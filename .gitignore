@@ -43,3 +43,5 @@ next-env.d.ts
 
 .track
 design
+*storybook.log
+storybook-static
