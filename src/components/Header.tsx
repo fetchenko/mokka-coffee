@@ -26,9 +26,7 @@ export function Header() {
           </ul>
         </nav>
 
-        <Link href="/#visit-us">
-          Visit Us
-        </Link>
+        <Link href="/#visit-us">Visit Us</Link>
       </div>
     </header>
   );
