@@ -1,24 +1,56 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f9f8f6;
-  --surface: #f1ede6;
-  --foreground: #1c1811;
-  --accent: #b2854e;
-  --accent-muted: #dbccb7;
-  --footer-muted: #a38763;
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --color-neutral-50: #fcfaf5;
+  --color-neutral-100: #f9f8f6;
+  --color-neutral-200: #f0ece6;
+  --color-neutral-800: #1c1811;
+  --color-neutral-950: #0a0600;
+
+  --color-ink-900: #0e0c09;
+  --color-ink-700: #383530;
+  --color-ink-400: #9c9995;
+  --color-ink-inverse-0: #f2f1f0;
+  --color-ink-inverse-300: #b4b2ac;
+
+  --color-accent-300: #c69564;
+  --color-accent-500: #b0824c;
+  --color-accent-600: #947f5f;
+
+  --color-icon-selected-base: #211a13;
 }
 
 @theme inline {
   --color-background: var(--background);
-  --color-surface: var(--surface);
   --color-foreground: var(--foreground);
-  --color-accent: var(--accent);
-  --color-accent-muted: var(--accent-muted);
-  --color-footer-muted: var(--footer-muted);
 
   --font-sans: var(--font-inter);
   --font-display: var(--font-playfair);
+
+  --color-surface: var(--color-neutral-100);
+  --color-surface-muted: var(--color-neutral-200);
+  --color-surface-card: var(--color-neutral-50);
+  --color-surface-inverse: var(--color-neutral-800);
+  --color-surface-scrim: var(--color-neutral-950);
+
+  --color-text: var(--color-ink-900);
+  --color-text-muted: var(--color-ink-700);
+  --color-text-subtle: var(--color-ink-400);
+  --color-text-inverse: var(--color-ink-inverse-0);
+  --color-text-inverse-muted: var(--color-ink-inverse-300);
+
+  --color-accent-soft: var(--color-accent-300);
+  --color-accent: var(--color-accent-500);
+  --color-accent-muted: var(--color-accent-600);
+
+  --color-icon-selected: var(--color-icon-selected-base);
+  --color-icon-unselected: var(--color-neutral-100);
+  --color-border-outline: var(--color-ink-inverse-0);
+
+  --color-border-outline: var(--color-ink-inverse-0);
 }
 
 body {
