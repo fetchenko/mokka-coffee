@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Button } from './button';
+import { Coffee } from 'lucide-react';
 
 const meta = {
   title: 'Components/Button',
@@ -73,11 +74,17 @@ export const WithIcon: Story = {
   ),
 };
 
-export const Icon: Story = {
+export const IconVariants: Story = {
   render: () => (
-    <Button size="icon" aria-label="Add item">
-      <span aria-hidden="true">+</span>
-    </Button>
+    <div className='flex flex-col gap-2'>
+      <Button size="icon" aria-label="Add item">
+        <span aria-hidden="true">+</span>
+      </Button>
+      <Button size="icon" variant="outline" aria-label="Add item">
+        <Coffee />
+      </Button>
+    </div>
+
   ),
 };
 

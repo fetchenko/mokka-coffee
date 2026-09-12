@@ -1,76 +1,97 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-
-  --color-neutral-50: #fcfaf5;
-  --color-neutral-100: #f9f8f6;
-  --color-neutral-200: #f0ece6;
-  --color-neutral-800: #1c1811;
-  --color-neutral-950: #0a0600;
-
-  --color-ink-900: #0e0c09;
-  --color-ink-700: #383530;
-  --color-ink-400: #9c9995;
-  --color-ink-inverse-0: #f2f1f0;
-  --color-ink-inverse-300: #b4b2ac;
-
-  --color-accent-300: #c69564;
-  --color-accent-500: #b0824c;
-  --color-accent-600: #947f5f;
-
-  --color-icon-selected-base: #211a13;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-
   --font-sans: var(--font-inter);
   --font-display: var(--font-playfair);
 
-  --color-surface: var(--color-neutral-100);
-  --color-surface-muted: var(--color-neutral-200);
-  --color-surface-card: var(--color-neutral-50);
-  --color-surface-inverse: var(--color-neutral-800);
-  --color-surface-scrim: var(--color-neutral-950);
+  --radius: 0.625rem;
 
-  --color-text: var(--color-ink-900);
-  --color-text-muted: var(--color-ink-700);
-  --color-text-subtle: var(--color-ink-400);
-  --color-text-inverse: var(--color-ink-inverse-0);
-  --color-text-inverse-muted: var(--color-ink-inverse-300);
+  /* shadcn semantic tokens */
 
-  --color-accent-soft: var(--color-accent-300);
-  --color-accent: var(--color-accent-500);
-  --color-accent-muted: var(--color-accent-600);
+  --background: #f9f8f6;
+  --foreground: #0e0c09;
 
-  --color-icon-selected: var(--color-icon-selected-base);
-  --color-icon-unselected: var(--color-neutral-100);
+  --card: #fcfaf5;
+  --card-foreground: #0e0c09;
 
-  --color-border-outline: var(--color-ink-inverse-0);
+  --popover: #fcfaf5;
+  --popover-foreground: #0e0c09;
 
-  /* --------------------------------
-     Component tokens
-     -------------------------------- */
+  --primary: #b0824c;
+  --primary-foreground: #f2f1f0;
 
-  /* Buttons */
-  --color-button-primary: var(--color-accent);
-  --color-button-primary-text: var(--color-text-inverse);
+  --secondary: #f0ece6;
+  --secondary-foreground: #383530;
 
-  --color-button-outline-text: var(--color-text);
-  --color-button-outline-border: var(--color-text);
+  --muted: #f0ece6;
+  --muted-foreground: #383530;
 
-  --color-button-outline-inverse-text: var(--color-text-inverse);
-  --color-button-outline-inverse-border: var(--color-border-outline);
+  --accent: #c69564;
+  --accent-foreground: #0e0c09;
 
-  /* Links */
-  --color-link: var(--color-accent);
-  --color-link-hover: var(--color-accent-soft);
+  --destructive: #b42318;
 
-  --color-link-inverse: var(--color-text-inverse);
-  --color-link-inverse-hover: var(--color-accent-soft);
+  --border: #f0ece6;
+  --input: #f0ece6;
+  --ring: #c69564;
+
+  /* Project-specific tokens */
+
+  --surface-inverse: #1c1811;
+  --surface-scrim: #0a0600;
+
+  --text-subtle: #9c9995;
+  --text-inverse-muted: #b4b2ac;
+
+  --accent-muted: #947f5f;
+
+  --icon-selected: #211a13;
+  --icon-unselected: #f9f9f6;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-playfair);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Project-specific */
+
+  --color-surface-inverse: var(--surface-inverse);
+  --color-surface-scrim: var(--surface-scrim);
+
+  --color-text-subtle: var(--text-subtle);
+  --color-text-inverse-muted: var(--text-inverse-muted);
+
+  --color-accent-muted: var(--accent-muted);
+
+  --color-icon-selected: var(--icon-selected);
+  --color-icon-unselected: var(--icon-unselected);
 }
 
 body {
