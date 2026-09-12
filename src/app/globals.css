@@ -48,9 +48,29 @@
 
   --color-icon-selected: var(--color-icon-selected-base);
   --color-icon-unselected: var(--color-neutral-100);
-  --color-border-outline: var(--color-ink-inverse-0);
 
   --color-border-outline: var(--color-ink-inverse-0);
+
+  /* --------------------------------
+     Component tokens
+     -------------------------------- */
+
+  /* Buttons */
+  --color-button-primary: var(--color-accent);
+  --color-button-primary-text: var(--color-text-inverse);
+
+  --color-button-outline-text: var(--color-text);
+  --color-button-outline-border: var(--color-text);
+
+  --color-button-outline-inverse-text: var(--color-text-inverse);
+  --color-button-outline-inverse-border: var(--color-border-outline);
+
+  /* Links */
+  --color-link: var(--color-accent);
+  --color-link-hover: var(--color-accent-soft);
+
+  --color-link-inverse: var(--color-text-inverse);
+  --color-link-inverse-hover: var(--color-accent-soft);
 }
 
 body {
