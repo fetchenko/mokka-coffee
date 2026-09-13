@@ -77,7 +77,7 @@ export const WithIcon: Story = {
         Add item
       </Button>
       <Button variant="link" asChild>
-        <a>
+        <a href='#'>
           check
           <ArrowRight />
         </a>
