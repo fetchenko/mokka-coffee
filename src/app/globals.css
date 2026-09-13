@@ -1,24 +1,99 @@
 @import "tailwindcss";
 
 :root {
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-playfair);
+
+  --radius: 0.625rem;
+
+  /* shadcn semantic tokens */
+
   --background: #f9f8f6;
-  --surface: #f1ede6;
-  --foreground: #1c1811;
-  --accent: #b2854e;
-  --accent-muted: #dbccb7;
-  --footer-muted: #a38763;
+  --foreground: #0e0c09;
+
+  --card: #fcfaf5;
+  --card-foreground: #0e0c09;
+
+  --popover: #fcfaf5;
+  --popover-foreground: #0e0c09;
+
+  --primary: #b0824c;
+  --primary-foreground: #f2f1f0;
+
+  --secondary: #f0ece6;
+  --secondary-foreground: #383530;
+
+  --muted: #f0ece6;
+  --muted-foreground: #383530;
+
+  --accent: #c69564;
+  --accent-foreground: #0e0c09;
+
+  --destructive: #b42318;
+  --destructive-foreground: #f2f1f0;
+
+  --border: #f0ece6;
+  --input: #f0ece6;
+  --ring: #c69564;
+
+  /* Project-specific tokens */
+
+  --surface-inverse: #1c1811;
+  --surface-scrim: #0a0600;
+
+  --text-subtle: #9c9995;
+  --text-inverse-muted: #b4b2ac;
+
+  --accent-muted: #947f5f;
+
+  --icon-selected: #211a13;
+  --icon-unselected: #f9f9f6;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-surface: var(--surface);
-  --color-foreground: var(--foreground);
-  --color-accent: var(--accent);
-  --color-accent-muted: var(--accent-muted);
-  --color-footer-muted: var(--footer-muted);
-
   --font-sans: var(--font-inter);
   --font-display: var(--font-playfair);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Project-specific */
+
+  --color-surface-inverse: var(--surface-inverse);
+  --color-surface-scrim: var(--surface-scrim);
+
+  --color-text-subtle: var(--text-subtle);
+  --color-text-inverse-muted: var(--text-inverse-muted);
+
+  --color-accent-muted: var(--accent-muted);
+
+  --color-icon-selected: var(--icon-selected);
+  --color-icon-unselected: var(--icon-unselected);
 }
 
 body {
