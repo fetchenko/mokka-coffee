@@ -1,6 +1,5 @@
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
-import { Section } from "@/components/layout/section";
 import { Hero } from "@/components/sections/hero";
 
 export default function Home() {
