@@ -149,19 +149,18 @@ export function Header() {
                 );
               })}
 
-              <li className="pt-5">
-                <Link
-                  href="/#visit-us"
-                  onClick={() => setIsMenuOpen(false)}
-                  className={cn(
-                    "inline-flex w-full items-center justify-center gap-2",
-                    "border-foreground border px-5 py-3",
-                    "text-foreground text-sm font-medium tracking-[0.1em] uppercase",
-                  )}
-                >
-                  <MapPin aria-hidden="true" size={16} strokeWidth={1.75} />
-                  Visit Us
-                </Link>
+              <li className="pt-5 px-8">
+                <Button variant="outline" asChild>
+                  <Link
+                    href="/#visit-us"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="w-full"
+                  >
+                    <MapPin aria-hidden="true" />
+                    Visit Us
+                  </Link>
+                </Button>
+
               </li>
             </ul>
           </nav>

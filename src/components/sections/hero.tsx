@@ -90,14 +90,13 @@ export function Hero() {
                 <Icon
                   aria-hidden="true"
                   className={cn(
-                    "size-6 m-1 shrink-0 sm:size-10",
+                    "m-1 size-6 shrink-0 sm:size-10",
                     feature.accent ? "text-primary" : "text-foreground",
                   )}
-                  strokeWidth={1.75}
                 />
                 <span className="text-foreground max-w-28 text-[11px] leading-tight sm:text-sm">
-                  <span >{feature.label}</span>
-                  <span className="hidden sm:block text-muted-foreground text-[10px] leading-tight">
+                  <span>{feature.label}</span>
+                  <span className="text-muted-foreground hidden text-[10px] leading-tight sm:block">
                     {feature.description}
                   </span>
                 </span>
