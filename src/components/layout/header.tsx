@@ -55,11 +55,11 @@ export function Header() {
           <Link
             href="/"
             aria-label="Mokka Coffee home"
-            className="text-primary-foreground justify-self-start"
+            className="text-foreground justify-self-start"
           >
             <span className="block font-sans text-2xl leading-none tracking-[0.12em]">MOKKA</span>
 
-            <span className="text-text-inverse-muted mt-1 block text-[0.5rem] tracking-[0.2em] uppercase">
+            <span className="text-muted-foreground mt-1 block text-[0.5rem] tracking-[0.2em] uppercase">
               Specialty Coffee
             </span>
           </Link>
@@ -78,7 +78,7 @@ export function Header() {
                         "relative py-2 text-sm font-medium",
                         "text-foreground transition-opacity duration-200 hover:opacity-70",
                         active &&
-                          "after:bg-background after:absolute after:inset-x-0 after:bottom-0 after:h-px",
+                        "after:bg-background after:absolute after:inset-x-0 after:bottom-0 after:h-px",
                       )}
                     >
                       {item.label}
@@ -140,7 +140,7 @@ export function Header() {
                       onClick={() => setIsMenuOpen(false)}
                       className={cn(
                         "block py-4 text-sm tracking-[0.12em] uppercase",
-                        active ? "text-foreground font-medium" : "text-text-subtle",
+                        active ? "text-foreground font-medium" : "text-subtle",
                       )}
                     >
                       {item.label}

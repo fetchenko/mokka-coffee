@@ -54,7 +54,7 @@
   --surface-scrim: var(--color-coffee-950);
 
   --text-subtle: var(--color-coffee-500);
-  --text-inverse-muted: var(--color-coffee-200);
+  --color-inverse-muted: var(--color-coffee-200);
 
   --accent-muted: var(--color-coffee-500);
 
@@ -141,8 +141,8 @@
   --color-surface-inverse: var(--surface-inverse);
   --color-surface-scrim: var(--surface-scrim);
 
-  --color-text-subtle: var(--text-subtle);
-  --color-text-inverse-muted: var(--text-inverse-muted);
+  --color-subtle: var(--text-subtle);
+  --color-inverse-muted: var(--text-inverse-muted);
 
   --color-accent-muted: var(--accent-muted);
 
