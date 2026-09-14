@@ -72,7 +72,7 @@
   --popover: var(--color-coffee-900);
   --popover-foreground: var(--color-coffee-50);
 
-  --primary: var(--accent);
+  --primary: var(--color-coffee-400);
   --primary-foreground: var(--color-coffee-50);
 
   --secondary: var(--color-coffee-800);
@@ -90,7 +90,7 @@
 
   --border: var(--color-coffee-50);
   --input: var(--color-coffee-50);
-  --ring: var(--color-coffee-50);
+  --ring: var(--color-coffee-300);
 
   --surface-inverse: var(--color-coffee-50);
   --surface-scrim: var(--color-coffee-950);

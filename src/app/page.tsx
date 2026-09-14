@@ -9,9 +9,7 @@ export default function Home() {
       <Header />
 
       <main>
-        <Section tone="dark">
-          <Hero />
-        </Section>
+        <Hero />
         <section>{/* Customer favorites */}</section>
         <section id="about">{/* About */}</section>
         <section>{/* Menu preview */}</section>
