@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, MapPin, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Container } from "@/components/layout/container";
 
 const navigation = [
   { label: "Home", href: "/" },
@@ -54,7 +55,7 @@ export function Header() {
         isScrolled ? "bg-surface-inverse/80 backdrop-blur-md" : "bg-transparent",
       ].join(" ")}
     >
-      <div className="mx-auto grid h-20 max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-6 lg:px-8">
+      <Container className="grid h-20 grid-cols-[1fr_auto_1fr] items-center">
         {/* Logo */}
         <Link
           href="/"
@@ -126,7 +127,7 @@ export function Header() {
             <Menu aria-hidden="true" size={28} strokeWidth={1.5} />
           )}
         </button>
-      </div>
+      </Container>
 
       {/* Mobile navigation */}
       <div

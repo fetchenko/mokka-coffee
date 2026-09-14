@@ -61,7 +61,7 @@ export const Sizes: Story = {
 export const WithIcon: Story = {
   render: () => (
     <>
-      {(["light", "dark"] as const).map(tone => (
+      {(["light", "dark"] as const).map((tone) => (
         <Section className="p-4" key={tone} tone={tone}>
           <div className="flex flex-col gap-2">
             <Button>
@@ -82,7 +82,6 @@ export const WithIcon: Story = {
         </Section>
       ))}
     </>
-
   ),
 };
 

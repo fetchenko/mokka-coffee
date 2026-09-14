@@ -1,3 +1,4 @@
+import { Container } from "@/components/layout/container";
 import { Button } from "@/components/ui/button";
 import { Coffee, Heart, Leaf, Map, Users } from "lucide-react";
 import Link from "next/link";
@@ -5,7 +6,7 @@ import Link from "next/link";
 const features = [
   {
     label: "Specialty coffee",
-    shortLabel: 'Specialty coffee',
+    shortLabel: "Specialty coffee",
     description: "Top quality beans",
     icon: Coffee,
     accent: true,
@@ -56,63 +57,63 @@ export function Hero() {
         className="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-gradient-to-t from-black/70 to-transparent"
       />
 
-      <div className="flex min-h-svh flex-col px-5 py-10 sm:px-8 lg:px-12 lg:py-16">
-        <div className="max-w-xl pt-8 sm:pt-12 lg:pt-16">
-          <h1 className="font-display text-[clamp(3.5rem,14vw,5.5rem)] leading-[1.1] font-semibold tracking-[-0.045em] lg:text-[clamp(4.5rem,7vw,7rem)]">
-            <span className="text-foreground block">Good days</span>
-            <span className="text-primary block leading-[0.88]">start with coffee</span>
-          </h1>
+      <Container>
+        <div
+          className="flex min-h-svh flex-col py-10 lg:py-16"
+        >
+          <div className="max-w-xl pt-8 sm:pt-12 lg:pt-16">
+            <h1 className="font-display text-[clamp(3.5rem,14vw,5.5rem)] leading-[1.1] font-semibold tracking-[-0.045em] lg:text-[clamp(4.5rem,6vw,6rem)]">
+              <span className="text-foreground block">Good days</span>
+              <span className="text-primary block leading-[0.88]">start with coffee</span>
+            </h1>
 
-          <p className="text-foreground/85 mt-6  max-w-2xs md:max-w-xs  text-base leading-relaxed sm:text-lg">
-            Specialty coffee, cozy atmosphere, and friendly people.
-          </p>
+            <p className="text-foreground/85 mt-6 max-w-2xs text-base leading-relaxed sm:text-lg md:max-w-xs">
+              Specialty coffee, cozy atmosphere, and friendly people.
+            </p>
 
-          <div className="mt-8 flex w-full max-w-sm flex-col gap-3 sm:flex-row">
-            <Button asChild>
-              <Link href="/menu">See our menu</Link>
-            </Button>
+            <div className="mt-8 flex w-full max-w-sm flex-col gap-3 sm:flex-row">
+              <Button asChild>
+                <Link href="/menu">See our menu</Link>
+              </Button>
 
-            <Button asChild variant="outline">
+              <Button asChild variant="outline">
+                <Link href="/visit-us">
+                  <Map />
+                  Visit us
+                </Link>
+              </Button>
+            </div>
+          </div>
 
-              <Link href="/visit-us">
-                <Map />
-                Visit us
-              </Link>
-            </Button>
+          <div className="mt-auto grid grid-cols-4 gap-1 pt-16 sm:gap-5 lg:max-w-3xl lg:gap-8 lg:pb-2">
+            {features.map((feature) => {
+              const Icon = feature.icon;
+
+              return (
+                <div
+                  key={feature.label}
+                  className="flex flex-col items-center gap-2 text-center md:flex-row md:text-left lg:items-start lg:text-left"
+                >
+                  <Icon
+                    aria-hidden="true"
+                    className={`size-6 shrink-0 sm:size-10 ${feature.accent ? "text-primary" : "text-foreground"} `}
+                    strokeWidth={1.75}
+                  />
+                  <div className="leading-none">
+                    <span className="text-foreground max-w-28 text-[11px] leading-tight sm:text-sm">
+                      <span className="md:hidden">{feature.label}</span>
+                      <span className="hidden font-semibold md:block">{feature.shortLabel}</span>
+                    </span>
+                    <span className="text-muted-foreground hidden max-w-30 text-[10px] leading-tight sm:text-sm md:block">
+                      {feature.description}
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
-
-        <div className="mt-auto grid grid-cols-4 gap-2 pt-16 sm:gap-5 lg:max-w-3xl lg:gap-8 lg:pb-2">
-          {features.map((feature) => {
-            const Icon = feature.icon;
-
-            return (
-              <div
-                key={feature.label}
-                className="flex flex-col items-center gap-2 text-center lg:items-start lg:text-left"
-              >
-                <Icon
-                  aria-hidden="true"
-                  className={`size-6 shrink-0 sm:size-10 ${feature.accent ? "text-primary" : "text-foreground"} `}
-                  strokeWidth={1.75}
-                />
-
-                <span className=" text-foreground max-w-28 text-[11px] leading-tight sm:text-sm">
-                  <span className="md:hidden">
-                    {feature.label}
-                  </span>
-                  <span className="hidden md:block font-semibold">
-                    {feature.shortLabel}
-                  </span>
-                </span>
-                <span className="hidden md:block text-muted max-w-30 text-[10px] leading-tight sm:text-sm">
-                  {feature.description}
-                </span>
-              </div>
-            );
-          })}
-        </div>
-      </div>
+      </Container>
     </div>
   );
 }

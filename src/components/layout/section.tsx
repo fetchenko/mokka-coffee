@@ -7,11 +7,7 @@ type SectionProps = React.ComponentProps<"section"> & {
 export function Section({ tone = "light", className, ...props }: SectionProps) {
   return (
     <section
-      className={cn(
-        "bg-background text-foreground",
-        `section-${tone}`,
-        className,
-      )}
+      className={cn("bg-background text-foreground", `section-${tone}`, className)}
       {...props}
     />
   );
