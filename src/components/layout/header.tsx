@@ -1,0 +1,171 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Menu, MapPin, X } from "lucide-react";
+import { useState } from "react";
+import { Container } from "@/components/layout/container";
+import { cn } from "@/lib/utils/cn";
+import { Button } from "@/components/ui/button";
+import { useInView } from "react-intersection-observer";
+
+const navigation = [
+  { label: "Home", href: "/" },
+  { label: "Menu", href: "/menu" },
+  { label: "About", href: "/#about" },
+  { label: "Contact", href: "/contact" },
+];
+
+export function Header() {
+  const pathname = usePathname();
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const { ref: topSentinelRef, inView: isAtTop } = useInView({
+    threshold: 0,
+  });
+
+  const isHeaderSolid = !isAtTop || isMenuOpen;
+
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+
+    if (href.startsWith("/#")) {
+      return pathname === "/";
+    }
+
+    return pathname.startsWith(href);
+  };
+
+  return (
+    <>
+      {/* Sentinel used to detect whether the page is at the top */}
+      <div ref={topSentinelRef} aria-hidden="true" className="absolute top-0 left-0 h-px w-px" />
+      <header
+        className={cn(
+          "section-dark",
+          "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
+          isHeaderSolid ? "bg-background/80 backdrop-blur-md" : "bg-transparent",
+        )}
+      >
+        <Container className="grid h-20 grid-cols-[1fr_auto_1fr] items-center">
+          {/* Logo */}
+          <Link
+            href="/"
+            aria-label="Mokka Coffee home"
+            className="text-foreground justify-self-start"
+          >
+            <span className="block font-sans text-2xl leading-none tracking-[0.12em]">MOKKA</span>
+
+            <span className="text-muted-foreground mt-1 block text-[0.5rem] tracking-[0.2em] uppercase">
+              Specialty Coffee
+            </span>
+          </Link>
+
+          {/* Desktop navigation */}
+          <nav aria-label="Main navigation" className="hidden md:block">
+            <ul className="flex items-center gap-8">
+              {navigation.map((item) => {
+                const active = isActive(item.href);
+
+                return (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className={cn(
+                        "relative py-2 text-sm font-medium",
+                        "text-foreground transition-opacity duration-200 hover:opacity-70",
+                        active &&
+                        "after:bg-background after:absolute after:inset-x-0 after:bottom-0 after:h-px",
+                      )}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+
+          {/* Desktop CTA */}
+          <Button className="hidden w-fit justify-self-end md:flex" variant="outline" asChild>
+            <Link href="/#visit-us">
+              <MapPin aria-hidden="true" size={16} strokeWidth={1.75} />
+              visit us
+            </Link>
+          </Button>
+
+          {/* Mobile menu button */}
+          <Button
+            type="button"
+            aria-label={isMenuOpen ? "Close navigation" : "Open navigation"}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setIsMenuOpen((open) => !open)}
+            className="col-start-3 justify-self-end bg-transparent md:hidden"
+            size="icon-lg"
+          >
+            {isMenuOpen ? (
+              <X aria-hidden="true" size={28} strokeWidth={1.5} />
+            ) : (
+              <Menu aria-hidden="true" size={28} strokeWidth={1.5} />
+            )}
+          </Button>
+        </Container>
+
+        {/* Mobile navigation */}
+        <div
+          id="mobile-navigation"
+          className={cn(
+            "overflow-hidden transition-[max-height,opacity] duration-300 md:hidden",
+            isMenuOpen
+              ? "pointer-events-auto max-h-96 opacity-100"
+              : "pointer-events-none max-h-0 opacity-0",
+          )}
+        >
+          <nav
+            aria-label="Mobile navigation"
+            className="bg-background/80 px-6 py-6 backdrop-blur-md"
+          >
+            <ul className="flex flex-col">
+              {navigation.map((item) => {
+                const active = isActive(item.href);
+
+                return (
+                  <li key={item.href} className="border-foreground/10 border-b last:border-0">
+                    <Link
+                      href={item.href}
+                      onClick={() => setIsMenuOpen(false)}
+                      className={cn(
+                        "block py-4 text-sm tracking-[0.12em] uppercase",
+                        active ? "text-foreground font-medium" : "text-subtle",
+                      )}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                );
+              })}
+
+              <li className="pt-5 px-8">
+                <Button variant="outline" asChild>
+                  <Link
+                    href="/#visit-us"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="w-full"
+                  >
+                    <MapPin aria-hidden="true" />
+                    Visit Us
+                  </Link>
+                </Button>
+
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </>
+  );
+}

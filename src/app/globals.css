@@ -1,6 +1,18 @@
 @import "tailwindcss";
 
 :root {
+  --color-coffee-950: #0e0c09;
+  --color-coffee-900: #29211d;
+  --color-coffee-800: #3a2e27;
+  --color-coffee-700: #514037;
+  --color-coffee-600: #6b5547;
+  --color-coffee-500: #8a6a52;
+  --color-coffee-400: #b87945;
+  --color-coffee-300: #c69564;
+  --color-coffee-200: #d8c5ad;
+  --color-coffee-100: #f0e8dc;
+  --color-coffee-50: #faf8f3;
+
   --font-sans: var(--font-inter);
   --font-display: var(--font-playfair);
 
@@ -8,46 +20,88 @@
 
   /* shadcn semantic tokens */
 
-  --background: #f9f8f6;
-  --foreground: #0e0c09;
+  --background: var(--color-coffee-50);
+  --foreground: var(--color-coffee-950);
 
-  --card: #fcfaf5;
-  --card-foreground: #0e0c09;
+  --card: var(--color-coffee-50);
+  --card-foreground: var(--color-coffee-950);
 
-  --popover: #fcfaf5;
-  --popover-foreground: #0e0c09;
+  --popover: var(--color-coffee-50);
+  --popover-foreground: var(--color-coffee-950);
 
-  --primary: #b0824c;
-  --primary-foreground: #f2f1f0;
+  --primary: var(--color-coffee-400);
+  --primary-foreground: var(--color-coffee-50);
 
-  --secondary: #f0ece6;
-  --secondary-foreground: #383530;
+  --secondary: var(--color-coffee-100);
+  --secondary-foreground: var(--color-coffee-800);
 
-  --muted: #f0ece6;
-  --muted-foreground: #383530;
+  --muted: var(--color-coffee-100);
+  --muted-foreground: var(--color-coffee-600);
 
-  --accent: #c69564;
-  --accent-foreground: #0e0c09;
+  --accent: var(--color-coffee-300);
+  --accent-foreground: var(--color-coffee-950);
 
-  --destructive: #b42318;
-  --destructive-foreground: #f2f1f0;
+  --destructive: var(--color-red-600);
+  --destructive-foreground: var(--color-white);
 
-  --border: #f0ece6;
-  --input: #f0ece6;
-  --ring: #c69564;
+  --border: var(--color-coffee-100);
+  --input: var(--color-coffee-100);
+  --ring: var(--color-coffee-300);
 
   /* Project-specific tokens */
 
-  --surface-inverse: #1c1811;
-  --surface-scrim: #0a0600;
+  --surface-inverse: var(--color-coffee-900);
+  --surface-scrim: var(--color-coffee-950);
 
-  --text-subtle: #9c9995;
-  --text-inverse-muted: #b4b2ac;
+  --text-subtle: var(--color-coffee-500);
+  --color-inverse-muted: var(--color-coffee-200);
 
-  --accent-muted: #947f5f;
+  --accent-muted: var(--color-coffee-500);
 
-  --icon-selected: #211a13;
-  --icon-unselected: #f9f9f6;
+  --icon-selected: var(--color-coffee-900);
+  --icon-unselected: var(--color-coffee-50);
+}
+
+.section-dark {
+  --background: var(--color-coffee-950);
+  --foreground: var(--color-coffee-50);
+
+  --card: var(--color-coffee-900);
+  --card-foreground: var(--color-coffee-50);
+
+  --popover: var(--color-coffee-900);
+  --popover-foreground: var(--color-coffee-50);
+
+  --primary: var(--color-coffee-400);
+  --primary-foreground: var(--color-coffee-50);
+
+  --secondary: var(--color-coffee-800);
+  --secondary-foreground: var(--color-coffee-100);
+
+  --muted: var(--color-coffee-800);
+  --muted-foreground: var(--color-coffee-200);
+
+  --accent: var(--color-coffee-400);
+  --accent-foreground: var(--color-coffee-950);
+
+  /* Tailwind red palette */
+  --destructive: var(--color-red-500);
+  --destructive-foreground: var(--color-white);
+
+  --border: var(--color-coffee-50);
+  --input: var(--color-coffee-50);
+  --ring: var(--color-coffee-300);
+
+  --surface-inverse: var(--color-coffee-50);
+  --surface-scrim: var(--color-coffee-950);
+
+  --text-subtle: var(--color-coffee-400);
+  --text-inverse-muted: var(--color-coffee-300);
+
+  --accent-muted: var(--color-coffee-400);
+
+  --icon-selected: var(--color-coffee-50);
+  --icon-unselected: var(--color-coffee-900);
 }
 
 @theme inline {
@@ -87,8 +141,8 @@
   --color-surface-inverse: var(--surface-inverse);
   --color-surface-scrim: var(--surface-scrim);
 
-  --color-text-subtle: var(--text-subtle);
-  --color-text-inverse-muted: var(--text-inverse-muted);
+  --color-subtle: var(--text-subtle);
+  --color-inverse-muted: var(--text-inverse-muted);
 
   --color-accent-muted: var(--accent-muted);
 
