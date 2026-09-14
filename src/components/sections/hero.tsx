@@ -8,31 +8,25 @@ import Link from "next/link";
 const features = [
   {
     label: "Specialty coffee",
-    shortLabel: "Specialty coffee",
     description: "Top quality beans",
     icon: Coffee,
     accent: true,
   },
   {
-    label: "Sustainable & eco-friendly",
-    shortLabel: "Sustainable",
+    label: "Sustainable",
     description: "Eco-friendly",
     icon: Leaf,
     accent: true,
   },
   {
     label: "Made with love",
-    shortLabel: "Made with love",
     description: "For you",
-
     icon: Heart,
     accent: false,
   },
   {
-    label: "Community & warm",
-    shortLabel: "Community",
+    label: "Community",
     description: "Local & warm",
-
     icon: Users,
     accent: false,
   },
@@ -101,15 +95,12 @@ export function Hero() {
                   )}
                   strokeWidth={1.75}
                 />
-                <div className="leading-none">
-                  <span className="text-foreground max-w-28 text-[11px] leading-tight sm:text-sm">
-                    <span className="md:hidden">{feature.label}</span>
-                    <span className="hidden font-semibold md:block">{feature.shortLabel}</span>
-                  </span>
-                  <span className="text-muted-foreground hidden max-w-30 text-[10px] leading-tight sm:text-sm md:block">
+                <span className="text-foreground max-w-28 text-[11px] leading-tight sm:text-sm">
+                  <span >{feature.label}</span>
+                  <span className="block text-muted-foreground text-[10px] leading-tight">
                     {feature.description}
                   </span>
-                </div>
+                </span>
               </div>
             );
           })}
