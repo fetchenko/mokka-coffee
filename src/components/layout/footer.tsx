@@ -5,7 +5,7 @@ import { Camera, FileUser, Turntable } from "lucide-react";
 import Link from "next/link";
 
 const FOOTER_DESCRIPTION = "Good coffee, good people, good days";
-const FOOTER_COPYRIGHT = "2026 Mokka Coffee. All rights reserved";
+const FOOTER_COPYRIGHT = `${new Date().getFullYear()} Mokka Coffee. All rights reserved`;
 
 const FOOTER_LINKS = [
   { label: "Home", href: "/" },
