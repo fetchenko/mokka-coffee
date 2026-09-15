@@ -78,7 +78,7 @@ export function Header() {
                         "relative py-2 text-sm font-medium",
                         "text-foreground transition-opacity duration-200 hover:opacity-70",
                         active &&
-                        "after:bg-background after:absolute after:inset-x-0 after:bottom-0 after:h-px",
+                          "after:bg-background after:absolute after:inset-x-0 after:bottom-0 after:h-px",
                       )}
                     >
                       {item.label}
@@ -149,18 +149,13 @@ export function Header() {
                 );
               })}
 
-              <li className="pt-5 px-8">
+              <li className="px-8 pt-5">
                 <Button variant="outline" asChild>
-                  <Link
-                    href="/#visit-us"
-                    onClick={() => setIsMenuOpen(false)}
-                    className="w-full"
-                  >
+                  <Link href="/#visit-us" onClick={() => setIsMenuOpen(false)} className="w-full">
                     <MapPin aria-hidden="true" />
                     Visit Us
                   </Link>
                 </Button>
-
               </li>
             </ul>
           </nav>

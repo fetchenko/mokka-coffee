@@ -11,4 +11,18 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  parameters: {
+    layout: "fullscreen",
+    nextjs: {
+      navigation: {
+        pathname: "/settings/profile",
+      },
+    },
+  },
+  render: () => (
+    <div className="section-dark bg-background h-20">
+      <Header />
+    </div>
+  ),
+};

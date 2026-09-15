@@ -1,16 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-
-export const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-export const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-});
+import { inter, playfair } from "@/app/fonts";
 
 export const metadata: Metadata = {
   title: "MOKKA — Specialty Coffee",
