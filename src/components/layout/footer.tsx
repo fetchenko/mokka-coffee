@@ -3,22 +3,23 @@ import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/ui/logo";
 import { Camera, FileUser, Turntable } from "lucide-react";
 import Link from "next/link";
+import { navigation, socialLinks } from "@/config/navigation";
 
 const FOOTER_DESCRIPTION = "Good coffee, good people, good days";
 const FOOTER_COPYRIGHT = `${new Date().getFullYear()} Mokka Coffee. All rights reserved`;
 
 const FOOTER_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "Menu", href: "/menu" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
-];
+  { label: "Home", href: navigation.home },
+  { label: "Menu", href: navigation.menu },
+  { label: "About", href: navigation.about },
+  { label: "Contact", href: navigation.contact },
+] as const;
 
 const SOCIAL_LINKS = [
-  { label: "Instagram", href: "#", icon: Camera },
-  { label: "LinkedIn", href: "#", icon: FileUser },
-  { label: "Spotify", href: "#", icon: Turntable },
-];
+  { label: "Instagram", href: socialLinks.instagram, icon: Camera },
+  { label: "LinkedIn", href: socialLinks.linkedin, icon: FileUser },
+  { label: "Spotify", href: socialLinks.spotify, icon: Turntable },
+] as const;
 
 export function Footer() {
   return (
