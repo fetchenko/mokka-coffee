@@ -14,9 +14,4 @@ export const Default: Story = {
   parameters: {
     layout: "fullscreen",
   },
-  render: () => (
-    <div className="section-dark bg-background">
-      <Footer />
-    </div>
-  ),
 };

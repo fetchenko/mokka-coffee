@@ -47,7 +47,7 @@ export function Header() {
       <div ref={topSentinelRef} aria-hidden="true" className="absolute top-0 left-0 h-px w-px" />
       <header
         className={cn(
-          "section-dark bg-background text-foreground",
+          "section-dark text-foreground",
           "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
           isHeaderSolid ? "bg-background/80 backdrop-blur-md" : "bg-transparent",
         )}
