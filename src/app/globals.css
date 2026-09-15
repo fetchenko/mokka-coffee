@@ -84,18 +84,17 @@
   --accent: var(--color-coffee-400);
   --accent-foreground: var(--color-coffee-950);
 
-  /* Tailwind red palette */
   --destructive: var(--color-red-500);
   --destructive-foreground: var(--color-white);
 
   --border: var(--color-coffee-50);
-  --input: var(--color-coffee-50);
+  --input: var(--color-coffee-200);
   --ring: var(--color-coffee-300);
 
   --surface-inverse: var(--color-coffee-50);
   --surface-scrim: var(--color-coffee-950);
 
-  --text-subtle: var(--color-coffee-400);
+  --text-subtle: var(--color-coffee-300);
   --text-inverse-muted: var(--color-coffee-300);
 
   --accent-muted: var(--color-coffee-400);

@@ -16,12 +16,12 @@ export const Default: Story = {
     layout: "fullscreen",
     nextjs: {
       navigation: {
-        pathname: "/settings/profile",
+        pathname: "/",
       },
     },
   },
   render: () => (
-    <div className="section-dark bg-background h-20">
+    <div className="bg-black h-20">
       <Header />
     </div>
   ),

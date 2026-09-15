@@ -7,14 +7,16 @@ import { useState } from "react";
 import { Container } from "@/components/layout/container";
 import { cn } from "@/lib/utils/cn";
 import { Button } from "@/components/ui/button";
+import { navigation } from "@/config/navigation";
 import { useInView } from "react-intersection-observer";
+import { Logo } from "@/components/ui/logo";
 
-const navigation = [
-  { label: "Home", href: "/" },
-  { label: "Menu", href: "/menu" },
-  { label: "About", href: "/#about" },
-  { label: "Contact", href: "/contact" },
-];
+const NAVIGATION_ITEMS = [
+  { label: "Home", href: navigation.home },
+  { label: "Menu", href: navigation.menu },
+  { label: "About", href: navigation.about },
+  { label: "Contact", href: navigation.contact },
+] as const;
 
 export function Header() {
   const pathname = usePathname();
@@ -28,7 +30,7 @@ export function Header() {
   const isHeaderSolid = !isAtTop || isMenuOpen;
 
   const isActive = (href: string) => {
-    if (href === "/") {
+    if (href === navigation.home) {
       return pathname === "/";
     }
 
@@ -45,29 +47,20 @@ export function Header() {
       <div ref={topSentinelRef} aria-hidden="true" className="absolute top-0 left-0 h-px w-px" />
       <header
         className={cn(
-          "section-dark",
+          "section-dark text-foreground",
           "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
           isHeaderSolid ? "bg-background/80 backdrop-blur-md" : "bg-transparent",
         )}
       >
         <Container className="grid h-20 grid-cols-[1fr_auto_1fr] items-center">
-          {/* Logo */}
-          <Link
-            href="/"
-            aria-label="Mokka Coffee home"
-            className="text-foreground justify-self-start"
-          >
-            <span className="block font-sans text-2xl leading-none tracking-[0.12em]">MOKKA</span>
-
-            <span className="text-muted-foreground mt-1 block text-[0.5rem] tracking-[0.2em] uppercase">
-              Specialty Coffee
-            </span>
+          <Link href={navigation.home} aria-label="Mokka Coffee home" className="justify-self-start">
+            <Logo />
           </Link>
 
           {/* Desktop navigation */}
           <nav aria-label="Main navigation" className="hidden md:block">
             <ul className="flex items-center gap-8">
-              {navigation.map((item) => {
+              {NAVIGATION_ITEMS.map((item) => {
                 const active = isActive(item.href);
 
                 return (
@@ -76,9 +69,8 @@ export function Header() {
                       href={item.href}
                       className={cn(
                         "relative py-2 text-sm font-medium",
-                        "text-foreground transition-opacity duration-200 hover:opacity-70",
-                        active &&
-                          "after:bg-background after:absolute after:inset-x-0 after:bottom-0 after:h-px",
+                        "transition-opacity duration-200 hover:opacity-70",
+                        active && "underline underline-offset-4",
                       )}
                     >
                       {item.label}
@@ -91,8 +83,8 @@ export function Header() {
 
           {/* Desktop CTA */}
           <Button className="hidden w-fit justify-self-end md:flex" variant="outline" asChild>
-            <Link href="/#visit-us">
-              <MapPin aria-hidden="true" size={16} strokeWidth={1.75} />
+            <Link href={navigation.visitUs}>
+              <MapPin aria-hidden="true" />
               visit us
             </Link>
           </Button>
@@ -107,11 +99,7 @@ export function Header() {
             className="col-start-3 justify-self-end bg-transparent md:hidden"
             size="icon-lg"
           >
-            {isMenuOpen ? (
-              <X aria-hidden="true" size={28} strokeWidth={1.5} />
-            ) : (
-              <Menu aria-hidden="true" size={28} strokeWidth={1.5} />
-            )}
+            {isMenuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
           </Button>
         </Container>
 
@@ -130,7 +118,7 @@ export function Header() {
             className="bg-background/80 px-6 py-6 backdrop-blur-md"
           >
             <ul className="flex flex-col">
-              {navigation.map((item) => {
+              {NAVIGATION_ITEMS.map((item) => {
                 const active = isActive(item.href);
 
                 return (
@@ -140,7 +128,7 @@ export function Header() {
                       onClick={() => setIsMenuOpen(false)}
                       className={cn(
                         "block py-4 text-sm tracking-[0.12em] uppercase",
-                        active ? "text-foreground font-medium" : "text-subtle",
+                        active && "underline underline-offset-4",
                       )}
                     >
                       {item.label}
@@ -151,7 +139,7 @@ export function Header() {
 
               <li className="px-8 pt-5">
                 <Button variant="outline" asChild>
-                  <Link href="/#visit-us" onClick={() => setIsMenuOpen(false)} className="w-full">
+                  <Link href={navigation.visitUs} onClick={() => setIsMenuOpen(false)} className="w-full">
                     <MapPin aria-hidden="true" />
                     Visit Us
                   </Link>
