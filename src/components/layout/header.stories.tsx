@@ -16,7 +16,7 @@ export const Default: Story = {
     layout: "fullscreen",
     nextjs: {
       navigation: {
-        pathname: "/settings/profile",
+        pathname: "/",
       },
     },
   },
