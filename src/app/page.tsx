@@ -1,5 +1,6 @@
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { CustomerFavorites } from "@/components/sections/customer-favorites";
 import { Hero } from "@/components/sections/hero";
 
 export default function Home() {
@@ -9,7 +10,7 @@ export default function Home() {
 
       <main>
         <Hero />
-        <section>{/* Customer favorites */}</section>
+        <CustomerFavorites />
         <section id="about">{/* About */}</section>
         <section>{/* Menu preview */}</section>
         <section>{/* Testimonials */}</section>
