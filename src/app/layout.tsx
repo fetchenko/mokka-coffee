@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import { inter, playfair } from "@/app/fonts";
+
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "MOKKA — Specialty Coffee",

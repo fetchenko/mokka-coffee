@@ -21,7 +21,7 @@ export const Default: Story = {
     },
   },
   render: () => (
-    <div className="bg-black h-20">
+    <div className="h-20 bg-black">
       <Header />
     </div>
   ),
