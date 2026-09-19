@@ -101,7 +101,7 @@ export function Header() {
             aria-controls="mobile-navigation"
             onClick={() => setIsMenuOpen((open) => !open)}
             className="col-start-3 justify-self-end bg-transparent md:hidden"
-            size="icon-lg"
+            size="icon"
           >
             {isMenuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
           </Button>
