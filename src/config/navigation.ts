@@ -1,3 +1,8 @@
+export const sections = {
+  aboutUs: "about",
+  visitUs: "visit-us",
+};
+
 export const navigation = {
   home: "/",
   menu: "/menu",

@@ -3,7 +3,7 @@ import { Header } from "@/components/layout/header";
 import { CustomerFavorites } from "@/components/sections/customer-favorites";
 import { Hero } from "@/components/sections/hero";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <Header />
@@ -11,10 +11,10 @@ export default function Home() {
       <main>
         <Hero />
         <CustomerFavorites />
-        <section id="about">{/* About */}</section>
-        <section>{/* Menu preview */}</section>
-        <section>{/* Testimonials */}</section>
-        <section id="visit-us">{/* Visit Us */}</section>
+        {/* <AboutUs />
+        <MenuPreview />
+        <Testimonialls />
+        <VisitUs /> */}
       </main>
 
       <Footer />

@@ -34,7 +34,7 @@ export const AllVariants: Story = {
       <div className="space-y-6">
         {variants.map(({ variant, label, text }) => (
           <div key={variant}>
-            <p className="mb-2 text-xs text-muted-foreground">{label}</p>
+            <p className="text-muted-foreground mb-2 text-xs">{label}</p>
 
             <Text variant={variant}>{text}</Text>
           </div>

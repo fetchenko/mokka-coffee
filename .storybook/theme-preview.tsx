@@ -2,20 +2,18 @@ import { cn } from "@/lib/utils/cn";
 
 export function ThemePreview({
   children,
-  className
+  className,
 }: {
   children: React.ReactNode;
   className?: string;
 }) {
   return (
     <div className="grid gap-6 md:grid-cols-2">
-      <div className={cn("p-4 bg-background text-foreground", className)}>
-        {children}
-      </div>
+      <div className={cn("bg-background text-foreground p-4", className)}>{children}</div>
 
-      <div className={cn("p-4 section-dark bg-background text-foreground", className)}>
+      <div className={cn("section-dark bg-background text-foreground p-4", className)}>
         {children}
       </div>
-    </div >
+    </div>
   );
 }
