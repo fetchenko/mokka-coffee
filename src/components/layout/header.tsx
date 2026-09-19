@@ -53,7 +53,11 @@ export function Header() {
         )}
       >
         <Container className="grid h-20 grid-cols-[1fr_auto_1fr] items-center">
-          <Link href={navigation.home} aria-label="Mokka Coffee home" className="justify-self-start">
+          <Link
+            href={navigation.home}
+            aria-label="Mokka Coffee home"
+            className="justify-self-start"
+          >
             <Logo />
           </Link>
 
@@ -139,7 +143,11 @@ export function Header() {
 
               <li className="px-8 pt-5">
                 <Button variant="outline" asChild>
-                  <Link href={navigation.visitUs} onClick={() => setIsMenuOpen(false)} className="w-full">
+                  <Link
+                    href={navigation.visitUs}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="w-full"
+                  >
                     <MapPin aria-hidden="true" />
                     Visit Us
                   </Link>
