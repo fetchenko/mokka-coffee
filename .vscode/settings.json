@@ -1,0 +1,8 @@
+{
+  "js/ts.preferences.importModuleSpecifier": "non-relative",
+  "js/ts.preferences.jsxAttributeCompletionStyle": "auto",
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  }
+}
