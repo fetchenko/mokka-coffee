@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
+import { ThemePreview } from "../../../.storybook/theme-preview";
 import { Heading } from "./heading";
 
 const meta = {
@@ -39,23 +40,19 @@ const variants = [
 
 export const AllVariants: Story = {
   render: () => (
-    <div className="grid gap-6 md:grid-cols-2">
-      {["bg-background", "section-dark bg-background text-foreground"].map((className) => (
-        <div key={className} className={className}>
-          <div className="space-y-6">
-            {variants.map(({ variant, label, text }) => (
-              <div key={variant}>
-                <p className="text-muted-foreground mb-2 text-xs">{label}</p>
+    <ThemePreview>
+      <div className="space-y-6">
+        {variants.map(({ variant, label, text }) => (
+          <div key={variant}>
+            <p className="mb-2 text-xs text-muted-foreground">{label}</p>
 
-                <Heading variant={variant} as="h2">
-                  {text}
-                </Heading>
-              </div>
-            ))}
+            <Heading variant={variant} as="h2">
+              {text}
+            </Heading>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </ThemePreview>
   ),
 };
 
