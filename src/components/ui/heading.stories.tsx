@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { ThemePreview } from "../../../.storybook/theme-preview";
 import { Heading } from "./heading";
 import { ThemePreview } from "@storybook/theme-preview";
 
