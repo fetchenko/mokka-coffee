@@ -38,7 +38,7 @@ export function Hero() {
       {/* Background image */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-20 bg-[url('/assets/hero-2.webp')] bg-cover bg-[60%_center] bg-no-repeat"
+        className="absolute inset-0 -z-20 bg-[url('/assets/hero.webp')] bg-cover bg-[60%_center] bg-no-repeat"
       />
 
       {/* Dark overlay */}

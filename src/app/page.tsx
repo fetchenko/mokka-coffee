@@ -1,5 +1,6 @@
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { AboutUs } from "@/components/sections/about-us";
 import { CustomerFavorites } from "@/components/sections/customer-favorites";
 import { Hero } from "@/components/sections/hero";
 
@@ -11,8 +12,8 @@ export default function HomePage() {
       <main>
         <Hero />
         <CustomerFavorites />
-        {/* <AboutUs />
-        <MenuPreview />
+        <AboutUs />
+        {/* <MenuPreview />
         <Testimonialls />
         <VisitUs /> */}
       </main>
