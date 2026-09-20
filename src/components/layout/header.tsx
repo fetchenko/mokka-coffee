@@ -18,7 +18,17 @@ const NAVIGATION_ITEMS = [
   { label: "Contact", href: navigation.contact },
 ] as const;
 
-export function Header() {
+export type HeaderVariant = "light" | "transparent";
+
+type HeaderProps = {
+  desktopVariant?: HeaderVariant;
+  mobileVariant?: HeaderVariant;
+};
+
+export function Header({
+  desktopVariant = "light",
+  mobileVariant = "light",
+}: HeaderProps) {
   const pathname = usePathname();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,6 +38,21 @@ export function Header() {
   });
 
   const isHeaderSolid = !isAtTop || isMenuOpen;
+
+  const headerBackground = isHeaderSolid
+    ? "bg-background/80 backdrop-blur-md"
+    : cn(
+        mobileVariant === "light"
+          ? "bg-background/80 backdrop-blur-md"
+          : "bg-transparent",
+        desktopVariant === "light"
+          ? "md:bg-background/80 md:backdrop-blur-md"
+          : "md:bg-transparent md:backdrop-blur-none",
+      );
+
+  const desktopAction = cn(
+    desktopVariant === "transparent" && !isHeaderSolid && "md:bg-transparent",
+  );
 
   const isActive = (href: string) => {
     if (href === navigation.home) {
@@ -47,9 +72,9 @@ export function Header() {
       <div ref={topSentinelRef} aria-hidden="true" className="absolute top-0 left-0 h-px w-px" />
       <header
         className={cn(
-          "section-dark text-foreground",
+          "text-foreground",
           "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
-          isHeaderSolid ? "bg-background/80 backdrop-blur-md" : "bg-transparent",
+          headerBackground,
         )}
       >
         <Container className="grid h-20 grid-cols-[1fr_auto_1fr] items-center">
@@ -86,7 +111,14 @@ export function Header() {
           </nav>
 
           {/* Desktop CTA */}
-          <Button className="hidden w-fit justify-self-end md:flex" variant="outline" asChild>
+          <Button
+            className={cn(
+              "hidden w-fit justify-self-end md:flex",
+              desktopAction,
+            )}
+            variant="outline"
+            asChild
+          >
             <Link href={navigation.visitUs}>
               <MapPin aria-hidden="true" />
               visit us
