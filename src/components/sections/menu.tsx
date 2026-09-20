@@ -16,8 +16,8 @@ export type MenuCategory = {
 
 export const formatPrice = (price: number) => `${price} PLN`;
 
-export const menu = {
-  coffee: {
+export const menu: MenuCategory[] = [
+  {
     id: "coffee",
     label: "Coffee",
     items: [
@@ -79,7 +79,7 @@ export const menu = {
       },
     ],
   },
-  nonCoffee: {
+  {
     id: "non-coffee",
     label: "Non-coffee",
     items: [
@@ -113,7 +113,7 @@ export const menu = {
       },
     ],
   },
-  pastries: {
+  {
     id: "pastries",
     label: "Pastries",
     items: [
@@ -140,12 +140,12 @@ export const menu = {
       },
     ],
   },
-  sandwiches: {
+  {
     id: "sandwiches",
     label: "Sandwiches",
     items: [],
   },
-};
+];
 
 export function Menu() {
   return <div>Menu</div>;
