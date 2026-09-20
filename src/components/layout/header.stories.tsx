@@ -26,3 +26,19 @@ export const Default: Story = {
     </div>
   ),
 };
+
+export const TransparentDesktop: Story = {
+  parameters: {
+    layout: "fullscreen",
+    nextjs: {
+      navigation: {
+        pathname: "/",
+      },
+    },
+  },
+  render: () => (
+    <div className="h-20 bg-coffee-100">
+      <Header desktopVariant="transparent" />
+    </div>
+  ),
+};
