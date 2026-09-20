@@ -1,6 +1,6 @@
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
-import Menu from "@/components/sections/menu";
+import { Menu } from "@/components/sections/menu";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
