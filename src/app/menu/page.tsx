@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 export default function MenuPage() {
   return (
     <>
-      <Header desktopVariant="light" />
+      <Header />
 
-      <main>
+      <main className="mt-header">
         <Menu />
       </main>
 
