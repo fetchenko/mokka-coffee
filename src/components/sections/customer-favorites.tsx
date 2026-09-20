@@ -13,19 +13,25 @@ export const customerFavorites: Coffee[] = [
     name: "Cappuccino",
     description: "Rich espresso with velvety steamed milk.",
     price: "$4.50",
-    image: "/assets/cappuccino.webp",
+    image: "/assets/coffee-cappuccino.webp",
   },
   {
     name: "Vanilla Latte",
     description: "Espresso, steamed milk, and vanilla.",
     price: "$5.00",
-    image: "/assets/vanilla-latte.webp",
+    image: "/assets/coffee-vanilla-latte.webp",
   },
   {
     name: "Cold Brew",
     description: "Smooth, slow-steeped coffee served over ice.",
     price: "$4.25",
-    image: "/assets/cold-brew.webp",
+    image: "/assets/coffee-cold-brew.webp",
+  },
+  {
+    name: "Coffee latte",
+    description: "Smooth, slow-steeped coffee served over ice.",
+    price: "$4.25",
+    image: "/assets/coffee-latte.webp",
   },
 ];
 
