@@ -18,17 +18,7 @@ const NAVIGATION_ITEMS = [
   { label: "Contact", href: navigation.contact },
 ] as const;
 
-export type HeaderVariant = "light" | "transparent";
-
-type HeaderProps = {
-  desktopVariant?: HeaderVariant;
-  mobileVariant?: HeaderVariant;
-};
-
-export function Header({
-  desktopVariant = "light",
-  mobileVariant = "light",
-}: HeaderProps) {
+export function Header({ className, transparent }: { className?: string; transparent?: boolean }) {
   const pathname = usePathname();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,21 +28,6 @@ export function Header({
   });
 
   const isHeaderSolid = !isAtTop || isMenuOpen;
-
-  const headerBackground = isHeaderSolid
-    ? "bg-background/80 backdrop-blur-md"
-    : cn(
-        mobileVariant === "light"
-          ? "bg-background/80 backdrop-blur-md"
-          : "bg-transparent",
-        desktopVariant === "light"
-          ? "md:bg-background/80 md:backdrop-blur-md"
-          : "md:bg-transparent md:backdrop-blur-none",
-      );
-
-  const desktopAction = cn(
-    desktopVariant === "transparent" && !isHeaderSolid && "md:bg-transparent",
-  );
 
   const isActive = (href: string) => {
     if (href === navigation.home) {
@@ -74,10 +49,15 @@ export function Header({
         className={cn(
           "text-foreground",
           "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
-          headerBackground,
+          isHeaderSolid
+            ? "bg-background/80 backdrop-blur-md"
+            : transparent
+              ? "bg-transparent"
+              : "bg-background",
+          className,
         )}
       >
-        <Container className="grid h-20 grid-cols-[1fr_auto_1fr] items-center">
+        <Container className="h-header grid grid-cols-[1fr_auto_1fr] items-center">
           <Link
             href={navigation.home}
             aria-label="Mokka Coffee home"
@@ -111,14 +91,7 @@ export function Header({
           </nav>
 
           {/* Desktop CTA */}
-          <Button
-            className={cn(
-              "hidden w-fit justify-self-end md:flex",
-              desktopAction,
-            )}
-            variant="outline"
-            asChild
-          >
+          <Button className="hidden w-fit justify-self-end md:flex" variant="outline" asChild>
             <Link href={navigation.visitUs}>
               <MapPin aria-hidden="true" />
               visit us
@@ -132,7 +105,7 @@ export function Header({
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"
             onClick={() => setIsMenuOpen((open) => !open)}
-            className="col-start-3 justify-self-end bg-transparent md:hidden"
+            className="text-foreground col-start-3 justify-self-end bg-transparent md:hidden"
             size="icon"
           >
             {isMenuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}

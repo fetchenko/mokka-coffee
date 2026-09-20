@@ -7,7 +7,12 @@ import { Hero } from "@/components/sections/hero";
 export default function HomePage() {
   return (
     <>
-      <Header desktopVariant="transparent" />
+      <div className="hidden md:block">
+        <Header className="section-dark" transparent />
+      </div>
+      <div className="block md:hidden">
+        <Header className="section-light" />
+      </div>
 
       <main>
         <Hero />
