@@ -31,7 +31,11 @@ export const Dark: Story = {
       },
     },
   },
-  render: () => <Header className="section-dark" />,
+  render: () => (
+    <div className="h-150 bg-black">
+      <Header className="section-dark" />
+    </div>
+  ),
 };
 
 export const TransparentDesktop: Story = {
@@ -45,7 +49,7 @@ export const TransparentDesktop: Story = {
   },
   render: () => (
     <div className="bg-primary h-120">
-      <Header className="section-dark" transparent />
+      <Header className="section-dark" />
     </div>
   ),
 };

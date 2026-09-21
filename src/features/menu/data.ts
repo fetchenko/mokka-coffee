@@ -176,7 +176,7 @@ export const products: ProductCategories[] = [
         name: "Ham and Cheese Sandwich",
         description: "Smoky ham and melted cheese served on soft, toasted, or pressed bread.",
         price: {
-          amount: 7.5,
+          amount: 750,
           currency: "EUR",
         },
         image:
@@ -189,7 +189,7 @@ export const products: ProductCategories[] = [
         description:
           "Crisp bacon, fresh lettuce, and juicy tomatoes with a light spread of mayonnaise.",
         price: {
-          amount: 8,
+          amount: 800,
           currency: "EUR",
         },
         image:
@@ -202,7 +202,7 @@ export const products: ProductCategories[] = [
         description:
           "Creamy chicken salad with herbs, grapes, or nuts served inside a flaky, buttery croissant.",
         price: {
-          amount: 9.5,
+          amount: 950,
           currency: "EUR",
         },
         image:
@@ -215,7 +215,7 @@ export const products: ProductCategories[] = [
         description:
           "Melted cheese pressed between sliced bread, with optional sourdough, bacon, or pesto.",
         price: {
-          amount: 7,
+          amount: 700,
           currency: "EUR",
         },
         image:

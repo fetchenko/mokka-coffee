@@ -53,9 +53,7 @@ export function Menu() {
 
       <div className="grid gap-4 md:col-span-2 md:grid-cols-2 lg:grid-cols-4">
         {activeCategory.items.map((item) => (
-          <article key={item.name}>
-            <ProductCard product={item} />
-          </article>
+          <ProductCard key={item.name} product={item} />
         ))}
       </div>
     </section>
