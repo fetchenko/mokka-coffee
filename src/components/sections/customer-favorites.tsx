@@ -4,40 +4,17 @@ import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { navigation } from "@/config/navigation";
+import { products } from "@/features/menu/data";
 import { Product } from "@/features/menu/model";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-export const customerFavorites: Product[] = [
-  {
-    id: "cappuccino",
-    name: "Cappuccino",
-    description: "Rich espresso with velvety steamed milk.",
-    price: { amount: 1200, currency: "PLN" },
-    image: "/assets/coffee-cappuccino.webp",
-  },
-  {
-    id: "vanilla-latte",
-    name: "Vanilla Latte",
-    description: "Espresso, steamed milk, and vanilla.",
-    price: { amount: 1300, currency: "PLN" },
-    image: "/assets/coffee-vanilla-latte.webp",
-  },
-  {
-    id: "cold-brew",
-    name: "Cold Brew",
-    description: "Smooth, slow-steeped coffee served over ice.",
-    price: { amount: 1400, currency: "PLN" },
-    image: "/assets/coffee-cold-brew.webp",
-  },
-  {
-    id: "coffee-latte",
-    name: "Coffee Latte",
-    description: "Smooth, slow-steeped coffee served over ice.",
-    price: { amount: 1200, currency: "PLN" },
-    image: "/assets/coffee-latte.webp",
-  },
-];
+const DISPLAY_ITEMS = 4;
+
+export const customerFavorites: Product[] = products
+  .flatMap((category) => category.items)
+  .filter((product) => product.tags?.includes("favourite"))
+  .slice(0, DISPLAY_ITEMS);
 
 export function CustomerFavorites() {
   return (

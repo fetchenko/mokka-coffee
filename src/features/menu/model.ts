@@ -2,6 +2,8 @@ export type Currency = "PLN" | "EUR" | "USD" | "BYN";
 
 export type ProductType = "coffee" | "non-coffee" | "pastries" | "sandwiches";
 
+export type ProductTag = "favourite" | "popular" | "new";
+
 export type Money = {
   amount: number;
   currency: Currency;
@@ -13,6 +15,7 @@ export type Product = {
   description: string;
   price: Money;
   image: string;
+  tags?: ProductTag[];
 };
 
 export type ProductCategories = {

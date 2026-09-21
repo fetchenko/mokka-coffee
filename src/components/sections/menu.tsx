@@ -33,17 +33,19 @@ export function Menu() {
             const isSelected = category.id === selectedCategory;
 
             return (
-              <Button
-                key={category.id}
-                aria-label={category.label}
-                aria-pressed={isSelected}
-                onClick={() => setSelectedCategory(category.id)}
-                size="icon-lg"
-                variant="outline"
-                className={cn(isSelected && "bg-foreground text-background")}
-              >
-                <Icon aria-hidden="true" />
-              </Button>
+              <div key={category.id}>
+                <Button
+                  aria-label={category.label}
+                  aria-pressed={isSelected}
+                  onClick={() => setSelectedCategory(category.id)}
+                  size="icon-lg"
+                  variant="outline"
+                  className={cn(isSelected && "bg-foreground text-background")}
+                >
+                  <Icon aria-hidden="true" />
+                </Button>
+                <p>{category.label}</p>
+              </div>
             );
           })}
         </nav>
