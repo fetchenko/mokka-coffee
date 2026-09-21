@@ -18,7 +18,7 @@ const NAVIGATION_ITEMS = [
   { label: "Contact", href: navigation.contact },
 ] as const;
 
-export function Header({ className, transparent }: { className?: string; transparent?: boolean }) {
+export function Header({ className }: { className?: string }) {
   const pathname = usePathname();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,11 +49,7 @@ export function Header({ className, transparent }: { className?: string; transpa
         className={cn(
           "text-foreground",
           "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
-          isHeaderSolid
-            ? "bg-background/80 backdrop-blur-md"
-            : transparent
-              ? "bg-transparent"
-              : "bg-background",
+          isHeaderSolid ? "bg-background/80 backdrop-blur-md" : "bg-transparent",
           className,
         )}
       >
