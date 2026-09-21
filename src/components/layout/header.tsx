@@ -18,7 +18,7 @@ const NAVIGATION_ITEMS = [
   { label: "Contact", href: navigation.contact },
 ] as const;
 
-export function Header() {
+export function Header({ className }: { className?: string }) {
   const pathname = usePathname();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,12 +47,13 @@ export function Header() {
       <div ref={topSentinelRef} aria-hidden="true" className="absolute top-0 left-0 h-px w-px" />
       <header
         className={cn(
-          "section-dark text-foreground",
+          "text-foreground",
           "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
           isHeaderSolid ? "bg-background/80 backdrop-blur-md" : "bg-transparent",
+          className,
         )}
       >
-        <Container className="grid h-20 grid-cols-[1fr_auto_1fr] items-center">
+        <Container className="h-header grid grid-cols-[1fr_auto_1fr] items-center">
           <Link
             href={navigation.home}
             aria-label="Mokka Coffee home"
@@ -100,7 +101,7 @@ export function Header() {
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"
             onClick={() => setIsMenuOpen((open) => !open)}
-            className="col-start-3 justify-self-end bg-transparent md:hidden"
+            className="text-foreground col-start-3 justify-self-end bg-transparent md:hidden"
             size="icon"
           >
             {isMenuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}

@@ -6,6 +6,14 @@ export default defineConfig({
   test: {
     projects: [
       defineProject({
+        test: {
+          name: "unit",
+          environment: "node",
+          include: ["src/**/*.test.{ts,tsx}"],
+        },
+      }),
+
+      defineProject({
         plugins: [
           storybookTest({
             configDir: ".storybook",

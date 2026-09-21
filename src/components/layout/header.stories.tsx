@@ -20,9 +20,36 @@ export const Default: Story = {
       },
     },
   },
+};
+
+export const Dark: Story = {
+  parameters: {
+    layout: "fullscreen",
+    nextjs: {
+      navigation: {
+        pathname: "/",
+      },
+    },
+  },
   render: () => (
-    <div className="h-20 bg-black">
-      <Header />
+    <div className="h-150 bg-black">
+      <Header className="section-dark" />
+    </div>
+  ),
+};
+
+export const TransparentDesktop: Story = {
+  parameters: {
+    layout: "fullscreen",
+    nextjs: {
+      navigation: {
+        pathname: "/",
+      },
+    },
+  },
+  render: () => (
+    <div className="bg-primary h-120">
+      <Header className="section-dark" />
     </div>
   ),
 };

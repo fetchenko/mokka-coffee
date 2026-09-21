@@ -147,6 +147,8 @@
 
   --color-icon-selected: var(--icon-selected);
   --color-icon-unselected: var(--icon-unselected);
+
+  --spacing-header: calc(var(--spacing) * 20);
 }
 
 body {

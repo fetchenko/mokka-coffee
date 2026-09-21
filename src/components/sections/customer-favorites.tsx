@@ -1,39 +1,20 @@
-import { CoffeeCard } from "@/components/cards/coffee-card";
+import { ProductCard } from "@/components/cards/product-card";
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { navigation } from "@/config/navigation";
-import { Coffee } from "@/features/menu/model";
+import { products } from "@/features/menu/data";
+import { Product } from "@/features/menu/model";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-export const customerFavorites: Coffee[] = [
-  {
-    name: "Cappuccino",
-    description: "Rich espresso with velvety steamed milk.",
-    price: "$4.50",
-    image: "/assets/coffee-cappuccino.webp",
-  },
-  {
-    name: "Vanilla Latte",
-    description: "Espresso, steamed milk, and vanilla.",
-    price: "$5.00",
-    image: "/assets/coffee-vanilla-latte.webp",
-  },
-  {
-    name: "Cold Brew",
-    description: "Smooth, slow-steeped coffee served over ice.",
-    price: "$4.25",
-    image: "/assets/coffee-cold-brew.webp",
-  },
-  {
-    name: "Coffee latte",
-    description: "Smooth, slow-steeped coffee served over ice.",
-    price: "$4.25",
-    image: "/assets/coffee-latte.webp",
-  },
-];
+const DISPLAY_ITEMS = 4;
+
+export const customerFavorites: Product[] = products
+  .flatMap((category) => category.items)
+  .filter((product) => product.tags?.includes("favourite"))
+  .slice(0, DISPLAY_ITEMS);
 
 export function CustomerFavorites() {
   return (
@@ -47,9 +28,9 @@ export function CustomerFavorites() {
         </div>
 
         <ul className="grid gap-4 md:col-span-2 md:grid-cols-2 lg:grid-cols-4">
-          {customerFavorites.map((coffee) => (
-            <li key={coffee.name}>
-              <CoffeeCard coffee={coffee} />
+          {customerFavorites.map((product) => (
+            <li key={product.name}>
+              <ProductCard product={product} />
             </li>
           ))}
         </ul>

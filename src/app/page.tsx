@@ -7,7 +7,7 @@ import { Hero } from "@/components/sections/hero";
 export default function HomePage() {
   return (
     <>
-      <Header />
+      <Header className="section-dark" />
 
       <main>
         <Hero />
