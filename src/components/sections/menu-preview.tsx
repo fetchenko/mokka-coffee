@@ -1,29 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Coffee,
-  Croissant,
-  Sandwich,
-  CupSoda,
-  ArrowRight,
-  type LucideIcon,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { Heading } from "@/components/ui/heading";
+import { CategoryNavigation } from "@/components/menu/category-navigation";
+import { MenuItem } from "@/components/menu/menu-item";
 import { navigation } from "@/config/navigation";
 import { products } from "@/features/menu/data";
-import { formatPrice } from "@/lib/money";
-import type { Product, ProductType } from "@/features/menu/model";
+import type { Product } from "@/features/menu/model";
 import { cn } from "@/lib/utils/cn";
-
-const CATEGORY_ICONS: Record<ProductType, LucideIcon> = {
-  coffee: Coffee,
-  "non-coffee": CupSoda,
-  pastries: Croissant,
-  sandwiches: Sandwich,
-};
 
 const coffee = products.find((category) => category.id === "coffee")!;
 const previewItems = coffee.items.slice(0, 6);
@@ -38,41 +25,6 @@ const galleryItems = [
     .find((category) => category.id === "pastries")
     ?.items.find((product) => product.id === "cinnamon-roll"),
 ].filter((product): product is Product => Boolean(product));
-
-function MenuItem({ product }: { product: Product }) {
-  return (
-    <li className="flex items-baseline justify-between gap-4 border-b border-border py-3 last:border-b-0">
-      <span className="text-sm font-semibold uppercase tracking-[0.08em]">{product.name}</span>
-      <span className="shrink-0 text-sm">{formatPrice(product.price)}</span>
-    </li>
-  );
-}
-
-function CategoryNavigation() {
-  return (
-    <nav aria-label="Menu categories">
-      <ul className="grid grid-cols-4 gap-3 md:gap-6">
-        {products.map((category) => {
-          const Icon = CATEGORY_ICONS[category.id];
-
-          return (
-            <li key={category.id}>
-              <Link
-                href={navigation.menu + "#" + category.id}
-                className="group flex flex-col items-center gap-2 text-center text-xs font-medium uppercase tracking-[0.12em] transition-opacity hover:opacity-70"
-              >
-                <span className="flex size-12 items-center justify-center rounded-full border border-border transition-colors group-hover:bg-secondary">
-                  <Icon aria-hidden="true" className="size-5" />
-                </span>
-                <span>{category.label}</span>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-    </nav>
-  );
-}
 
 function DesktopMenuList({ items }: { items: Product[] }) {
   return (
@@ -116,14 +68,14 @@ export function MenuPreview() {
         </div>
 
         <div className="md:hidden">
-          <CategoryNavigation />
+          <CategoryNavigation mode="link" />
           <div className="mt-10">
             <MobileMenuLists />
           </div>
         </div>
 
         <div className="hidden md:block">
-          <CategoryNavigation />
+          <CategoryNavigation mode="link" />
 
           <div className="mt-12 grid grid-cols-5 gap-8 lg:gap-10">
             <div className="col-span-2">
