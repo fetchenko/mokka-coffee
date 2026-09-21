@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { formatPrice, type Product } from "@/features/menu/model";
+import { type Product } from "@/features/menu/model";
+import { formatPrice } from "@/lib/money";
 
 type ProductCardProps = {
   product: Product;
@@ -21,7 +22,7 @@ export function ProductCard({ product }: ProductCardProps) {
       <div className="flex flex-1 flex-col justify-center gap-1 p-4 md:justify-start">
         <h3 className="text-foreground text-sm font-semibold">{product.name}</h3>
         <p className="text-foreground-muted text-xs">{product.description}</p>
-        <p className="text-primary mt-1 text-xs font-semibold">{formatPrice(product.price)} PLN</p>
+        <p className="text-primary mt-1 text-xs font-semibold">{formatPrice(product.price)}</p>
       </div>
     </article>
   );

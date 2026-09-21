@@ -1,13 +1,10 @@
+import { Money } from "@/lib/money";
+
 export type Currency = "PLN" | "EUR" | "USD" | "BYN";
 
 export type ProductType = "coffee" | "non-coffee" | "pastries" | "sandwiches";
 
 export type ProductTag = "favourite" | "popular" | "new";
-
-export type Money = {
-  amount: number;
-  currency: Currency;
-};
 
 export type Product = {
   id: string;
@@ -23,10 +20,3 @@ export type ProductCategories = {
   label: string;
   items: Product[];
 };
-
-export function formatPrice(price: Money) {
-  return new Intl.NumberFormat("pl-PL", {
-    style: "currency",
-    currency: price.currency,
-  }).format(price.amount / 100);
-}
