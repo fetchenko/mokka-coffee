@@ -44,15 +44,15 @@ export function CategoryNavigation(props: CategoryNavigationProps) {
 
           return (
             <li key={category.id}>
-              <Link
-                href={navigation.menu + "#" + category.id}
-                className="group flex flex-col items-center gap-2 text-center text-xs font-medium tracking-[0.12em] uppercase transition-opacity hover:opacity-70"
-              >
-                <span className="border-border group-hover:bg-secondary flex size-12 items-center justify-center rounded-full border transition-colors">
+              <Button variant="outline" size="icon-lg" asChild>
+                <Link
+                  href={navigation.menu + "#" + category.id}
+                  className="group flex flex-col items-center gap-2 text-center text-xs font-medium tracking-[0.12em] uppercase transition-opacity hover:opacity-70"
+                >
                   <Icon aria-hidden="true" className="size-5" />
-                </span>
-                <span>{category.label}</span>
-              </Link>
+                  <span>{category.label}</span>
+                </Link>
+              </Button>
             </li>
           );
         })}
