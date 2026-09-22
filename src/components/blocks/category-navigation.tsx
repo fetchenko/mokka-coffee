@@ -2,26 +2,26 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils/cn";
 import { navigation } from "@/config/navigation";
-import { products } from "@/features/menu/data";
 import type { ProductType } from "@/features/menu/model";
-import { CATEGORY_ICONS } from "@/components/menu/category-icons";
+import { CategoryItem } from "@/features/menu/category-menu";
 
 type CategoryNavigationProps =
-  | { mode: "link" }
-  | { mode: "select"; selectedCategory: ProductType; onSelect: (category: ProductType) => void };
+  | { categoryItems: CategoryItem[]; mode: "link" }
+  | {
+      categoryItems: CategoryItem[];
+      mode: "select";
+      selectedCategory: ProductType;
+      onSelect: (category: ProductType) => void;
+    };
 
 export function CategoryNavigation(props: CategoryNavigationProps) {
   const isSelectable = props.mode === "select";
 
   return (
     <nav aria-label="Menu categories">
-      <ul
-        className={cn(
-          isSelectable ? "flex justify-around border-b" : "grid grid-cols-4 gap-3 md:gap-6",
-        )}
-      >
-        {products.map((category) => {
-          const Icon = CATEGORY_ICONS[category.id];
+      <ul className={cn(isSelectable ? "flex justify-around" : "grid grid-cols-4 gap-3 md:gap-6")}>
+        {props.categoryItems.map((category) => {
+          const Icon = category.icon;
           const isSelected = isSelectable && category.id === props.selectedCategory;
 
           if (isSelectable) {
@@ -46,9 +46,9 @@ export function CategoryNavigation(props: CategoryNavigationProps) {
             <li key={category.id}>
               <Link
                 href={navigation.menu + "#" + category.id}
-                className="group flex flex-col items-center gap-2 text-center text-xs font-medium uppercase tracking-[0.12em] transition-opacity hover:opacity-70"
+                className="group flex flex-col items-center gap-2 text-center text-xs font-medium tracking-[0.12em] uppercase transition-opacity hover:opacity-70"
               >
-                <span className="flex size-12 items-center justify-center rounded-full border border-border transition-colors group-hover:bg-secondary">
+                <span className="border-border group-hover:bg-secondary flex size-12 items-center justify-center rounded-full border transition-colors">
                   <Icon aria-hidden="true" className="size-5" />
                 </span>
                 <span>{category.label}</span>

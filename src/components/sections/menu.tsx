@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { ProductCard } from "@/components/cards/product-card";
-import { CategoryNavigation } from "@/components/menu/category-navigation";
+import { ProductCard } from "@/components/blocks/product-card";
+import { CategoryNavigation } from "@/components/blocks/category-navigation";
 import { ProductType } from "@/features/menu/model";
 import { products } from "@/features/menu/data";
+import { categoryNavigation } from "@/features/menu/category-menu";
 
 export function Menu() {
   const [selectedCategory, setSelectedCategory] =
@@ -20,6 +21,7 @@ export function Menu() {
     <section>
       <div className="top-header bg-background sticky z-10">
         <CategoryNavigation
+          categoryItems={categoryNavigation}
           mode="select"
           selectedCategory={selectedCategory}
           onSelect={(category) => setSelectedCategory(category as ProductType)}
