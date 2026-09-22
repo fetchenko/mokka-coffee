@@ -33,9 +33,17 @@ export function Footer() {
             </p>
           </div>
 
-          <nav aria-label="Footer navigation" className="flex flex-col items-start">
+          <nav
+            aria-label="Footer navigation"
+            className="flex flex-col items-start"
+          >
             {FOOTER_LINKS.map(({ label, href }) => (
-              <Button key={href} variant="link" asChild className="text-foreground px-0 capitalize">
+              <Button
+                key={href}
+                variant="link"
+                asChild
+                className="text-foreground px-0 capitalize"
+              >
                 <Link href={href}>{label}</Link>
               </Button>
             ))}

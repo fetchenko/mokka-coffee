@@ -35,7 +35,11 @@ export function CustomerFavorites() {
           ))}
         </ul>
 
-        <Button className="md:col-start-2 md:row-start-1 md:self-end" variant="link" asChild>
+        <Button
+          className="md:col-start-2 md:row-start-1 md:self-end"
+          variant="link"
+          asChild
+        >
           <Link href={navigation.menu}>
             View full menu
             <ArrowRight />

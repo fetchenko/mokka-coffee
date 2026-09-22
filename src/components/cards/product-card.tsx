@@ -20,9 +20,13 @@ export function ProductCard({ product }: ProductCardProps) {
       </div>
 
       <div className="flex flex-1 flex-col justify-center gap-1 p-4 md:justify-start">
-        <h3 className="text-foreground text-sm font-semibold">{product.name}</h3>
+        <h3 className="text-foreground text-sm font-semibold">
+          {product.name}
+        </h3>
         <p className="text-foreground-muted text-xs">{product.description}</p>
-        <p className="text-primary mt-1 text-xs font-semibold">{formatPrice(product.price)}</p>
+        <p className="text-primary mt-1 text-xs font-semibold">
+          {formatPrice(product.price)}
+        </p>
       </div>
     </article>
   );

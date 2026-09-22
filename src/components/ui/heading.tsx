@@ -21,6 +21,13 @@ type HeadingProps = ComponentProps<"h1"> &
     as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
   };
 
-export function Heading({ as: Tag = "h2", variant, className, ...props }: HeadingProps) {
-  return <Tag className={cn(headingVariants({ variant }), className)} {...props} />;
+export function Heading({
+  as: Tag = "h2",
+  variant,
+  className,
+  ...props
+}: HeadingProps) {
+  return (
+    <Tag className={cn(headingVariants({ variant }), className)} {...props} />
+  );
 }

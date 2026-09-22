@@ -174,7 +174,8 @@ export const products: ProductCategories[] = [
       {
         id: "ham-and-cheese-sandwich",
         name: "Ham and Cheese Sandwich",
-        description: "Smoky ham and melted cheese served on soft, toasted, or pressed bread.",
+        description:
+          "Smoky ham and melted cheese served on soft, toasted, or pressed bread.",
         price: {
           amount: 750,
           currency: "EUR",
