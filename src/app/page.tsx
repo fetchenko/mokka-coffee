@@ -4,6 +4,7 @@ import { AboutUs } from "@/components/sections/about-us";
 import { CustomerFavorites } from "@/components/sections/customer-favorites";
 import { Hero } from "@/components/sections/hero";
 import { MenuPreview } from "@/components/sections/menu-preview";
+import { Testimonialls } from "@/components/sections/testimonialls";
 
 export default function HomePage() {
   return (
@@ -15,8 +16,8 @@ export default function HomePage() {
         <CustomerFavorites />
         <AboutUs />
         <MenuPreview />
-        {/*         <Testimonialls />
-        <VisitUs /> */}
+        <Testimonialls />
+        {/*      <VisitUs /> */}
       </main>
 
       <Footer />
