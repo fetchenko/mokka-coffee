@@ -8,6 +8,7 @@ import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
+import { cn } from "@/lib/utils/cn";
 
 const testimonials = [
   {
@@ -178,10 +179,10 @@ export function Testimonialls() {
                 className="hover:bg-transparent"
               >
                 <span
-                  className={
-                    "size-4 rounded-full " +
-                    (activeIndex === index ? "bg-primary" : "bg-primary/30")
-                  }
+                  className={cn(
+                    "size-4 rounded-full",
+                    activeIndex === index ? "bg-primary" : "bg-primary/30",
+                  )}
                 />
               </Button>
             ))}
