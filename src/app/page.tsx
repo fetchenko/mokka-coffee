@@ -3,6 +3,7 @@ import { Header } from "@/components/layout/header";
 import { AboutUs } from "@/components/sections/about-us";
 import { CustomerFavorites } from "@/components/sections/customer-favorites";
 import { Hero } from "@/components/sections/hero";
+import { MenuPreview } from "@/components/sections/menu-preview";
 
 export default function HomePage() {
   return (
@@ -13,8 +14,8 @@ export default function HomePage() {
         <Hero />
         <CustomerFavorites />
         <AboutUs />
-        {/* <MenuPreview />
-        <Testimonialls />
+        <MenuPreview />
+        {/*         <Testimonialls />
         <VisitUs /> */}
       </main>
 
