@@ -66,11 +66,15 @@ function TestimonialCard({
   onPrevious,
   onNext,
   showNavigation = false,
+  showPrevious = true,
+  showNext = true,
 }: {
   testimonial: Testimonial;
   onPrevious: () => void;
   onNext: () => void;
   showNavigation?: boolean;
+  showPrevious?: boolean;
+  showNext?: boolean;
 }) {
   return (
     <article className="relative flex min-h-64 flex-col rounded-lg bg-secondary p-6">
@@ -92,27 +96,31 @@ function TestimonialCard({
 
       {showNavigation && (
         <>
-          <Button
-            type="button"
-            variant="secondary"
-            size="icon"
-            aria-label="Previous testimonial"
-            onClick={onPrevious}
-            className="absolute left-3 top-1/2 -translate-y-1/2"
-          >
-            <ArrowLeft aria-hidden />
-          </Button>
+          {showPrevious && (
+            <Button
+              type="button"
+              variant="secondary"
+              size="icon"
+              aria-label="Previous testimonial"
+              onClick={onPrevious}
+              className="absolute left-3 top-1/2 -translate-y-1/2"
+            >
+              <ArrowLeft aria-hidden />
+            </Button>
+          )}
 
-          <Button
-            type="button"
-            variant="secondary"
-            size="icon"
-            aria-label="Next testimonial"
-            onClick={onNext}
-            className="absolute right-3 top-1/2 -translate-y-1/2"
-          >
-            <ArrowRight aria-hidden />
-          </Button>
+          {showNext && (
+            <Button
+              type="button"
+              variant="secondary"
+              size="icon"
+              aria-label="Next testimonial"
+              onClick={onNext}
+              className="absolute right-3 top-1/2 -translate-y-1/2"
+            >
+              <ArrowRight aria-hidden />
+            </Button>
+          )}
         </>
       )}
     </article>
@@ -123,13 +131,11 @@ export function Testimonialls() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const goToNext = () => {
-    setActiveIndex((current) => (current + 1) % testimonials.length);
+    setActiveIndex((current) => Math.min(current + 1, testimonials.length - 1));
   };
 
   const goToPrevious = () => {
-    setActiveIndex(
-      (current) => (current - 1 + testimonials.length) % testimonials.length,
-    );
+    setActiveIndex((current) => Math.max(current - 1, 0));
   };
 
   return (
@@ -145,13 +151,15 @@ export function Testimonialls() {
             className="flex transition-transform duration-300"
             style={{ transform: "translateX(-" + activeIndex * 100 + "%)" }}
           >
-            {testimonials.map((testimonial) => (
+            {testimonials.map((testimonial, index) => (
               <div key={testimonial.name} className="w-full shrink-0">
                 <TestimonialCard
                   testimonial={testimonial}
                   onPrevious={goToPrevious}
                   onNext={goToNext}
                   showNavigation
+                  showPrevious={index > 0}
+                  showNext={index < testimonials.length - 1}
                 />
               </div>
             ))}
