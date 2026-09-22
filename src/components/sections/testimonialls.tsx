@@ -78,13 +78,43 @@ function TestimonialCard({
 }) {
   return (
     <article className="relative flex min-h-64 flex-col rounded-lg bg-secondary p-6">
-      <Rating value={testimonial.rating} />
+      <div className="flex items-center justify-between">
+        <Rating value={testimonial.rating} />
 
-      <Text className="mt-6 max-w-sm text-lg leading-7">
+        {showNavigation && (
+          <div className="flex gap-2">
+            {showPrevious && (
+              <Button
+                type="button"
+                variant="secondary"
+                size="icon"
+                aria-label="Previous testimonial"
+                onClick={onPrevious}
+              >
+                <ArrowLeft aria-hidden />
+              </Button>
+            )}
+
+            {showNext && (
+              <Button
+                type="button"
+                variant="secondary"
+                size="icon"
+                aria-label="Next testimonial"
+                onClick={onNext}
+              >
+                <ArrowRight aria-hidden />
+              </Button>
+            )}
+          </div>
+        )}
+      </div>
+
+      <Text className="mt-3 max-w-sm text-base leading-6">
         {testimonial.body}
       </Text>
 
-      <div className="mt-auto flex items-center gap-3 pt-8">
+      <div className="mt-auto flex items-center gap-3 pt-6">
         <div
           className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground"
           aria-hidden
@@ -93,36 +123,6 @@ function TestimonialCard({
         </div>
         <p className="font-semibold">{testimonial.name}</p>
       </div>
-
-      {showNavigation && (
-        <>
-          {showPrevious && (
-            <Button
-              type="button"
-              variant="secondary"
-              size="icon"
-              aria-label="Previous testimonial"
-              onClick={onPrevious}
-              className="absolute left-3 top-1/2 -translate-y-1/2"
-            >
-              <ArrowLeft aria-hidden />
-            </Button>
-          )}
-
-          {showNext && (
-            <Button
-              type="button"
-              variant="secondary"
-              size="icon"
-              aria-label="Next testimonial"
-              onClick={onNext}
-              className="absolute right-3 top-1/2 -translate-y-1/2"
-            >
-              <ArrowRight aria-hidden />
-            </Button>
-          )}
-        </>
-      )}
     </article>
   );
 }
@@ -179,7 +179,7 @@ export function Testimonialls() {
               >
                 <span
                   className={
-                    "size-2 rounded-full " +
+                    "size-4 rounded-full " +
                     (activeIndex === index ? "bg-primary" : "bg-primary/30")
                   }
                 />
