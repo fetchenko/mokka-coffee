@@ -44,12 +44,18 @@ export function Header({ className }: { className?: string }) {
   return (
     <>
       {/* Sentinel used to detect whether the page is at the top */}
-      <div ref={topSentinelRef} aria-hidden="true" className="absolute top-0 left-0 h-px w-px" />
+      <div
+        ref={topSentinelRef}
+        aria-hidden="true"
+        className="absolute top-0 left-0 h-px w-px"
+      />
       <header
         className={cn(
           "text-foreground",
           "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
-          isHeaderSolid ? "bg-background/80 backdrop-blur-md" : "bg-transparent",
+          isHeaderSolid
+            ? "bg-background/80 backdrop-blur-md"
+            : "bg-transparent",
           className,
         )}
       >
@@ -87,7 +93,11 @@ export function Header({ className }: { className?: string }) {
           </nav>
 
           {/* Desktop CTA */}
-          <Button className="hidden w-fit justify-self-end md:flex" variant="outline" asChild>
+          <Button
+            className="hidden w-fit justify-self-end md:flex"
+            variant="outline"
+            asChild
+          >
             <Link href={navigation.visitUs}>
               <MapPin aria-hidden="true" />
               visit us
@@ -104,7 +114,11 @@ export function Header({ className }: { className?: string }) {
             className="text-foreground col-start-3 justify-self-end bg-transparent md:hidden"
             size="icon"
           >
-            {isMenuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
+            {isMenuOpen ? (
+              <X aria-hidden="true" />
+            ) : (
+              <Menu aria-hidden="true" />
+            )}
           </Button>
         </Container>
 
@@ -127,7 +141,10 @@ export function Header({ className }: { className?: string }) {
                 const active = isActive(item.href);
 
                 return (
-                  <li key={item.href} className="border-foreground/10 border-b last:border-0">
+                  <li
+                    key={item.href}
+                    className="border-foreground/10 border-b last:border-0"
+                  >
                     <Link
                       href={item.href}
                       onClick={() => setIsMenuOpen(false)}

@@ -57,7 +57,9 @@ export function Hero() {
         <div className="max-w-xl">
           <h1 className="font-display text-[clamp(3.5rem,14vw,5.5rem)] leading-[1.1] font-semibold tracking-[-0.045em] lg:text-[clamp(4.5rem,6vw,6rem)]">
             <span className="block">Good days</span>
-            <span className="text-primary block leading-[0.88]">start with coffee</span>
+            <span className="text-primary block leading-[0.88]">
+              start with coffee
+            </span>
           </h1>
 
           <p className="text-foreground/85 mt-6 max-w-2xs text-base leading-relaxed sm:text-lg md:max-w-xs">

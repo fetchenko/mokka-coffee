@@ -41,8 +41,9 @@ export function AboutUs() {
         />
         <div>
           <Text variant="body">
-            Mokka is a place where passion for coffee meets good vibes. We select the best beans
-            from around the world and brew each cup with care. Come in, slow down and enjoy.
+            Mokka is a place where passion for coffee meets good vibes. We
+            select the best beans from around the world and brew each cup with
+            care. Come in, slow down and enjoy.
           </Text>
           <Button asChild>
             <Link href={sections.visitUs}>Visit us</Link>

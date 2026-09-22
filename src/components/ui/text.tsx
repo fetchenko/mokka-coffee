@@ -20,6 +20,13 @@ type TextProps = ComponentProps<"p"> &
     as?: "p" | "span" | "div";
   };
 
-export function Text({ as: Tag = "p", variant, className, ...props }: TextProps) {
-  return <Tag className={cn(textVariants({ variant }), className)} {...props} />;
+export function Text({
+  as: Tag = "p",
+  variant,
+  className,
+  ...props
+}: TextProps) {
+  return (
+    <Tag className={cn(textVariants({ variant }), className)} {...props} />
+  );
 }
