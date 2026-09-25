@@ -1,4 +1,4 @@
-import { headers } from "next/headers";
+import { cookies, headers } from "next/headers";
 
 import { defaultLocale, isLocale, type Locale } from "./config";
 
@@ -11,42 +11,19 @@ function localeFromLanguageTag(languageTag: string): Locale | null {
 function getLocaleFromAcceptLanguage(
   acceptLanguage: string | null,
 ): Locale | null {
-  if (!acceptLanguage) {
-    return null;
-  }
+  const language = acceptLanguage?.split(",")[0];
 
-  const languages = acceptLanguage
-    .split(",")
-    .map((part, index) => {
-      const [languageTag, ...parameters] = part.trim().split(";");
-      const qualityParameter = parameters.find((parameter) =>
-        parameter.trim().startsWith("q="),
-      );
-      const quality = qualityParameter
-        ? Number.parseFloat(qualityParameter.trim().slice(2))
-        : 1;
-
-      return {
-        languageTag,
-        quality: Number.isNaN(quality) ? 0 : quality,
-        index,
-      };
-    })
-    .filter(({ quality }) => quality > 0)
-    .sort((a, b) => b.quality - a.quality || a.index - b.index);
-
-  for (const { languageTag } of languages) {
-    const locale = localeFromLanguageTag(languageTag);
-
-    if (locale) {
-      return locale;
-    }
-  }
-
-  return null;
+  return language ? localeFromLanguageTag(language) : null;
 }
 
 export async function getLocale(): Promise<Locale> {
+  const cookieStore = await cookies();
+  const savedLocale = cookieStore.get("locale")?.value;
+
+  if (savedLocale && isLocale(savedLocale)) {
+    return savedLocale;
+  }
+
   const requestHeaders = await headers();
 
   return (
