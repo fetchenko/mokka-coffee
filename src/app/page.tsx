@@ -11,9 +11,9 @@ import { VisitUs } from "@/components/sections/visit-us";
 export default function HomePage() {
   return (
     <>
-      <TranslationWrapper>
-        {({ dictionary }) => (
-          <Header className="section-dark" dictionary={dictionary.header} />
+      <TranslationWrapper section="header">
+        {({ translations }) => (
+          <Header className="section-dark" dictionary={translations} />
         )}
       </TranslationWrapper>
 
