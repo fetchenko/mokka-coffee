@@ -1,5 +1,6 @@
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { TranslationWrapper } from "@/components/i18n/translation-wrapper";
 import { AboutUs } from "@/components/sections/about-us";
 import { CustomerFavorites } from "@/components/sections/customer-favorites";
 import { Hero } from "@/components/sections/hero";
@@ -10,7 +11,11 @@ import { VisitUs } from "@/components/sections/visit-us";
 export default function HomePage() {
   return (
     <>
-      <Header className="section-dark" />
+      <TranslationWrapper section="header">
+        {({ translations }) => (
+          <Header className="section-dark" dictionary={translations} />
+        )}
+      </TranslationWrapper>
 
       <main>
         <Hero />
