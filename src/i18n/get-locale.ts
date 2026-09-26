@@ -1,26 +1,33 @@
 import { cookies, headers } from "next/headers";
 
-import { defaultLocale, isLocale, type Locale } from "./config";
+import { defaultLocale, isSupportedLocale, type Locale } from "./config";
 
-function localeFromLanguageTag(languageTag: string): Locale | null {
-  const language = languageTag.trim().toLowerCase().split("-")[0];
+export function getLocaleFromAcceptLanguage(
+  acceptLanguage: string | null,
+): Locale | null {
+  if (!acceptLanguage) return null;
 
-  return isLocale(language) ? language : null;
+  for (const languageRange of acceptLanguage.split(",")) {
+    const language = languageRange
+      .split(";")[0]
+      .trim()
+      .toLowerCase()
+      .split("-")[0];
+
+    return isSupportedLocale(language) ? language : null;
+  }
+
+  return null;
 }
 
 export async function getLocale(): Promise<Locale> {
   const cookieLocale = (await cookies()).get("locale")?.value;
 
-  if (cookieLocale && isLocale(cookieLocale)) {
+  if (isSupportedLocale(cookieLocale)) {
     return cookieLocale;
   }
 
-  const browserLocale = (await headers())
-    .get("accept-language")
-    ?.split(",")[0];
+  const acceptLanguage = (await headers()).get("accept-language");
 
-  return (
-    (browserLocale && localeFromLanguageTag(browserLocale)) ??
-    defaultLocale
-  );
+  return getLocaleFromAcceptLanguage(acceptLanguage) ?? defaultLocale;
 }
