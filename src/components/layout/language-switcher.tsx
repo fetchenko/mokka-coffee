@@ -12,7 +12,10 @@ type LanguageSwitcherProps = {
   dictionary: Dictionary["language"];
 };
 
-export function LanguageSwitcher({ locale, dictionary }: LanguageSwitcherProps) {
+export function LanguageSwitcher({
+  locale,
+  dictionary,
+}: LanguageSwitcherProps) {
   const router = useRouter();
 
   async function handleChange(event: ChangeEvent<HTMLSelectElement>) {
@@ -28,7 +31,7 @@ export function LanguageSwitcher({ locale, dictionary }: LanguageSwitcherProps) 
       <select
         value={locale}
         onChange={handleChange}
-        className="rounded-md border bg-background px-2 py-1"
+        className="bg-background rounded-md border px-2 py-1"
         aria-label={dictionary.selectAriaLabel}
       >
         {supportedLocales.map((item) => (
