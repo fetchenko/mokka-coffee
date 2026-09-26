@@ -8,7 +8,7 @@ import { navigation, socialLinks } from "@/config/navigation";
 import { getLocale } from "@/i18n/get-locale";
 
 const FOOTER_DESCRIPTION = "Good coffee, good people, good days";
-const FOOTER_COPYRIGHT = `2026 Mokka Coffee. All rights reserved`;
+const FOOTER_COPYRIGHT = `Mokka Coffee. All rights reserved`;
 
 const FOOTER_LINKS = [
   { label: "Home", href: navigation.home },
@@ -67,9 +67,12 @@ export async function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4 text-muted-foreground self-end">
+          <div className="text-muted-foreground flex flex-col justify-between gap-4">
             <LanguageSwitcher locale={locale} />
-            <small>{FOOTER_COPYRIGHT}</small>
+            <small>
+              {`${new Date().getFullYear()} `}
+              {FOOTER_COPYRIGHT}
+            </small>
           </div>
         </div>
       </Container>
