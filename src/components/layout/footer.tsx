@@ -1,12 +1,14 @@
 import { Container } from "@/components/layout/container";
+import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/ui/logo";
 import { Camera, FileUser, Turntable } from "lucide-react";
 import Link from "next/link";
 import { navigation, socialLinks } from "@/config/navigation";
+import { getLocale } from "@/i18n/get-locale";
 
 const FOOTER_DESCRIPTION = "Good coffee, good people, good days";
-const FOOTER_COPYRIGHT = `${new Date().getFullYear()} Mokka Coffee. All rights reserved`;
+const FOOTER_COPYRIGHT = `2026 Mokka Coffee. All rights reserved`;
 
 const FOOTER_LINKS = [
   { label: "Home", href: navigation.home },
@@ -21,7 +23,9 @@ const SOCIAL_LINKS = [
   { label: "Spotify", href: socialLinks.spotify, icon: Turntable },
 ] as const;
 
-export function Footer() {
+export async function Footer() {
+  const locale = await getLocale();
+
   return (
     <footer className="section-dark bg-background text-foreground">
       <Container>
@@ -63,7 +67,8 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="text-muted-foreground self-end">
+          <div className="flex flex-col gap-4 text-muted-foreground self-end">
+            <LanguageSwitcher locale={locale} />
             <small>{FOOTER_COPYRIGHT}</small>
           </div>
         </div>
