@@ -14,7 +14,9 @@ export function getLocaleFromAcceptLanguage(
       .toLowerCase()
       .split("-")[0];
 
-    return isSupportedLocale(language) ? language : null;
+    if (isSupportedLocale(language)) {
+      return language;
+    }
   }
 
   return null;
