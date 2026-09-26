@@ -1,9 +1,17 @@
 export const dictionary = {
-  navigation: {
-    home: "Home",
-    menu: "Menu",
-    about: "About",
-    contact: "Contact",
+  header: {
+    navigation: {
+      home: "Home",
+      menu: "Menu",
+      about: "About",
+      contact: "Contact",
+    },
+    visitUs: "Visit Us",
+    homeAriaLabel: "Mokka Coffee home",
+    mainNavigation: "Main navigation",
+    mobileNavigation: "Mobile navigation",
+    openNavigation: "Open navigation",
+    closeNavigation: "Close navigation",
   },
   footer: {
     description: "Good coffee, good people, good days",
