@@ -159,7 +159,7 @@ export function Header({ className, dictionary }: HeaderProps) {
                         active && "underline underline-offset-4",
                       )}
                     >
-                      {item.label}
+                      {dictionary.navigation[item.key]}
                     </Link>
                   </li>
                 );
