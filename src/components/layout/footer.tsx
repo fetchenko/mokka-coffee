@@ -24,7 +24,7 @@ export function Footer() {
   return (
     <TranslationWrapper>
       {({ locale, dictionary }) => (
-    <footer className="section-dark bg-background text-foreground">
+        <footer className="section-dark bg-background text-foreground">
       <Container>
         <div className="grid gap-8 py-12 sm:grid-cols-4">
           <div>
