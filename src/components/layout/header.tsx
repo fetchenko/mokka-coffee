@@ -10,15 +10,21 @@ import { Button } from "@/components/ui/button";
 import { navigation } from "@/config/navigation";
 import { useInView } from "react-intersection-observer";
 import { Logo } from "@/components/ui/logo";
+import type { Dictionary } from "@/i18n/dictionaries/en";
 
 const NAVIGATION_ITEMS = [
-  { label: "Home", href: navigation.home },
-  { label: "Menu", href: navigation.menu },
-  { label: "About", href: navigation.about },
-  { label: "Contact", href: navigation.contact },
+  { label: dictionary.navigation.home, href: navigation.home },
+  { label: dictionary.navigation.menu, href: navigation.menu },
+  { label: dictionary.navigation.about, href: navigation.about },
+  { label: dictionary.navigation.contact, href: navigation.contact },
 ] as const;
 
-export function Header({ className }: { className?: string }) {
+type HeaderProps = {
+  className?: string;
+  dictionary: Dictionary["header"];
+};
+
+export function Header({ className, dictionary }: HeaderProps) {
   const pathname = usePathname();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -62,14 +68,14 @@ export function Header({ className }: { className?: string }) {
         <Container className="h-header grid grid-cols-[1fr_auto_1fr] items-center">
           <Link
             href={navigation.home}
-            aria-label="Mokka Coffee home"
+            aria-label={dictionary.homeAriaLabel}
             className="justify-self-start"
           >
             <Logo />
           </Link>
 
           {/* Desktop navigation */}
-          <nav aria-label="Main navigation" className="hidden md:block">
+          <nav aria-label={dictionary.mainNavigation} className="hidden md:block">
             <ul className="flex items-center gap-8">
               {NAVIGATION_ITEMS.map((item) => {
                 const active = isActive(item.href);
@@ -107,7 +113,7 @@ export function Header({ className }: { className?: string }) {
           {/* Mobile menu button */}
           <Button
             type="button"
-            aria-label={isMenuOpen ? "Close navigation" : "Open navigation"}
+            aria-label={isMenuOpen ? dictionary.closeNavigation : dictionary.openNavigation}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"
             onClick={() => setIsMenuOpen((open) => !open)}
@@ -133,7 +139,7 @@ export function Header({ className }: { className?: string }) {
           )}
         >
           <nav
-            aria-label="Mobile navigation"
+            aria-label={dictionary.mobileNavigation}
             className="bg-background/80 px-6 py-6 backdrop-blur-md"
           >
             <ul className="flex flex-col">
