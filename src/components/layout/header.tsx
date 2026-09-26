@@ -13,10 +13,10 @@ import { Logo } from "@/components/ui/logo";
 import type { Dictionary } from "@/i18n/dictionaries/en";
 
 const NAVIGATION_ITEMS = [
-  { label: dictionary.navigation.home, href: navigation.home },
-  { label: dictionary.navigation.menu, href: navigation.menu },
-  { label: dictionary.navigation.about, href: navigation.about },
-  { label: dictionary.navigation.contact, href: navigation.contact },
+  { key: "home", href: navigation.home },
+  { key: "menu", href: navigation.menu },
+  { key: "about", href: navigation.about },
+  { key: "contact", href: navigation.contact },
 ] as const;
 
 type HeaderProps = {
@@ -90,7 +90,7 @@ export function Header({ className, dictionary }: HeaderProps) {
                         active && "underline underline-offset-4",
                       )}
                     >
-                      {item.label}
+                      {dictionary.navigation[item.key]}
                     </Link>
                   </li>
                 );
@@ -106,7 +106,7 @@ export function Header({ className, dictionary }: HeaderProps) {
           >
             <Link href={navigation.visitUs}>
               <MapPin aria-hidden="true" />
-              visit us
+              {dictionary.visitUs}
             </Link>
           </Button>
 
@@ -173,7 +173,7 @@ export function Header({ className, dictionary }: HeaderProps) {
                     className="w-full"
                   >
                     <MapPin aria-hidden="true" />
-                    Visit Us
+                    {dictionary.visitUs}
                   </Link>
                 </Button>
               </li>
