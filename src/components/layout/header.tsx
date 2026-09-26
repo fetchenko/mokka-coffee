@@ -75,7 +75,10 @@ export function Header({ className, dictionary }: HeaderProps) {
           </Link>
 
           {/* Desktop navigation */}
-          <nav aria-label={dictionary.mainNavigation} className="hidden md:block">
+          <nav
+            aria-label={dictionary.mainNavigation}
+            className="hidden md:block"
+          >
             <ul className="flex items-center gap-8">
               {NAVIGATION_ITEMS.map((item) => {
                 const active = isActive(item.href);
@@ -90,7 +93,7 @@ export function Header({ className, dictionary }: HeaderProps) {
                         active && "underline underline-offset-4",
                       )}
                     >
-                      {dictionary.navigation[item.key]}
+                      {dictionary.navigationItems[item.key]}
                     </Link>
                   </li>
                 );
@@ -113,7 +116,11 @@ export function Header({ className, dictionary }: HeaderProps) {
           {/* Mobile menu button */}
           <Button
             type="button"
-            aria-label={isMenuOpen ? dictionary.closeNavigation : dictionary.openNavigation}
+            aria-label={
+              isMenuOpen
+                ? dictionary.closeNavigation
+                : dictionary.openNavigation
+            }
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"
             onClick={() => setIsMenuOpen((open) => !open)}
@@ -159,7 +166,7 @@ export function Header({ className, dictionary }: HeaderProps) {
                         active && "underline underline-offset-4",
                       )}
                     >
-                      {dictionary.navigation[item.key]}
+                      {dictionary.navigationItems[item.key]}
                     </Link>
                   </li>
                 );

@@ -1,11 +1,13 @@
+const navigationItems = {
+  home: "Home",
+  menu: "Menu",
+  about: "About",
+  contact: "Contact",
+};
+
 export const dictionary = {
   header: {
-    navigation: {
-      home: "Home",
-      menu: "Menu",
-      about: "About",
-      contact: "Contact",
-    },
+    navigationItems,
     visitUs: "Visit Us",
     homeAriaLabel: "Mokka Coffee home",
     mainNavigation: "Main navigation",
@@ -14,6 +16,7 @@ export const dictionary = {
     closeNavigation: "Close navigation",
   },
   footer: {
+    navigationItems,
     description: "Good coffee, good people, good days",
     navigation: "Footer navigation",
     followUs: "Follow us",

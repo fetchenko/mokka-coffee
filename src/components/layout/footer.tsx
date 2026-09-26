@@ -44,7 +44,7 @@ export function Footer() {
                     asChild
                     className="text-foreground px-0 capitalize"
                   >
-                    <Link href={href}>{key}</Link>
+                    <Link href={href}>{translations.navigationItems[key]}</Link>
                   </Button>
                 ))}
               </nav>

@@ -1,11 +1,12 @@
+const navigationItems = {
+  home: "Strona główna",
+  menu: "Menu",
+  about: "O nas",
+  contact: "Kontakt",
+};
 export const dictionary = {
   header: {
-    navigation: {
-      home: "Strona główna",
-      menu: "Menu",
-      about: "O nas",
-      contact: "Kontakt",
-    },
+    navigationItems,
     visitUs: "Odwiedź nas",
     homeAriaLabel: "Strona główna Mokka Coffee",
     mainNavigation: "Główna nawigacja",
@@ -14,6 +15,7 @@ export const dictionary = {
     closeNavigation: "Zamknij nawigację",
   },
   footer: {
+    navigationItems,
     description: "Dobra kawa, dobrzy ludzie, dobre dni",
     navigation: "Nawigacja stopki",
     followUs: "Obserwuj nas",
