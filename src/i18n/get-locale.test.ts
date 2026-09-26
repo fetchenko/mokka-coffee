@@ -25,11 +25,13 @@ describe("isSupportedLocale", () => {
 
 describe("getLocaleFromAcceptLanguage", () => {
   it.each([
-    ["en-US", "en"],
-    ["pl-PL", "pl"],
-    ["ru-RU", "ru"],
-    ["EN-us", "en"],
-    ["en-US,en;q=0.9", "en"],
+    ["de", null],
+    ["en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7", "en"],
+    ["da, en-gb;q=0.8, en;q=0.7", "en"],
+    ["fr-CH, fr;q=0.9, en;q=0.8, de;q=0.7, *;q=0.5", "en"],
+    ["pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7", "pl"],
+    ["ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7", "ru"],
+    ["EN-us,en;q=0.9", "en"],
   ])("returns %s for %s", (acceptLanguage, expected) => {
     expect(getLocaleFromAcceptLanguage(acceptLanguage)).toBe(expected);
   });
