@@ -4,9 +4,7 @@ export type Locale = (typeof supportedLocales)[number];
 
 export const defaultLocale: Locale = "en";
 
-export function isSupportedLocale(
-  value: string | null | undefined,
-): value is Locale {
+export function isSupportedLocale(value: string | undefined): value is Locale {
   if (!value) return false;
 
   return supportedLocales.includes(value as Locale);
