@@ -178,7 +178,7 @@ export const products: ProductCategories[] = [
           "Smoky ham and melted cheese served on soft, toasted, or pressed bread.",
         price: {
           amount: 750,
-          currency: "EUR",
+          currency: "PLN",
         },
         image:
           "https://images.unsplash.com/photo-1695304777030-167556e5ecf3?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -191,7 +191,7 @@ export const products: ProductCategories[] = [
           "Crisp bacon, fresh lettuce, and juicy tomatoes with a light spread of mayonnaise.",
         price: {
           amount: 800,
-          currency: "EUR",
+          currency: "PLN",
         },
         image:
           "https://images.unsplash.com/photo-1705538363245-03fe613f9eb9?q=80&w=839&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -204,7 +204,7 @@ export const products: ProductCategories[] = [
           "Creamy chicken salad with herbs, grapes, or nuts served inside a flaky, buttery croissant.",
         price: {
           amount: 950,
-          currency: "EUR",
+          currency: "PLN",
         },
         image:
           "https://images.unsplash.com/photo-1653964158593-716a5a01de7c?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -217,7 +217,7 @@ export const products: ProductCategories[] = [
           "Melted cheese pressed between sliced bread, with optional sourdough, bacon, or pesto.",
         price: {
           amount: 700,
-          currency: "EUR",
+          currency: "PLN",
         },
         image:
           "https://images.unsplash.com/photo-1751199592465-f142293a8cc6?q=80&w=884&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
