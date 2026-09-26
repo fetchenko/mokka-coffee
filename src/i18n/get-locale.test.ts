@@ -34,6 +34,10 @@ describe("getLocaleFromAcceptLanguage", () => {
     expect(getLocaleFromAcceptLanguage(acceptLanguage)).toBe(expected);
   });
 
+  it("returns the first supported language", () => {
+    expect(getLocaleFromAcceptLanguage("de-DE,en-US;q=0.9")).toBe("en");
+  });
+
   it.each([null, "", "de-DE"])(
     "returns null for %s",
     (acceptLanguage) => {
