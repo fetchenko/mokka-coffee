@@ -1,18 +1,18 @@
 export const testimonials: Testimonial[] = [
   {
-    body: "the best coffeee in town! cozy place and amazing vibes.",
+    bodyKey: "anna",
     name: "Anna K.",
     initials: "AK",
     rating: 5.0,
   },
   {
-    body: "i come here every morning. and delicious pastries.",
+    bodyKey: "magda",
     name: "Magda L.",
     initials: "ML",
     rating: 4.8,
   },
   {
-    body: "great coffee, friendly service, and a lovely atmosphere.",
+    bodyKey: "julia",
     name: "Julia M.",
     initials: "JM",
     rating: 4.5,
@@ -20,8 +20,14 @@ export const testimonials: Testimonial[] = [
 ];
 
 export type Testimonial = {
-  body: string;
+  bodyKey: keyof typeof testimonialKeys;
   name: string;
   initials: string;
   rating: number;
 };
+
+const testimonialKeys = {
+  anna: "anna",
+  magda: "magda",
+  julia: "julia",
+} as const;
