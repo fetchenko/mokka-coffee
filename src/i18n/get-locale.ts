@@ -1,4 +1,5 @@
 import { cookies, headers } from "next/headers";
+import { cache } from "react";
 
 import { defaultLocale, isSupportedLocale, type Locale } from "./config";
 
@@ -36,7 +37,7 @@ export function getLocaleFromAcceptLanguage(
   return null;
 }
 
-export async function getLocale(): Promise<Locale> {
+export const getLocale = cache(async (): Promise<Locale> => {
   const cookieLocale = (await cookies()).get("locale")?.value;
 
   if (isSupportedLocale(cookieLocale)) {
@@ -46,4 +47,4 @@ export async function getLocale(): Promise<Locale> {
   const acceptLanguage = (await headers()).get("accept-language");
 
   return getLocaleFromAcceptLanguage(acceptLanguage) ?? defaultLocale;
-}
+});
