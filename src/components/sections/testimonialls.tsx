@@ -14,7 +14,7 @@ import type { Dictionary } from "@/i18n/dictionaries/en";
 const DISPLAY_ITEMS = 2;
 
 type TestimonialsProps = {
-  translations: Dictionary["testimonials"]["items"];
+  translations: Dictionary["testimonials"];
 };
 
 export function Testimonialls({ translations }: TestimonialsProps) {
