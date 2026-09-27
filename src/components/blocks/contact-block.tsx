@@ -1,3 +1,4 @@
+import type { Dictionary } from "@/i18n/dictionaries/en";
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
@@ -5,15 +6,7 @@ import { Text } from "@/components/ui/text";
 export function ContactBlock({
   translations,
 }: {
-  translations: {
-    contactEyebrow: string;
-    contactTitle: string;
-    contactDescription: string;
-    nameLabel: string;
-    emailLabel: string;
-    messageLabel: string;
-    sendMessage: string;
-  };
+  translations: Dictionary["visitUs"];
 }) {
   return (
     <div>
