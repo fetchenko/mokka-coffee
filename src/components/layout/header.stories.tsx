@@ -3,11 +3,12 @@ import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { withTranslations } from "../../../.storybook/with-translations";
 import { Header } from "./header";
 
+const StorybookHeader = withTranslations(Header, "header");
+
 const meta = {
   title: "Components/Header",
-  component: Header,
-  decorators: [withTranslations("header")],
-} satisfies Meta<typeof Header>;
+  component: StorybookHeader,
+} satisfies Meta<typeof StorybookHeader>;
 
 export default meta;
 
@@ -52,7 +53,7 @@ export const Dark: Story = {
   },
   render: (args) => (
     <div className="h-150 bg-black">
-      <Header {...args} className="section-dark" />
+      <StorybookHeader {...args} className="section-dark" />
     </div>
   ),
 };
@@ -71,7 +72,7 @@ export const TransparentDesktop: Story = {
   },
   render: (args) => (
     <div className="bg-primary h-120">
-      <Header {...args} className="section-dark" />
+      <StorybookHeader {...args} className="section-dark" />
     </div>
   ),
 };
