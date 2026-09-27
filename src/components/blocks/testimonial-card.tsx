@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Rating } from "@/components/ui/rating";
 import { Text } from "@/components/ui/text";
-import { Testimonial } from "@/features/menu/testimonials";
+import { LocalizedTestimonial } from "@/features/menu/testimonials";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export function TestimonialCard({
@@ -11,13 +11,17 @@ export function TestimonialCard({
   showNavigation = false,
   showPrevious = true,
   showNext = true,
+  previousLabel = "Previous testimonial",
+  nextLabel = "Next testimonial",
 }: {
-  testimonial: Testimonial;
+  testimonial: LocalizedTestimonial;
   onPrevious: () => void;
   onNext: () => void;
   showNavigation?: boolean;
   showPrevious?: boolean;
   showNext?: boolean;
+  previousLabel?: string;
+  nextLabel?: string;
 }) {
   return (
     <article className="bg-secondary relative flex min-h-64 flex-col rounded-lg p-6">
@@ -31,7 +35,7 @@ export function TestimonialCard({
                 type="button"
                 variant="secondary"
                 size="icon"
-                aria-label="Previous testimonial"
+                aria-label={previousLabel}
                 onClick={onPrevious}
               >
                 <ArrowLeft aria-hidden />
@@ -43,7 +47,7 @@ export function TestimonialCard({
                 type="button"
                 variant="secondary"
                 size="icon"
-                aria-label="Next testimonial"
+                aria-label={nextLabel}
                 onClick={onNext}
               >
                 <ArrowRight aria-hidden />
