@@ -16,6 +16,12 @@ const heroFeatures = {
   localAndWarm: "Local & warm",
 };
 
+const aboutUsStats = {
+  arabicaBeans: "Arabica beans",
+  happyCustomers: "Happy customers",
+  yearsInTown: "Years in town",
+};
+
 export const dictionary = {
   header: {
     navigationItems,
@@ -49,6 +55,14 @@ export const dictionary = {
     menuCta: "See our menu",
     visitCta: "Visit us",
     features: heroFeatures,
+  },
+  aboutUs: {
+    eyebrow: "About us",
+    title: "More than just coffee",
+    imageAlt: "Inside Mokka",
+    description: "Mokka is a place where passion for coffee meets good vibes. We select the best beans from around the world and brew each cup with care. Come in, slow down and enjoy.",
+    visitCta: "Visit us",
+    stats: aboutUsStats,
   },
 } as const;
 
