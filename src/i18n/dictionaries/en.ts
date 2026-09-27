@@ -22,6 +22,12 @@ const aboutUsStats = {
   yearsInTown: "Years in town",
 };
 
+const testimonialTranslations = {
+  anna: "The best coffee in town! Cozy place and amazing vibes.",
+  magda: "I come here every morning. And delicious pastries.",
+  julia: "Great coffee, friendly service, and a lovely atmosphere.",
+};
+
 export const dictionary = {
   header: {
     navigationItems,
@@ -63,6 +69,14 @@ export const dictionary = {
     description: "Mokka is a place where passion for coffee meets good vibes. We select the best beans from around the world and brew each cup with care. Come in, slow down and enjoy.",
     visitCta: "Visit us",
     stats: aboutUsStats,
+  },
+  testimonials: {
+    eyebrow: "Our guests love us",
+    title: "What people say",
+    previous: "Previous testimonial",
+    next: "Next testimonial",
+    show: "Show testimonial",
+    items: testimonialTranslations,
   },
 } as const;
 
