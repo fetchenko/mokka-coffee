@@ -134,5 +134,17 @@ export const dictionary = {
       "grilled-cheese": { name: "Грилд-чиз", description: "Расплавленный сыр между ломтиками хлеба, с опциональными беконом или песто." },
     },
     navigationLabel: "Категории меню",
+      preview: {
+      eyebrow: "Меню",
+      title: "Что-то для каждого",
+      description: "Тщательно отобранные зёрна в каждой чашке.",
+      viewFullMenu: "Посмотреть всё меню",
+      imageAlt: "Кофе и выпечка",
+    },
+    favorites: {
+      eyebrow: "Наши фавориты",
+      title: "Выбор гостей",
+      viewFullMenu: "Посмотреть всё меню",
+    },
   },
 } as const;
