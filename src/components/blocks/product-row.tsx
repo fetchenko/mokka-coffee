@@ -2,9 +2,8 @@ import Image from "next/image";
 
 import type { Product } from "@/features/menu/model";
 import { formatPrice, type Currency } from "@/lib/money";
-import type { ProductTranslation } from "@/components/blocks/product-card";
 
-type ProductRowProps = {
+type ProductTranslation = {\n  name: string;\n  description: string;\n};\n\ntype ProductRowProps = {
   product: Product;
   translation: ProductTranslation;
   currency: Currency;
