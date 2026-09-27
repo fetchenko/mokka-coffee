@@ -5,12 +5,16 @@ const navigationItems = {
   contact: "Контакты",
 };
 
-const heroFeatures = [
-  { label: "Спешелти кофе", description: "Зёрна высшего качества" },
-  { label: "Экологичность", description: "Забота об окружающей среде" },
-  { label: "С любовью", description: "Для вас" },
-  { label: "Сообщество", description: "Местное и тёплое" },
-];
+const heroFeatures = {
+  specialtyCoffee: "Спешелти кофе",
+  topQualityBeans: "Зёрна высшего качества",
+  sustainable: "Экологичность",
+  ecoFriendly: "Забота об окружающей среде",
+  madeWithLove: "С любовью",
+  forYou: "Для вас",
+  community: "Сообщество",
+  localAndWarm: "Местное и тёплое",
+};
 
 export const dictionary = {
   header: {
