@@ -188,4 +188,3 @@ export const dictionary = {
   },
 } as const;
 
-export type Dictionary = typeof dictionary;
