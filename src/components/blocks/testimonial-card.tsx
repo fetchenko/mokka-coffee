@@ -71,7 +71,9 @@ export function TestimonialCard({
         >
           {translations.items[testimonial.initialsKey]}
         </div>
-        <p className="font-semibold">{translations.items[testimonial.nameKey]}</p>
+        <p className="font-semibold">
+          {translations.items[testimonial.nameKey]}
+        </p>
       </div>
     </article>
   );

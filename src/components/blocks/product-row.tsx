@@ -16,11 +16,7 @@ type ProductRowProps = {
   locale: Locale;
 };
 
-export function ProductRow({
-  product,
-  translation,
-  locale,
-}: ProductRowProps) {
+export function ProductRow({ product, translation, locale }: ProductRowProps) {
   const currency = getCurrencyForLocale(locale);
 
   return (

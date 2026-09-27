@@ -29,7 +29,8 @@ const testimonialTranslations = {
   magdaInitials: "ML",
   juliaName: "Julia M.",
   juliaInitials: "JM",
-  annaReview: "Najlepsza kawa w mieście! Przytulne miejsce i świetna atmosfera.",
+  annaReview:
+    "Najlepsza kawa w mieście! Przytulne miejsce i świetna atmosfera.",
   magdaReview: "Przychodzę tutaj każdego ranka. I mają pyszne wypieki.",
   juliaReview: "Świetna kawa, miła obsługa i cudowna atmosfera.",
 };
@@ -45,7 +46,8 @@ const visitUsTranslations = {
   mapTitle: "Lokalizacja Mokka Coffee",
   contactEyebrow: "Skontaktuj się z nami",
   contactTitle: "Napisz do nas",
-  contactDescription: "Masz pytanie, chcesz zarezerwować wydarzenie czy po prostu powiedzieć cześć? Napisz do nas, a wkrótce odpowiemy.",
+  contactDescription:
+    "Masz pytanie, chcesz zarezerwować wydarzenie czy po prostu powiedzieć cześć? Napisz do nas, a wkrótce odpowiemy.",
   nameLabel: "Imię",
   emailLabel: "Twój e-mail",
   messageLabel: "Wiadomość",
@@ -90,7 +92,8 @@ export const dictionary = {
     eyebrow: "O nas",
     title: "To coś więcej niż tylko kawa",
     imageAlt: "Wnętrze Mokka",
-    description: "Mokka to miejsce, w którym pasja do kawy spotyka się z dobrą atmosferą. Wybieramy najlepsze ziarna z całego świata i starannie przygotowujemy każdą filiżankę. Wpadnij, zwolnij i ciesz się chwilą.",
+    description:
+      "Mokka to miejsce, w którym pasja do kawy spotyka się z dobrą atmosferą. Wybieramy najlepsze ziarna z całego świata i starannie przygotowujemy każdą filiżankę. Wpadnij, zwolnij i ciesz się chwilą.",
     visitCta: "Odwiedź nas",
     stats: aboutUsStats,
   },
@@ -114,27 +117,73 @@ export const dictionary = {
       espresso: { name: "Espresso", description: "Wyraziste i mocne" },
       americano: { name: "Americano", description: "Proste i klasyczne" },
       latte: { name: "Latte", description: "Delikatne i mleczne" },
-      cappuccino: { name: "Cappuccino", description: "Klasyczne i aromatyczne" },
-      "flat-white": { name: "Flat White", description: "Gładkie i zrównoważone" },
+      cappuccino: {
+        name: "Cappuccino",
+        description: "Klasyczne i aromatyczne",
+      },
+      "flat-white": {
+        name: "Flat White",
+        description: "Gładkie i zrównoważone",
+      },
       mocha: { name: "Mocha", description: "Czekoladowe i słodkie" },
-      "caramel-latte": { name: "Latte karmelowe", description: "Z domowym karmelem" },
-      "cold-brew": { name: "Cold Brew", description: "Orzeźwiające i delikatne" },
-      "vanilla-latte": { name: "Latte waniliowe", description: "Espresso, spienione mleko i wanilia." },
-      "coffee-latte": { name: "Latte kawowe", description: "Delikatna kawa parzona na zimno, podawana z lodem." },
-      "matcha-latte": { name: "Matcha Latte", description: "Zielone i pobudzające" },
-      "hot-chocolate": { name: "Gorąca czekolada", description: "Bogata i kremowa" },
-      "chai-latte": { name: "Chai Latte", description: "Korzenne i rozgrzewające" },
+      "caramel-latte": {
+        name: "Latte karmelowe",
+        description: "Z domowym karmelem",
+      },
+      "cold-brew": {
+        name: "Cold Brew",
+        description: "Orzeźwiające i delikatne",
+      },
+      "vanilla-latte": {
+        name: "Latte waniliowe",
+        description: "Espresso, spienione mleko i wanilia.",
+      },
+      "coffee-latte": {
+        name: "Latte kawowe",
+        description: "Delikatna kawa parzona na zimno, podawana z lodem.",
+      },
+      "matcha-latte": {
+        name: "Matcha Latte",
+        description: "Zielone i pobudzające",
+      },
+      "hot-chocolate": {
+        name: "Gorąca czekolada",
+        description: "Bogata i kremowa",
+      },
+      "chai-latte": {
+        name: "Chai Latte",
+        description: "Korzenne i rozgrzewające",
+      },
       lemonade: { name: "Lemoniada", description: "Świeża i owocowa" },
-      "cinnamon-roll": { name: "Cynamonka", description: "Miękka i aromatyczna" },
+      "cinnamon-roll": {
+        name: "Cynamonka",
+        description: "Miękka i aromatyczna",
+      },
       croissant: { name: "Croissant", description: "Maślany i chrupiący" },
       cheesecake: { name: "Sernik", description: "Kremowy i pyszny" },
-      "ham-and-cheese-sandwich": { name: "Kanapka z szynką i serem", description: "Wędzona szynka i roztopiony ser w miękkim, tostowanym lub grillowanym pieczywie." },
-      blt: { name: "BLT", description: "Chrupiący bekon, świeża sałata i soczyste pomidory z lekką warstwą majonezu." },
-      "chicken-salad-croissant": { name: "Croissant z sałatką z kurczakiem", description: "Kremowa sałatka z kurczakiem, ziołami, winogronami lub orzechami w maślanym croissancie." },
-      "grilled-cheese": { name: "Grilled Cheese", description: "Roztopiony ser między kromkami pieczywa, opcjonalnie z zakwasem, bekonem lub pesto." },
+      "ham-and-cheese-sandwich": {
+        name: "Kanapka z szynką i serem",
+        description:
+          "Wędzona szynka i roztopiony ser w miękkim, tostowanym lub grillowanym pieczywie.",
+      },
+      blt: {
+        name: "BLT",
+        description:
+          "Chrupiący bekon, świeża sałata i soczyste pomidory z lekką warstwą majonezu.",
+      },
+      "chicken-salad-croissant": {
+        name: "Croissant z sałatką z kurczakiem",
+        description:
+          "Kremowa sałatka z kurczakiem, ziołami, winogronami lub orzechami w maślanym croissancie.",
+      },
+      "grilled-cheese": {
+        name: "Grilled Cheese",
+        description:
+          "Roztopiony ser między kromkami pieczywa, opcjonalnie z zakwasem, bekonem lub pesto.",
+      },
     },
     navigationLabel: "Kategorie menu",
-      preview: {
+    preview: {
       eyebrow: "Podgląd menu",
       title: "Coś dla każdego",
       description: "Starannie wybrane ziarna w każdej filiżance.",

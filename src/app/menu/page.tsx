@@ -19,10 +19,7 @@ export default function MenuPage() {
       <main className="mt-header">
         <TranslationWrapper section="menu">
           {({ translations, locale }) => (
-            <Menu
-              translations={translations}
-              locale={locale}
-            />
+            <Menu translations={translations} locale={locale} />
           )}
         </TranslationWrapper>
       </main>

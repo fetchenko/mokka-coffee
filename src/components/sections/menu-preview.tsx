@@ -26,10 +26,7 @@ type MenuPreviewProps = {
   locale: Locale;
 };
 
-export function MenuPreview({
-  translations,
-  locale,
-}: MenuPreviewProps) {
+export function MenuPreview({ translations, locale }: MenuPreviewProps) {
   const [selectedCategory, setSelectedCategory] =
     useState<ProductType>("coffee");
   const activeCategory = products.find(
@@ -42,7 +39,9 @@ export function MenuPreview({
         <div className="grid gap-10 md:grid-cols-3 md:gap-8 lg:gap-12">
           <div>
             <div className="mb-8 space-y-2 md:mb-10">
-              <Heading variant="eyebrow">{translations.preview.eyebrow}</Heading>
+              <Heading variant="eyebrow">
+                {translations.preview.eyebrow}
+              </Heading>
               <Heading variant="section">{translations.preview.title}</Heading>
               <Text>{translations.preview.description}</Text>
             </div>
@@ -72,7 +71,7 @@ export function MenuPreview({
                           key={product.id}
                           product={product}
                           translation={translations.products[product.id]}
-                                        locale={locale}
+                          locale={locale}
                         />
                       ))}
                   </div>

@@ -12,13 +12,13 @@ export function ContactBlock({
     <div>
       <Heading variant="eyebrow">{translations.contactEyebrow}</Heading>
       <Heading variant="section">{translations.contactTitle}</Heading>
-      <Text>
-        {translations.contactDescription}
-      </Text>
+      <Text>{translations.contactDescription}</Text>
       <form className="space-y-4">
         <div className="grid gap-4 sm:grid-cols-2">
           <label className="space-y-2">
-            <span className="text-sm font-medium">{translations.nameLabel}</span>
+            <span className="text-sm font-medium">
+              {translations.nameLabel}
+            </span>
             <input
               name="name"
               type="text"
@@ -28,7 +28,9 @@ export function ContactBlock({
             />
           </label>
           <label className="space-y-2">
-            <span className="text-sm font-medium">{translations.emailLabel}</span>
+            <span className="text-sm font-medium">
+              {translations.emailLabel}
+            </span>
             <input
               name="email"
               type="email"
@@ -39,7 +41,9 @@ export function ContactBlock({
           </label>
         </div>
         <label className="block space-y-2">
-          <span className="text-sm font-medium">{translations.messageLabel}</span>
+          <span className="text-sm font-medium">
+            {translations.messageLabel}
+          </span>
           <textarea
             name="message"
             rows={5}

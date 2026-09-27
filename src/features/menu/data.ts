@@ -134,25 +134,29 @@ export const products: ProductCategories[] = [
     id: "sandwiches",
     items: [
       {
-        id: "ham-and-cheese-sandwich",        prices: { PLN: 750, EUR: 175, USD: 200, BYN: 583 },
+        id: "ham-and-cheese-sandwich",
+        prices: { PLN: 750, EUR: 175, USD: 200, BYN: 583 },
         image:
           "https://images.unsplash.com/photo-1695304777030-167556e5ecf3?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         tags: ["popular"],
       },
       {
-        id: "blt",        prices: { PLN: 800, EUR: 187, USD: 213, BYN: 622 },
+        id: "blt",
+        prices: { PLN: 800, EUR: 187, USD: 213, BYN: 622 },
         image:
           "https://images.unsplash.com/photo-1705538363245-03fe613f9eb9?q=80&w=839&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         tags: ["popular"],
       },
       {
-        id: "chicken-salad-croissant",        prices: { PLN: 950, EUR: 222, USD: 253, BYN: 739 },
+        id: "chicken-salad-croissant",
+        prices: { PLN: 950, EUR: 222, USD: 253, BYN: 739 },
         image:
           "https://images.unsplash.com/photo-1653964158593-716a5a01de7c?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         tags: ["new"],
       },
       {
-        id: "grilled-cheese",        prices: { PLN: 700, EUR: 163, USD: 187, BYN: 544 },
+        id: "grilled-cheese",
+        prices: { PLN: 700, EUR: 163, USD: 187, BYN: 544 },
         image:
           "https://images.unsplash.com/photo-1751199592465-f142293a8cc6?q=80&w=884&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         tags: ["favourite"],

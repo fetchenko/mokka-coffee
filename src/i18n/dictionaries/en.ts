@@ -45,7 +45,8 @@ const visitUsTranslations = {
   mapTitle: "Mokka Coffee location",
   contactEyebrow: "Contact us",
   contactTitle: "Send us a message",
-  contactDescription: "Have a question, want to book an event or just want to say hi? Drop us a message and we'll get back to you soon",
+  contactDescription:
+    "Have a question, want to book an event or just want to say hi? Drop us a message and we'll get back to you soon",
   nameLabel: "Your name",
   emailLabel: "Your email",
   messageLabel: "Message",
@@ -90,7 +91,8 @@ export const dictionary = {
     eyebrow: "About us",
     title: "More than just coffee",
     imageAlt: "Inside Mokka",
-    description: "Mokka is a place where passion for coffee meets good vibes. We select the best beans from around the world and brew each cup with care. Come in, slow down and enjoy.",
+    description:
+      "Mokka is a place where passion for coffee meets good vibes. We select the best beans from around the world and brew each cup with care. Come in, slow down and enjoy.",
     visitCta: "Visit us",
     stats: aboutUsStats,
   },
@@ -117,21 +119,55 @@ export const dictionary = {
       cappuccino: { name: "Cappuccino", description: "Classic and aromatic" },
       "flat-white": { name: "Flat White", description: "Smooth and balanced" },
       mocha: { name: "Mocha", description: "Chocolatey and sweet" },
-      "caramel-latte": { name: "Caramel Latte", description: "With homemade caramel" },
+      "caramel-latte": {
+        name: "Caramel Latte",
+        description: "With homemade caramel",
+      },
       "cold-brew": { name: "Cold Brew", description: "Refreshing and smooth" },
-      "vanilla-latte": { name: "Vanilla Latte", description: "Espresso, steamed milk, and vanilla." },
-      "coffee-latte": { name: "Coffee Latte", description: "Smooth, slow-steeped coffee served over ice." },
-      "matcha-latte": { name: "Matcha Latte", description: "Green and energizing" },
-      "hot-chocolate": { name: "Hot Chocolate", description: "Rich and creamy" },
+      "vanilla-latte": {
+        name: "Vanilla Latte",
+        description: "Espresso, steamed milk, and vanilla.",
+      },
+      "coffee-latte": {
+        name: "Coffee Latte",
+        description: "Smooth, slow-steeped coffee served over ice.",
+      },
+      "matcha-latte": {
+        name: "Matcha Latte",
+        description: "Green and energizing",
+      },
+      "hot-chocolate": {
+        name: "Hot Chocolate",
+        description: "Rich and creamy",
+      },
       "chai-latte": { name: "Chai Latte", description: "Spiced and warm" },
       lemonade: { name: "Lemonade", description: "Fresh and fruity" },
-      "cinnamon-roll": { name: "Cinnamon Roll", description: "Soft and fragrant" },
+      "cinnamon-roll": {
+        name: "Cinnamon Roll",
+        description: "Soft and fragrant",
+      },
       croissant: { name: "Croissant", description: "Buttery and flaky" },
       cheesecake: { name: "Cheesecake", description: "Creamy and delicious" },
-      "ham-and-cheese-sandwich": { name: "Ham and Cheese Sandwich", description: "Smoky ham and melted cheese served on soft, toasted, or pressed bread." },
-      blt: { name: "BLT", description: "Crisp bacon, fresh lettuce, and juicy tomatoes with a light spread of mayonnaise." },
-      "chicken-salad-croissant": { name: "Chicken Salad Croissant", description: "Creamy chicken salad with herbs, grapes, or nuts served inside a flaky, buttery croissant." },
-      "grilled-cheese": { name: "Grilled Cheese", description: "Melted cheese pressed between sliced bread, with optional sourdough, bacon, or pesto." },
+      "ham-and-cheese-sandwich": {
+        name: "Ham and Cheese Sandwich",
+        description:
+          "Smoky ham and melted cheese served on soft, toasted, or pressed bread.",
+      },
+      blt: {
+        name: "BLT",
+        description:
+          "Crisp bacon, fresh lettuce, and juicy tomatoes with a light spread of mayonnaise.",
+      },
+      "chicken-salad-croissant": {
+        name: "Chicken Salad Croissant",
+        description:
+          "Creamy chicken salad with herbs, grapes, or nuts served inside a flaky, buttery croissant.",
+      },
+      "grilled-cheese": {
+        name: "Grilled Cheese",
+        description:
+          "Melted cheese pressed between sliced bread, with optional sourdough, bacon, or pesto.",
+      },
     },
     navigationLabel: "Menu categories",
     preview: {

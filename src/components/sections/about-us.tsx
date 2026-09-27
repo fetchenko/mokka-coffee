@@ -52,7 +52,9 @@ export function AboutUs() {
                   <li key={title} className="flex items-center gap-4 py-4">
                     <Icon className="size-10 shrink-0 stroke-1" aria-hidden />
                     <div>
-                      <p className="text-xl leading-tight font-semibold">{title}</p>
+                      <p className="text-xl leading-tight font-semibold">
+                        {title}
+                      </p>
                       <p className="text-muted-foreground text-sm">
                         {translations.stats[descriptionKey]}
                       </p>

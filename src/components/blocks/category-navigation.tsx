@@ -49,9 +49,7 @@ export function CategoryNavigation(props: CategoryNavigationProps) {
                   onClick={() => props.onSelect(category.id)}
                   size="icon-lg"
                   variant="outline"
-                  className={cn(
-                    isSelected && "bg-foreground text-background",
-                  )}
+                  className={cn(isSelected && "bg-foreground text-background")}
                 >
                   <Icon aria-hidden="true" />
                 </Button>

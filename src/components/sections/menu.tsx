@@ -15,7 +15,7 @@ type MenuProps = {
   locale: Locale;
 };
 
-export function Menu({ translations, locale, currency }: MenuProps) {
+export function Menu({ translations, locale }: MenuProps) {
   const [selectedCategory, setSelectedCategory] =
     useState<ProductType>("coffee");
 
