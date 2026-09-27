@@ -4,7 +4,7 @@ import { Heading } from "@/components/ui/heading";
 import { MapPin, Navigation } from "lucide-react";
 import Link from "next/link";
 
-const ADDRESS = ["ul. kawiorniarna 12", "31-123 Krakow, Poland"];
+
 const HOURS_KEYS = ["weekdays", "weekends"] as const;
 const DIRECTIONS_URL =
   "https://www.google.com/maps/dir/?api=1&destination=ul.+Kawiorniarna+12%2C+31-123+Krakow%2C+Poland";
