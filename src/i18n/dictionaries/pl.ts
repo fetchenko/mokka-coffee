@@ -22,6 +22,12 @@ const aboutUsStats = {
   yearsInTown: "Lat w mieście",
 };
 
+const testimonialTranslations = {
+  anna: "Najlepsza kawa w mieście! Przytulne miejsce i świetna atmosfera.",
+  magda: "Przychodzę tutaj każdego ranka. I mają pyszne wypieki.",
+  julia: "Świetna kawa, miła obsługa i cudowna atmosfera.",
+};
+
 export const dictionary = {
   header: {
     navigationItems,
@@ -63,5 +69,13 @@ export const dictionary = {
     description: "Mokka to miejsce, w którym pasja do kawy spotyka się z dobrą atmosferą. Wybieramy najlepsze ziarna z całego świata i starannie przygotowujemy każdą filiżankę. Wpadnij, zwolnij i ciesz się chwilą.",
     visitCta: "Odwiedź nas",
     stats: aboutUsStats,
+  },
+  testimonials: {
+    eyebrow: "Nasi goście nas uwielbiają",
+    title: "Co mówią nasi goście",
+    previous: "Poprzednia opinia",
+    next: "Następna opinia",
+    show: "Pokaż opinię",
+    items: testimonialTranslations,
   },
 } as const;
