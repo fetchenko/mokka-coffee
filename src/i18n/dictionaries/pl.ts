@@ -5,12 +5,16 @@ const navigationItems = {
   contact: "Kontakt",
 };
 
-const heroFeatures = [
-  { label: "Kawa specialty", description: "Ziarna najwyższej jakości" },
-  { label: "Zrównoważony rozwój", description: "Ekologiczne podejście" },
-  { label: "Zrobione z miłością", description: "Dla Ciebie" },
-  { label: "Społeczność", description: "Lokalnie i serdecznie" },
-];
+const heroFeatures = {
+  specialtyCoffee: "Kawa specialty",
+  topQualityBeans: "Ziarna najwyższej jakości",
+  sustainable: "Zrównoważony rozwój",
+  ecoFriendly: "Ekologiczne podejście",
+  madeWithLove: "Zrobione z miłością",
+  forYou: "Dla Ciebie",
+  community: "Społeczność",
+  localAndWarm: "Lokalnie i serdecznie",
+};
 
 export const dictionary = {
   header: {
