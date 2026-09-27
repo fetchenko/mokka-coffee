@@ -20,8 +20,6 @@ export function TestimonialCard({
   showNavigation?: boolean;
   showPrevious?: boolean;
   showNext?: boolean;
-  previousLabel?: string;
-  nextLabel?: string;
   translations: Dictionary["testimonials"];
 }) {
   return (
@@ -36,7 +34,7 @@ export function TestimonialCard({
                 type="button"
                 variant="secondary"
                 size="icon"
-                aria-label={previousLabel}
+                aria-label={translations.previousLabel}
                 onClick={onPrevious}
               >
                 <ArrowLeft aria-hidden />
@@ -48,7 +46,7 @@ export function TestimonialCard({
                 type="button"
                 variant="secondary"
                 size="icon"
-                aria-label={nextLabel}
+                aria-label={translations.nextLabel}
                 onClick={onNext}
               >
                 <ArrowRight aria-hidden />
