@@ -34,6 +34,22 @@ const testimonialTranslations = {
   juliaReview: "Great coffee, friendly service, and a lovely atmosphere.",
 };
 
+const visitUsTranslations = {
+  eyebrow: "Visit us",
+  title: "We'd love to see you!",
+  weekdays: "Mon - Fri: 7:00 - 20:00",
+  weekends: "Sat - Sun: 8:00 - 21:00",
+  getDirections: "Get directions",
+  mapTitle: "Mokka Coffee location",
+  contactEyebrow: "Contact us",
+  contactTitle: "Send us a message",
+  contactDescription: "Have a question, want to book an event or just want to say hi? Drop us a message and we'll get back to you soon",
+  nameLabel: "Your name",
+  emailLabel: "Your email",
+  messageLabel: "Message",
+  sendMessage: "Send message",
+};
+
 export const dictionary = {
   header: {
     navigationItems,
@@ -76,6 +92,7 @@ export const dictionary = {
     visitCta: "Visit us",
     stats: aboutUsStats,
   },
+  visitUs: visitUsTranslations,
   testimonials: {
     eyebrow: "Our guests love us",
     title: "What people say",
