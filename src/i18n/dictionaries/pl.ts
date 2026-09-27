@@ -29,9 +29,9 @@ const testimonialTranslations = {
   magdaInitials: "ML",
   juliaName: "Julia M.",
   juliaInitials: "JM",
-  anna: "Najlepsza kawa w mieście! Przytulne miejsce i świetna atmosfera.",
-  magda: "Przychodzę tutaj każdego ranka. I mają pyszne wypieki.",
-  julia: "Świetna kawa, miła obsługa i cudowna atmosfera.",
+  annaReview: "Najlepsza kawa w mieście! Przytulne miejsce i świetna atmosfera.",
+  magdaReview: "Przychodzę tutaj każdego ranka. I mają pyszne wypieki.",
+  juliaReview: "Świetna kawa, miła obsługa i cudowna atmosfera.",
 };
 
 export const dictionary = {
