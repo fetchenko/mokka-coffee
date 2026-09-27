@@ -5,10 +5,6 @@ const navigationItems = {
   contact: "Контакты",
 };
 
-const logo = {
-  subtitle: "Спешелти кофе",
-};
-
 
 
 const heroFeatures = {
@@ -61,6 +57,9 @@ const visitUsTranslations = {
 };
 
 export const dictionary = {
+  logo: {
+    subtitle: "Спешелти кофе",
+  },
   header: {
 navigationItems,
     visitUs: "Посетить нас",
