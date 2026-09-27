@@ -9,12 +9,12 @@ import { Heading } from "@/components/ui/heading";
 import { cn } from "@/lib/utils/cn";
 import { testimonials } from "@/features/menu/testimonials";
 import { TestimonialCard } from "@/components/blocks/testimonial-card";
-import { Dictionary } from "@/i18n/dictionaries/en";
+import type { Dictionary } from "@/i18n/dictionaries/en";
 
 const DISPLAY_ITEMS = 2;
 
 type TestimonialsProps = {
-  translations: Dictionary["testimonials"];
+  translations: Dictionary["testimonials"]["items"];
 };
 
 export function Testimonialls({ translations }: TestimonialsProps) {
@@ -42,7 +42,7 @@ export function Testimonialls({ translations }: TestimonialsProps) {
             style={{ transform: "translateX(-" + activeIndex * 100 + "%)" }}
           >
             {testimonials.map((testimonial, index) => (
-              <div key={testimonial.name} className="w-full shrink-0">
+              <div key={testimonial.nameKey} className="w-full shrink-0">
                 <TestimonialCard
                   translations={translations}
                   testimonial={testimonial}
@@ -61,7 +61,7 @@ export function Testimonialls({ translations }: TestimonialsProps) {
           <div className="mt-5 flex justify-center gap-1">
             {testimonials.map((testimonial, index) => (
               <Button
-                key={testimonial.name}
+                key={testimonial.nameKey}
                 type="button"
                 variant="ghost"
                 size="icon-xs"
@@ -82,7 +82,7 @@ export function Testimonialls({ translations }: TestimonialsProps) {
         </div>
 
         {testimonials.slice(0, DISPLAY_ITEMS).map((testimonial) => (
-          <div key={testimonial.name} className="hidden lg:block">
+          <div key={testimonial.nameKey} className="hidden lg:block">
             <TestimonialCard
               translations={translations}
               testimonial={testimonial}
