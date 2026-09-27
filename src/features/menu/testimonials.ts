@@ -1,4 +1,4 @@
-export const testimonials: Testimonial[] = [
+export const testimonials = [
   {
     bodyKey: "anna",
     name: "Anna K.",
@@ -17,17 +17,6 @@ export const testimonials: Testimonial[] = [
     initials: "JM",
     rating: 4.5,
   },
-];
+] as const;
 
-export type Testimonial = {
-  bodyKey: keyof typeof testimonialKeys;
-  name: string;
-  initials: string;
-  rating: number;
-};
-
-const testimonialKeys = {
-  anna: "anna",
-  magda: "magda",
-  julia: "julia",
-} as const;
+export type Testimonial = (typeof testimonials)[number];
