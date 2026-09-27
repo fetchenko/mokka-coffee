@@ -23,6 +23,12 @@ const aboutUsStats = {
 };
 
 const testimonialTranslations = {
+  annaName: "Анна К.",
+  annaInitials: "АК",
+  magdaName: "Магда Л.",
+  magdaInitials: "МЛ",
+  juliaName: "Юлия М.",
+  juliaInitials: "ЮМ",
   anna: "Лучшая кофейня в городе! Уютное место и отличная атмосфера.",
   magda: "Я прихожу сюда каждое утро. И здесь вкусная выпечка.",
   julia: "Отличный кофе, дружелюбное обслуживание и прекрасная атмосфера.",
