@@ -10,7 +10,6 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries/en";
 import type { Locale } from "@/i18n/config";
-import type { Currency } from "@/lib/money";
 
 const DISPLAY_ITEMS = 4;
 
@@ -22,13 +21,11 @@ export const customerFavorites: Product[] = products
 type CustomerFavoritesProps = {
   translations: Dictionary["menu"];
   locale: Locale;
-  currency: Currency;
 };
 
 export function CustomerFavorites({
   translations,
   locale,
-  currency,
 }: CustomerFavoritesProps) {
   return (
     <Section>
@@ -46,8 +43,7 @@ export function CustomerFavorites({
               <ProductCard
                 product={product}
                 translation={translations.products[product.id]}
-                currency={currency}
-                locale={locale}
+                    locale={locale}
               />
             </li>
           ))}
