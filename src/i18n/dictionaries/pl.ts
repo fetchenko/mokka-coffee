@@ -34,6 +34,22 @@ const testimonialTranslations = {
   juliaReview: "Świetna kawa, miła obsługa i cudowna atmosfera.",
 };
 
+const visitUsTranslations = {
+  eyebrow: "Odwiedź nas",
+  title: "Chętnie Cię zobaczymy!",
+  weekdays: "Pon - Pt: 7:00 - 20:00",
+  weekends: "Sob - Nd: 8:00 - 21:00",
+  getDirections: "Wyznacz trasę",
+  mapTitle: "Lokalizacja Mokka Coffee",
+  contactEyebrow: "Skontaktuj się z nami",
+  contactTitle: "Napisz do nas",
+  contactDescription: "Masz pytanie, chcesz zarezerwować wydarzenie czy po prostu powiedzieć cześć? Napisz do nas, a wkrótce odpowiemy.",
+  nameLabel: "Imię",
+  emailLabel: "Twój e-mail",
+  messageLabel: "Wiadomość",
+  sendMessage: "Wyślij wiadomość",
+};
+
 export const dictionary = {
   header: {
     navigationItems,
@@ -76,6 +92,7 @@ export const dictionary = {
     visitCta: "Odwiedź nas",
     stats: aboutUsStats,
   },
+  visitUs: visitUsTranslations,
   testimonials: {
     eyebrow: "Nasi goście nas uwielbiają",
     title: "Co mówią nasi goście",
