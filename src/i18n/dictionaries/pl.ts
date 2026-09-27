@@ -56,7 +56,8 @@ const visitUsTranslations = {
 
 export const dictionary = {
   header: {
-    navigationItems,
+    logoSubtitle: "Kawa specialty",
+navigationItems,
     visitUs: "Odwiedź nas",
     homeAriaLabel: "Strona główna Mokka Coffee",
     mainNavigation: "Główna nawigacja",
