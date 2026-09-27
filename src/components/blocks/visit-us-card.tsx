@@ -1,3 +1,4 @@
+import type { Dictionary } from "@/i18n/dictionaries/en";
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { MapPin, Navigation } from "lucide-react";
@@ -11,13 +12,7 @@ const DIRECTIONS_URL =
 export function VisitUsCard({
   translations,
 }: {
-  translations: {
-    eyebrow: string;
-    title: string;
-    weekdays: string;
-    weekends: string;
-    getDirections: string;
-  };
+  translations: Dictionary["visitUs"];
 }) {
   return (
     <div className="section-dark bg-background text-foreground rounded-lg p-6 md:p-8">
