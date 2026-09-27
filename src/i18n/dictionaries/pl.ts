@@ -23,6 +23,12 @@ const aboutUsStats = {
 };
 
 const testimonialTranslations = {
+  annaName: "Anna K.",
+  annaInitials: "AK",
+  magdaName: "Magda L.",
+  magdaInitials: "ML",
+  juliaName: "Julia M.",
+  juliaInitials: "JM",
   anna: "Najlepsza kawa w mieście! Przytulne miejsce i świetna atmosfera.",
   magda: "Przychodzę tutaj każdego ranka. I mają pyszne wypieki.",
   julia: "Świetna kawa, miła obsługa i cudowna atmosfera.",
