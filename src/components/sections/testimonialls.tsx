@@ -7,36 +7,21 @@ import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { cn } from "@/lib/utils/cn";
-import { testimonials, type LocalizedTestimonial } from "@/features/menu/testimonials";
+import { testimonials } from "@/features/menu/testimonials";
 import { TestimonialCard } from "@/components/blocks/testimonial-card";
+import { Dictionary } from "@/i18n/dictionaries/en";
 
 const DISPLAY_ITEMS = 2;
 
 type TestimonialsProps = {
-  translations: {
-    eyebrow: string;
-    title: string;
-    previous: string;
-    next: string;
-    show: string;
-    items: Record<"anna" | "magda" | "julia", string>;
-  };
+  translations: Dictionary["testimonials"];
 };
 
 export function Testimonialls({ translations }: TestimonialsProps) {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const localizedTestimonials: LocalizedTestimonial[] = testimonials.map(
-    ({ bodyKey, ...testimonial }) => ({
-      ...testimonial,
-      body: translations.items[bodyKey],
-    }),
-  );
-
   const goToNext = () => {
-    setActiveIndex((current) =>
-      Math.min(current + 1, localizedTestimonials.length - 1),
-    );
+    setActiveIndex((current) => Math.min(current + 1, testimonials.length - 1));
   };
 
   const goToPrevious = () => {
@@ -56,9 +41,10 @@ export function Testimonialls({ translations }: TestimonialsProps) {
             className="flex transition-transform duration-300"
             style={{ transform: "translateX(-" + activeIndex * 100 + "%)" }}
           >
-            {localizedTestimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial, index) => (
               <div key={testimonial.name} className="w-full shrink-0">
                 <TestimonialCard
+                  translations={translations}
                   testimonial={testimonial}
                   onPrevious={goToPrevious}
                   onNext={goToNext}
@@ -66,14 +52,14 @@ export function Testimonialls({ translations }: TestimonialsProps) {
                   nextLabel={translations.next}
                   showNavigation
                   showPrevious={index > 0}
-                  showNext={index < localizedTestimonials.length - 1}
+                  showNext={index < testimonials.length - 1}
                 />
               </div>
             ))}
           </div>
 
           <div className="mt-5 flex justify-center gap-1">
-            {localizedTestimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial, index) => (
               <Button
                 key={testimonial.name}
                 type="button"
@@ -95,9 +81,10 @@ export function Testimonialls({ translations }: TestimonialsProps) {
           </div>
         </div>
 
-        {localizedTestimonials.slice(0, DISPLAY_ITEMS).map((testimonial) => (
+        {testimonials.slice(0, DISPLAY_ITEMS).map((testimonial) => (
           <div key={testimonial.name} className="hidden lg:block">
             <TestimonialCard
+              translations={translations}
               testimonial={testimonial}
               onPrevious={goToPrevious}
               onNext={goToNext}

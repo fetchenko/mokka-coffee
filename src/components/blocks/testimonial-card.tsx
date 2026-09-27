@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Rating } from "@/components/ui/rating";
 import { Text } from "@/components/ui/text";
-import { LocalizedTestimonial } from "@/features/menu/testimonials";
+import { Testimonial } from "@/features/menu/testimonials";
+import { Dictionary } from "@/i18n/dictionaries/en";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export function TestimonialCard({
+  translations,
   testimonial,
   onPrevious,
   onNext,
@@ -14,7 +16,7 @@ export function TestimonialCard({
   previousLabel = "Previous testimonial",
   nextLabel = "Next testimonial",
 }: {
-  testimonial: LocalizedTestimonial;
+  testimonial: Testimonial;
   onPrevious: () => void;
   onNext: () => void;
   showNavigation?: boolean;
@@ -22,6 +24,7 @@ export function TestimonialCard({
   showNext?: boolean;
   previousLabel?: string;
   nextLabel?: string;
+  translations: Dictionary["testimonials"];
 }) {
   return (
     <article className="bg-secondary relative flex min-h-64 flex-col rounded-lg p-6">
@@ -58,7 +61,7 @@ export function TestimonialCard({
       </div>
 
       <Text className="mt-3 max-w-sm text-base leading-6">
-        {testimonial.body}
+        {translations[testimonial.bodyKey]}
       </Text>
 
       <div className="mt-auto flex items-center gap-3 pt-6">
@@ -66,9 +69,9 @@ export function TestimonialCard({
           className="bg-primary text-primary-foreground flex size-10 shrink-0 items-center justify-center rounded-full text-sm font-semibold"
           aria-hidden
         >
-          {testimonial.initials}
+          {translations[testimonial.initialsKey]}
         </div>
-        <p className="font-semibold">{testimonial.name}</p>
+        <p className="font-semibold">{translations[testimonial.nameKey]}</p>
       </div>
     </article>
   );
