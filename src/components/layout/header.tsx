@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { navigation } from "@/config/navigation";
 import { useInView } from "react-intersection-observer";
 import type { ReactNode } from "react";
-import type { Dictionary } from "@/i18n/dictionaries/en";
+import type { Dictionary } from "@/i18n/dictionary.types";
 
 const NAVIGATION_ITEMS = [
   { key: "home", href: navigation.home },

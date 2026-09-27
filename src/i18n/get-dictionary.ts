@@ -3,9 +3,9 @@ import { cache } from "react";
 import { Dictionary } from "@/i18n/dictionary.types";
 import { Locale } from "@/i18n/config";
 
-import { dictionary as en } from "@/i18n/dictionaries/en";
-import { dictionary as pl } from "@/i18n/dictionaries/pl";
-import { dictionary as ru } from "@/i18n/dictionaries/ru";
+import { dictionary as en } from "./dictionaries/en";
+import { dictionary as pl } from "./dictionaries/pl";
+import { dictionary as ru } from "./dictionaries/ru";
 
 const dictionaries: Record<Locale, Dictionary> = {
   en,

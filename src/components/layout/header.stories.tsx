@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
-import { withTranslations } from "../../../.storybook/with-translations";
+import { withTranslations } from "@storybook/with-translations";
 import { Header } from "./header";
+import { Logo } from "@/components/ui/logo";
 
 const StorybookHeader = withTranslations(Header, "header");
 
@@ -14,16 +15,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-const logo = (
-  <span>
-    <span className="block font-sans text-2xl leading-none tracking-[0.12em]">
-      MOKKA
-    </span>
-    <span className="text-muted-foreground mt-1 block text-[0.5rem] tracking-[0.2em] uppercase">
-      Specialty Coffee
-    </span>
-  </span>
-);
+const logo = <Logo />;
 
 export const Default: Story = {
   args: {

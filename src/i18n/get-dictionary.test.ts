@@ -3,11 +3,8 @@ import { describe, expect, expectTypeOf, it } from "vitest";
 import { dictionary as en } from "./dictionaries/en";
 import { dictionary as pl } from "./dictionaries/pl";
 import { dictionary as ru } from "./dictionaries/ru";
-import {
-  getDictionary,
-  type Dictionary,
-  type TranslationSchema,
-} from "./get-dictionary";
+import { getDictionary } from "./get-dictionary";
+import { Dictionary, TranslationSchema } from "@/i18n/dictionary.types";
 
 describe("TranslationSchema", () => {
   it("turns translation leaves into strings while preserving the dictionary shape", () => {
