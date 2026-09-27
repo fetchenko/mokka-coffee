@@ -4,8 +4,6 @@ import { Heading } from "@/components/ui/heading";
 import { MapPin, Navigation } from "lucide-react";
 import Link from "next/link";
 
-
-const HOURS_KEYS = ["weekdays", "weekends"] as const;
 const DIRECTIONS_URL =
   "https://www.google.com/maps/dir/?api=1&destination=ul.+Kawiorniarna+12%2C+31-123+Krakow%2C+Poland";
 
@@ -23,14 +21,12 @@ export function VisitUsCard({
       </div>
       <div className="space-y-5">
         <address className="not-italic">
-          {ADDRESS.map((line) => (
-            <div key={key}>{translations[key]}</div>
-          ))}
+          <div>{translations.addressLine1}</div>
+          <div>{translations.addressLine2}</div>
         </address>
         <div>
-          {HOURS_KEYS.map((key) => (
-            <div key={line}>{line}</div>
-          ))}
+          <div>{translations.weekdays}</div>
+          <div>{translations.weekends}</div>
         </div>
       </div>
       <Button className="mt-8" asChild>
