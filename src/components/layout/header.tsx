@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils/cn";
 import { Button } from "@/components/ui/button";
 import { navigation } from "@/config/navigation";
 import { useInView } from "react-intersection-observer";
-import { Logo } from "@/components/ui/logo";
+import type { ReactNode } from "react";
 import type { Dictionary } from "@/i18n/dictionaries/en";
 
 const NAVIGATION_ITEMS = [
@@ -22,9 +22,10 @@ const NAVIGATION_ITEMS = [
 type HeaderProps = {
   className?: string;
   dictionary: Dictionary["header"];
+  logo: ReactNode;
 };
 
-export function Header({ className, dictionary }: HeaderProps) {
+export function Header({ className, dictionary, logo }: HeaderProps) {
   const pathname = usePathname();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -71,7 +72,7 @@ export function Header({ className, dictionary }: HeaderProps) {
             aria-label={dictionary.homeAriaLabel}
             className="justify-self-start"
           >
-            <Logo subtitle={dictionary.logoSubtitle} />
+            {logo}
           </Link>
 
           {/* Desktop navigation */}
