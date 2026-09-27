@@ -1,5 +1,8 @@
 const navigationItems = {
   home: "Strona główna",
+  logo: {
+    subtitle: "Kawa specialty",
+  },
   menu: "Menu",
   about: "O nas",
   contact: "Kontakt",
@@ -56,7 +59,6 @@ const visitUsTranslations = {
 
 export const dictionary = {
   header: {
-    logoSubtitle: "Kawa specialty",
 navigationItems,
     visitUs: "Odwiedź nas",
     homeAriaLabel: "Strona główna Mokka Coffee",
