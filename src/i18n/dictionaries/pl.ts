@@ -16,6 +16,12 @@ const heroFeatures = {
   localAndWarm: "Lokalnie i serdecznie",
 };
 
+const aboutUsStats = {
+  arabicaBeans: "Ziarna arabiki",
+  happyCustomers: "Zadowoleni klienci",
+  yearsInTown: "Lat w mieście",
+};
+
 export const dictionary = {
   header: {
     navigationItems,
@@ -49,5 +55,13 @@ export const dictionary = {
     menuCta: "Zobacz nasze menu",
     visitCta: "Odwiedź nas",
     features: heroFeatures,
+  },
+  aboutUs: {
+    eyebrow: "O nas",
+    title: "To coś więcej niż tylko kawa",
+    imageAlt: "Wnętrze Mokka",
+    description: "Mokka to miejsce, w którym pasja do kawy spotyka się z dobrą atmosferą. Wybieramy najlepsze ziarna z całego świata i starannie przygotowujemy każdą filiżankę. Wpadnij, zwolnij i ciesz się chwilą.",
+    visitCta: "Odwiedź nas",
+    stats: aboutUsStats,
   },
 } as const;
