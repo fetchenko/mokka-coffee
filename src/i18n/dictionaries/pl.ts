@@ -4,6 +4,14 @@ const navigationItems = {
   about: "O nas",
   contact: "Kontakt",
 };
+
+const heroFeatures = [
+  { label: "Kawa specialty", description: "Ziarna najwyższej jakości" },
+  { label: "Zrównoważony rozwój", description: "Ekologiczne podejście" },
+  { label: "Zrobione z miłością", description: "Dla Ciebie" },
+  { label: "Społeczność", description: "Lokalnie i serdecznie" },
+];
+
 export const dictionary = {
   header: {
     navigationItems,
@@ -29,5 +37,13 @@ export const dictionary = {
       pl: "Polski",
       ru: "Rosyjski",
     },
+  },
+  hero: {
+    title: "Dobre dni",
+    titleAccent: "zaczynają się od kawy",
+    description: "Kawa specialty, przytulna atmosfera i serdeczni ludzie.",
+    menuCta: "Zobacz nasze menu",
+    visitCta: "Odwiedź nas",
+    features: heroFeatures,
   },
 } as const;
