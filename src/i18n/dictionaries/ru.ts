@@ -16,6 +16,12 @@ const heroFeatures = {
   localAndWarm: "Местное и тёплое",
 };
 
+const aboutUsStats = {
+  arabicaBeans: "Зёрна арабики",
+  happyCustomers: "Довольные клиенты",
+  yearsInTown: "Лет в городе",
+};
+
 export const dictionary = {
   header: {
     navigationItems,
@@ -49,5 +55,13 @@ export const dictionary = {
     menuCta: "Посмотреть меню",
     visitCta: "Посетить нас",
     features: heroFeatures,
+  },
+  aboutUs: {
+    eyebrow: "О нас",
+    title: "Больше, чем просто кофе",
+    imageAlt: "Интерьер Mokka",
+    description: "Mokka — это место, где любовь к кофе встречается с хорошей атмосферой. Мы выбираем лучшие зёрна со всего мира и тщательно готовим каждую чашку. Заходите, замедлитесь и наслаждайтесь.",
+    visitCta: "Посетить нас",
+    stats: aboutUsStats,
   },
 } as const;
