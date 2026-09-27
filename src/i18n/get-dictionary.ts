@@ -1,10 +1,17 @@
-import type { Locale } from "./config";
-import type { Dictionary } from "./dictionaries/en";
+import { cache } from "react";
 
+import type { Locale } from "./config";
 import { dictionary as en } from "./dictionaries/en";
 import { dictionary as pl } from "./dictionaries/pl";
 import { dictionary as ru } from "./dictionaries/ru";
-import { cache } from "react";
+
+export type TranslationSchema<T> = {
+  [K in keyof T]: T[K] extends Record<string, unknown>
+    ? TranslationSchema<T[K]>
+    : string;
+};
+
+export type Dictionary = TranslationSchema<typeof en>;
 
 const dictionaries: Record<Locale, Dictionary> = {
   en,
