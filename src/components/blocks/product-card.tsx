@@ -1,7 +1,9 @@
 import Image from "next/image";
 
 import type { Product } from "@/features/menu/model";
-import { formatPrice, type Currency } from "@/lib/money";
+import { getCurrencyForLocale } from "@/i18n/currency";
+import { formatPrice } from "@/lib/money";
+import type { Locale } from "@/i18n/config";
 
 export type ProductTranslation = {
   name: string;
@@ -11,16 +13,16 @@ export type ProductTranslation = {
 type ProductCardProps = {
   product: Product;
   translation: ProductTranslation;
-  currency: Currency;
-  locale: string;
+  locale: Locale;
 };
 
 export function ProductCard({
   product,
   translation,
-  currency,
   locale,
 }: ProductCardProps) {
+  const currency = getCurrencyForLocale(locale);
+
   return (
     <article className="bg-background flex overflow-hidden rounded-xl shadow-sm md:flex-col">
       <div className="relative w-[45%] shrink-0 md:aspect-[3/2] md:w-full">
