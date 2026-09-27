@@ -1,5 +1,8 @@
 const navigationItems = {
   home: "Home",
+  logo: {
+    subtitle: "Specialty Coffee",
+  },
   menu: "Menu",
   about: "About",
   contact: "Contact",
@@ -55,7 +58,6 @@ const visitUsTranslations = {
 
 export const dictionary = {
   header: {
-    logoSubtitle: "Specialty Coffee",
 navigationItems,
     visitUs: "Visit Us",
     homeAriaLabel: "Mokka Coffee home",
