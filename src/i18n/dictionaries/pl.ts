@@ -36,6 +36,8 @@ const testimonialTranslations = {
 
 const visitUsTranslations = {
   eyebrow: "Odwiedź nas",
+  addressLine1: "ul. Kawiorniarna 12",
+  addressLine2: "31-123 Kraków, Polska",
   title: "Chętnie Cię zobaczymy!",
   weekdays: "Pon - Pt: 7:00 - 20:00",
   weekends: "Sob - Nd: 8:00 - 21:00",
