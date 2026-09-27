@@ -7,7 +7,6 @@ import { Hero } from "@/components/sections/hero";
 import { MenuPreview } from "@/components/sections/menu-preview";
 import { Testimonialls } from "@/components/sections/testimonialls";
 import { VisitUs } from "@/components/sections/visit-us";
-import { getCurrencyForLocale } from "@/i18n/currency";
 
 export default function HomePage() {
   return (
@@ -22,15 +21,12 @@ export default function HomePage() {
         <Hero />
         <TranslationWrapper section="menu">
           {({ translations, locale }) => {
-            const currency = getCurrencyForLocale(locale);
-
             return (
               <>
                 <CustomerFavorites
                   translations={translations}
                   locale={locale}
-                  currency={currency}
-                />
+                  />
                 <MenuPreview
                   translations={translations}
                   locale={locale}
