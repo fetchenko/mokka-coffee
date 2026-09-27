@@ -17,7 +17,15 @@ export default function MenuPage() {
       </TranslationWrapper>
 
       <main className="mt-header">
-        <Menu />
+        <TranslationWrapper section="menu">
+          {({ translations, locale }) => (
+            <Menu
+              translations={translations}
+              locale={locale}
+              currency={locale === "pl" ? "PLN" : locale === "ru" ? "BYN" : "USD"}
+            />
+          )}
+        </TranslationWrapper>
       </main>
 
       <Footer />
