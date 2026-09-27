@@ -1,7 +1,9 @@
 import Image from "next/image";
 
 import type { Product } from "@/features/menu/model";
-import { formatPrice, type Currency } from "@/lib/money";
+import { getCurrencyForLocale } from "@/i18n/currency";
+import type { Locale } from "@/i18n/config";
+import { formatPrice } from "@/lib/money";
 
 type ProductTranslation = {
   name: string;
@@ -11,16 +13,16 @@ type ProductTranslation = {
 type ProductRowProps = {
   product: Product;
   translation: ProductTranslation;
-  currency: Currency;
-  locale: string;
+  locale: Locale;
 };
 
 export function ProductRow({
   product,
   translation,
-  currency,
   locale,
 }: ProductRowProps) {
+  const currency = getCurrencyForLocale(locale);
+
   return (
     <article className="grid grid-cols-[64px_minmax(0,1fr)_auto] grid-rows-2 gap-x-3 gap-y-1 border-b py-3">
       <div className="relative col-start-1 row-span-2 size-16 overflow-hidden rounded-full">
