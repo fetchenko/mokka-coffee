@@ -18,20 +18,17 @@ import { Button } from "@/components/ui/button";
 import { Text } from "@/components/ui/text";
 import type { Dictionary } from "@/i18n/dictionaries/en";
 import type { Locale } from "@/i18n/config";
-import type { Currency } from "@/lib/money";
 
 const DISPLAY_ITEMS = 5;
 
 type MenuPreviewProps = {
   translations: Dictionary["menu"];
   locale: Locale;
-  currency: Currency;
 };
 
 export function MenuPreview({
   translations,
   locale,
-  currency,
 }: MenuPreviewProps) {
   const [selectedCategory, setSelectedCategory] =
     useState<ProductType>("coffee");
@@ -75,8 +72,7 @@ export function MenuPreview({
                           key={product.id}
                           product={product}
                           translation={translations.products[product.id]}
-                          currency={currency}
-                          locale={locale}
+                                        locale={locale}
                         />
                       ))}
                   </div>
