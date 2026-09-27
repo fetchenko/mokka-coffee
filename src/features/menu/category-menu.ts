@@ -1,11 +1,16 @@
-import { Coffee as CoffeeIcon, Croissant, CupSoda, Sandwich, type LucideIcon } from "lucide-react";
+import {
+  Coffee as CoffeeIcon,
+  Croissant,
+  CupSoda,
+  Sandwich,
+  type LucideIcon,
+} from "lucide-react";
+
 import type { ProductType } from "@/features/menu/model";
-import { products } from "@/features/menu/data";
 
 export type CategoryItem = {
   id: ProductType;
   icon: LucideIcon;
-  label: string;
 };
 
 export const CATEGORY_ICONS: Record<ProductType, LucideIcon> = {
@@ -15,8 +20,9 @@ export const CATEGORY_ICONS: Record<ProductType, LucideIcon> = {
   sandwiches: Sandwich,
 };
 
-export const categoryNavigation = products.map((product) => ({
-  id: product.id,
-  icon: CATEGORY_ICONS[product.id],
-  label: product.label,
-})) as CategoryItem[];
+export const categoryNavigation: CategoryItem[] = [
+  { id: "coffee", icon: CATEGORY_ICONS.coffee },
+  { id: "non-coffee", icon: CATEGORY_ICONS["non-coffee"] },
+  { id: "pastries", icon: CATEGORY_ICONS.pastries },
+  { id: "sandwiches", icon: CATEGORY_ICONS.sandwiches },
+];
