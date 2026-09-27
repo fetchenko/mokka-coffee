@@ -19,22 +19,14 @@ export default function HomePage() {
 
       <main>
         <Hero />
+        <CustomerFavorites />
         <TranslationWrapper section="menu">
-          {({ translations, locale }) => {
-            return (
-              <>
-                <CustomerFavorites
-                  translations={translations}
-                  locale={locale}
-                  />
-                <MenuPreview
-                  translations={translations}
-                  locale={locale}
-                  currency={currency}
-                />
-              </>
-            );
-          }}
+          {({ translations, locale }) => (
+            <MenuPreview
+              translations={translations}
+              locale={locale}
+            />
+          )}
         </TranslationWrapper>
         <AboutUs />
         <TranslationWrapper section="testimonials">
