@@ -7,13 +7,14 @@ import { Hero } from "@/components/sections/hero";
 import { MenuPreview } from "@/components/sections/menu-preview";
 import { Testimonialls } from "@/components/sections/testimonialls";
 import { VisitUs } from "@/components/sections/visit-us";
+import { Logo } from "@/components/ui/logo";
 
 export default function HomePage() {
   return (
     <>
       <TranslationWrapper section="header">
         {({ translations }) => (
-          <Header className="section-dark" dictionary={translations} />
+          <Header className="section-dark" dictionary={translations} logo={<Logo />} />
         )}
       </TranslationWrapper>
 
