@@ -134,5 +134,17 @@ export const dictionary = {
       "grilled-cheese": { name: "Grilled Cheese", description: "Roztopiony ser między kromkami pieczywa, opcjonalnie z zakwasem, bekonem lub pesto." },
     },
     navigationLabel: "Kategorie menu",
+      preview: {
+      eyebrow: "Podgląd menu",
+      title: "Coś dla każdego",
+      description: "Starannie wybrane ziarna w każdej filiżance.",
+      viewFullMenu: "Zobacz pełne menu",
+      imageAlt: "Kawa i ciasto",
+    },
+    favorites: {
+      eyebrow: "Nasi faworyci",
+      title: "Ulubione klientów",
+      viewFullMenu: "Zobacz pełne menu",
+    },
   },
 } as const;
