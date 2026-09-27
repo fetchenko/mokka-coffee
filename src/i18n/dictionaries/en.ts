@@ -5,6 +5,13 @@ const navigationItems = {
   contact: "Contact",
 };
 
+const heroFeatures = [
+  { label: "Specialty coffee", description: "Top quality beans" },
+  { label: "Sustainable", description: "Eco-friendly" },
+  { label: "Made with love", description: "For you" },
+  { label: "Community", description: "Local & warm" },
+];
+
 export const dictionary = {
   header: {
     navigationItems,
@@ -30,6 +37,14 @@ export const dictionary = {
       pl: "Polski",
       ru: "Русский",
     },
+  },
+  hero: {
+    title: "Good days",
+    titleAccent: "start with coffee",
+    description: "Specialty coffee, cozy atmosphere, and friendly people.",
+    menuCta: "See our menu",
+    visitCta: "Visit us",
+    features: heroFeatures,
   },
 } as const;
 
