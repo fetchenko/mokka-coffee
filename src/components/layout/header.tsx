@@ -21,11 +21,11 @@ const NAVIGATION_ITEMS = [
 
 type HeaderProps = {
   className?: string;
-  dictionary: Dictionary["header"];
+  translations: Dictionary["header"];
   logo: ReactNode;
 };
 
-export function Header({ className, dictionary, logo }: HeaderProps) {
+export function Header({ className, translations, logo }: HeaderProps) {
   const pathname = usePathname();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -69,7 +69,7 @@ export function Header({ className, dictionary, logo }: HeaderProps) {
         <Container className="h-header grid grid-cols-[1fr_auto_1fr] items-center">
           <Link
             href={navigation.home}
-            aria-label={dictionary.homeAriaLabel}
+            aria-label={translations.homeAriaLabel}
             className="justify-self-start"
           >
             {logo}
@@ -77,7 +77,7 @@ export function Header({ className, dictionary, logo }: HeaderProps) {
 
           {/* Desktop navigation */}
           <nav
-            aria-label={dictionary.mainNavigation}
+            aria-label={translations.mainNavigation}
             className="hidden md:block"
           >
             <ul className="flex items-center gap-8">
@@ -94,7 +94,7 @@ export function Header({ className, dictionary, logo }: HeaderProps) {
                         active && "underline underline-offset-4",
                       )}
                     >
-                      {dictionary.navigationItems[item.key]}
+                      {translations.navigationItems[item.key]}
                     </Link>
                   </li>
                 );
@@ -110,7 +110,7 @@ export function Header({ className, dictionary, logo }: HeaderProps) {
           >
             <Link href={navigation.visitUs}>
               <MapPin aria-hidden="true" />
-              {dictionary.visitUs}
+              {translations.visitUs}
             </Link>
           </Button>
 
@@ -119,8 +119,8 @@ export function Header({ className, dictionary, logo }: HeaderProps) {
             type="button"
             aria-label={
               isMenuOpen
-                ? dictionary.closeNavigation
-                : dictionary.openNavigation
+                ? translations.closeNavigation
+                : translations.openNavigation
             }
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"
@@ -147,7 +147,7 @@ export function Header({ className, dictionary, logo }: HeaderProps) {
           )}
         >
           <nav
-            aria-label={dictionary.mobileNavigation}
+            aria-label={translations.mobileNavigation}
             className="bg-background/80 px-6 py-6 backdrop-blur-md"
           >
             <ul className="flex flex-col">
@@ -167,7 +167,7 @@ export function Header({ className, dictionary, logo }: HeaderProps) {
                         active && "underline underline-offset-4",
                       )}
                     >
-                      {dictionary.navigationItems[item.key]}
+                      {translations.navigationItems[item.key]}
                     </Link>
                   </li>
                 );
@@ -181,7 +181,7 @@ export function Header({ className, dictionary, logo }: HeaderProps) {
                     className="w-full"
                   >
                     <MapPin aria-hidden="true" />
-                    {dictionary.visitUs}
+                    {translations.visitUs}
                   </Link>
                 </Button>
               </li>

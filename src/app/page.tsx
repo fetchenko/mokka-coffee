@@ -1,6 +1,5 @@
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
-import { TranslationWrapper } from "@/components/i18n/translation-wrapper";
 import { AboutUs } from "@/components/sections/about-us";
 import { CustomerFavorites } from "@/components/sections/customer-favorites";
 import { Hero } from "@/components/sections/hero";
@@ -8,32 +7,27 @@ import { MenuPreview } from "@/components/sections/menu-preview";
 import { Testimonialls } from "@/components/sections/testimonialls";
 import { VisitUs } from "@/components/sections/visit-us";
 import { Logo } from "@/components/ui/logo";
+import { getLocale } from "@/i18n/get-locale";
+import { getDictionary } from "@/i18n/get-dictionary";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const locale = await getLocale();
+  const dictionary = getDictionary(locale);
+
   return (
     <>
-      <TranslationWrapper section="header">
-        {({ translations }) => (
-          <Header
-            className="section-dark"
-            dictionary={translations}
-            logo={<Logo />}
-          />
-        )}
-      </TranslationWrapper>
+      <Header
+        className="section-dark"
+        translations={dictionary.header}
+        logo={<Logo />}
+      />
 
       <main>
         <Hero />
         <CustomerFavorites />
-        <TranslationWrapper section="menu">
-          {({ translations, locale }) => (
-            <MenuPreview translations={translations} locale={locale} />
-          )}
-        </TranslationWrapper>
+        <MenuPreview translations={dictionary.menu} locale={locale} />
         <AboutUs />
-        <TranslationWrapper section="testimonials">
-          {({ translations }) => <Testimonialls translations={translations} />}
-        </TranslationWrapper>
+        <Testimonialls translations={dictionary.testimonials} />
         <VisitUs />
       </main>
 
