@@ -5,8 +5,6 @@ const navigationItems = {
   contact: "Kontakt",
 };
 
-
-
 const heroFeatures = {
   specialtyCoffee: "Kawa specialty",
   topQualityBeans: "Ziarna najwyższej jakości",
@@ -61,7 +59,7 @@ export const dictionary = {
     subtitle: "Kawa specialty",
   },
   header: {
-navigationItems,
+    navigationItems,
     visitUs: "Odwiedź nas",
     homeAriaLabel: "Strona główna Mokka Coffee",
     mainNavigation: "Główna nawigacja",

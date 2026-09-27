@@ -14,7 +14,9 @@ export default function MenuPage() {
   return (
     <>
       <TranslationWrapper section="header">
-        {({ translations }) => <Header dictionary={translations} logo={<Logo />} />}
+        {({ translations }) => (
+          <Header dictionary={translations} logo={<Logo />} />
+        )}
       </TranslationWrapper>
 
       <main className="mt-header">

@@ -48,8 +48,6 @@ export function Testimonialls({ translations }: TestimonialsProps) {
                   testimonial={testimonial}
                   onPrevious={goToPrevious}
                   onNext={goToNext}
-                  previousLabel={translations.previousLabel}
-                  nextLabel={translations.nextLabel}
                   showNavigation
                   showPrevious={index > 0}
                   showNext={index < testimonials.length - 1}
@@ -88,8 +86,6 @@ export function Testimonialls({ translations }: TestimonialsProps) {
               testimonial={testimonial}
               onPrevious={goToPrevious}
               onNext={goToNext}
-              previousLabel={translations.previous}
-              nextLabel={translations.next}
             />
           </div>
         ))}

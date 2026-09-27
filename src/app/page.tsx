@@ -14,7 +14,11 @@ export default function HomePage() {
     <>
       <TranslationWrapper section="header">
         {({ translations }) => (
-          <Header className="section-dark" dictionary={translations} logo={<Logo />} />
+          <Header
+            className="section-dark"
+            dictionary={translations}
+            logo={<Logo />}
+          />
         )}
       </TranslationWrapper>
 

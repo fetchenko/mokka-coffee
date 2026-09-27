@@ -5,8 +5,6 @@ const navigationItems = {
   contact: "Contact",
 };
 
-
-
 const heroFeatures = {
   specialtyCoffee: "Specialty coffee",
   topQualityBeans: "Top quality beans",
@@ -60,7 +58,7 @@ export const dictionary = {
     subtitle: "Specialty Coffee",
   },
   header: {
-navigationItems,
+    navigationItems,
     visitUs: "Visit Us",
     homeAriaLabel: "Mokka Coffee home",
     mainNavigation: "Main navigation",

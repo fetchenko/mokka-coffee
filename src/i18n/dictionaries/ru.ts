@@ -5,8 +5,6 @@ const navigationItems = {
   contact: "Контакты",
 };
 
-
-
 const heroFeatures = {
   specialtyCoffee: "Спешелти кофе",
   topQualityBeans: "Зёрна высшего качества",
@@ -61,7 +59,7 @@ export const dictionary = {
     subtitle: "Спешелти кофе",
   },
   header: {
-navigationItems,
+    navigationItems,
     visitUs: "Посетить нас",
     homeAriaLabel: "Главная Mokka Coffee",
     mainNavigation: "Основная навигация",
