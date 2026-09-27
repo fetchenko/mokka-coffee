@@ -1,20 +1,20 @@
 export const testimonials = [
   {
     bodyKey: "anna",
-    name: "Anna K.",
-    initials: "AK",
+    nameKey: "annaName",
+    initialsKey: "annaInitials",
     rating: 5.0,
   },
   {
     bodyKey: "magda",
-    name: "Magda L.",
-    initials: "ML",
+    nameKey: "magdaName",
+    initialsKey: "magdaInitials",
     rating: 4.8,
   },
   {
     bodyKey: "julia",
-    name: "Julia M.",
-    initials: "JM",
+    nameKey: "juliaName",
+    initialsKey: "juliaInitials",
     rating: 4.5,
   },
 ] as const;
