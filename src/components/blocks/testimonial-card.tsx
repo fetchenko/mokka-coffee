@@ -61,7 +61,7 @@ export function TestimonialCard({
       </div>
 
       <Text className="mt-3 max-w-sm text-base leading-6">
-        {translations[testimonial.bodyKey]}
+        {translations.items[testimonial.bodyKey]}
       </Text>
 
       <div className="mt-auto flex items-center gap-3 pt-6">
@@ -69,9 +69,9 @@ export function TestimonialCard({
           className="bg-primary text-primary-foreground flex size-10 shrink-0 items-center justify-center rounded-full text-sm font-semibold"
           aria-hidden
         >
-          {translations[testimonial.initialsKey]}
+          {translations.items[testimonial.initialsKey]}
         </div>
-        <p className="font-semibold">{translations[testimonial.nameKey]}</p>
+        <p className="font-semibold">{translations.items[testimonial.nameKey]}</p>
       </div>
     </article>
   );
