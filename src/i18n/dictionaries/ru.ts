@@ -22,6 +22,12 @@ const aboutUsStats = {
   yearsInTown: "Лет в городе",
 };
 
+const testimonialTranslations = {
+  anna: "Лучшая кофейня в городе! Уютное место и отличная атмосфера.",
+  magda: "Я прихожу сюда каждое утро. И здесь вкусная выпечка.",
+  julia: "Отличный кофе, дружелюбное обслуживание и прекрасная атмосфера.",
+};
+
 export const dictionary = {
   header: {
     navigationItems,
@@ -63,5 +69,13 @@ export const dictionary = {
     description: "Mokka — это место, где любовь к кофе встречается с хорошей атмосферой. Мы выбираем лучшие зёрна со всего мира и тщательно готовим каждую чашку. Заходите, замедлитесь и наслаждайтесь.",
     visitCta: "Посетить нас",
     stats: aboutUsStats,
+  },
+  testimonials: {
+    eyebrow: "Наши гости нас любят",
+    title: "Что говорят гости",
+    previous: "Предыдущий отзыв",
+    next: "Следующий отзыв",
+    show: "Показать отзыв",
+    items: testimonialTranslations,
   },
 } as const;
