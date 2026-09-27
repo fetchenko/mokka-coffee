@@ -28,7 +28,7 @@ export function Footer() {
           <Container>
             <div className="grid gap-8 py-12 sm:grid-cols-4">
               <div>
-                <Logo />
+                <Logo subtitle={translations.logoSubtitle} />
                 <p className="text-muted-foreground hidden w-40 py-4 text-xs sm:block">
                   {translations.description}
                 </p>
