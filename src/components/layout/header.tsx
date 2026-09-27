@@ -71,7 +71,7 @@ export function Header({ className, dictionary }: HeaderProps) {
             aria-label={dictionary.homeAriaLabel}
             className="justify-self-start"
           >
-            <Logo />
+            <Logo subtitle={dictionary.logoSubtitle} />
           </Link>
 
           {/* Desktop navigation */}
