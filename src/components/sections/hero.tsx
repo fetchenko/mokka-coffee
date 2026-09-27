@@ -6,7 +6,32 @@ import { cn } from "@/lib/utils/cn";
 import { Coffee, Heart, Leaf, Map, Users } from "lucide-react";
 import Link from "next/link";
 
-const featureIcons = [Coffee, Leaf, Heart, Users];
+const features = [
+  {
+    labelKey: "specialtyCoffee",
+    descriptionKey: "topQualityBeans",
+    icon: Coffee,
+    accent: true,
+  },
+  {
+    labelKey: "sustainable",
+    descriptionKey: "ecoFriendly",
+    icon: Leaf,
+    accent: true,
+  },
+  {
+    labelKey: "madeWithLove",
+    descriptionKey: "forYou",
+    icon: Heart,
+    accent: false,
+  },
+  {
+    labelKey: "community",
+    descriptionKey: "localAndWarm",
+    icon: Users,
+    accent: false,
+  },
+] as const;
 
 export function Hero() {
   return (
@@ -59,25 +84,25 @@ export function Hero() {
             </div>
 
             <div className="mt-auto grid grid-cols-4 gap-1 pt-16 sm:gap-5 lg:max-w-3xl lg:gap-8 lg:pb-2">
-              {translations.features.map((feature, index) => {
-                const Icon = featureIcons[index];
+              {features.map((feature) => {
+                const Icon = feature.icon;
 
                 return (
                   <div
-                    key={feature.label}
+                    key={feature.labelKey}
                     className="flex flex-col items-center gap-2 text-center md:flex-row md:text-left lg:items-start"
                   >
                     <Icon
                       aria-hidden="true"
                       className={cn(
                         "m-1 size-6 shrink-0 sm:size-10",
-                        index < 2 ? "text-primary" : "text-foreground",
+                        feature.accent ? "text-primary" : "text-foreground",
                       )}
                     />
                     <span className="text-foreground max-w-28 text-[11px] leading-tight sm:text-sm">
-                      <span>{feature.label}</span>
+                      <span>{translations.features[feature.labelKey]}</span>
                       <span className="text-muted-foreground hidden text-[10px] leading-tight sm:block">
-                        {feature.description}
+                        {translations.features[feature.descriptionKey]}
                       </span>
                     </span>
                   </div>
