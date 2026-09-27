@@ -55,7 +55,8 @@ const visitUsTranslations = {
 
 export const dictionary = {
   header: {
-    navigationItems,
+    logoSubtitle: "Specialty Coffee",
+navigationItems,
     visitUs: "Visit Us",
     homeAriaLabel: "Mokka Coffee home",
     mainNavigation: "Main navigation",
