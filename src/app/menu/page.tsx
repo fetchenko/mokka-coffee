@@ -1,33 +1,37 @@
+import type { Metadata } from "next";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { Menu } from "@/components/sections/menu";
-import { TranslationWrapper } from "@/components/i18n/translation-wrapper";
-import { Metadata } from "next";
 import { Logo } from "@/components/ui/logo";
+import { getLocale } from "@/i18n/get-locale";
+import { getDictionary } from "@/i18n/get-dictionary";
 
 export const metadata: Metadata = {
   title: "Menu — MOKKA",
   description: "Coffee, cold drinks, breakfast and something sweet at MOKKA.",
 };
 
-export default function MenuPage() {
+export default async function MenuPage() {
+  const locale = await getLocale();
+  const dictionary = getDictionary(locale);
+
   return (
     <>
-      <TranslationWrapper section="header">
-        {({ translations }) => (
-          <Header dictionary={translations} logo={<Logo />} />
-        )}
-      </TranslationWrapper>
+      <Header
+        translations={dictionary.header}
+        logo={<Logo translations={dictionary.logo} />}
+      />
 
       <main className="mt-header">
-        <TranslationWrapper section="menu">
-          {({ translations, locale }) => (
-            <Menu translations={translations} locale={locale} />
-          )}
-        </TranslationWrapper>
+        <Menu translations={dictionary.menu} locale={locale} />
       </main>
 
-      <Footer />
+      <Footer
+        translations={dictionary.footer}
+        languageTranslations={dictionary.language}
+        logoTranslations={dictionary.logo}
+        locale={locale}
+      />
     </>
   );
 }
