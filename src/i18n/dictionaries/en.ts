@@ -1,12 +1,15 @@
 const navigationItems = {
   home: "Home",
-  logo: {
-    subtitle: "Specialty Coffee",
-  },
   menu: "Menu",
   about: "About",
   contact: "Contact",
 };
+
+const logo = {
+  subtitle: "Specialty Coffee",
+};
+
+
 
 const heroFeatures = {
   specialtyCoffee: "Specialty coffee",
