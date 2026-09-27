@@ -1,12 +1,15 @@
 const navigationItems = {
   home: "Главная",
-  logo: {
-    subtitle: "Спешелти кофе",
-  },
   menu: "Меню",
   about: "О нас",
   contact: "Контакты",
 };
+
+const logo = {
+  subtitle: "Спешелти кофе",
+};
+
+
 
 const heroFeatures = {
   specialtyCoffee: "Спешелти кофе",
