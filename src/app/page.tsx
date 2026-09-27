@@ -19,19 +19,24 @@ export default async function HomePage() {
       <Header
         className="section-dark"
         translations={dictionary.header}
-        logo={<Logo />}
+        logo={<Logo translations={dictionary.logo} />}
       />
 
       <main>
-        <Hero />
-        <CustomerFavorites />
+        <Hero translations={dictionary.hero} />
+        <CustomerFavorites translations={dictionary.menu} locale={locale} />
         <MenuPreview translations={dictionary.menu} locale={locale} />
-        <AboutUs />
+        <AboutUs translations={dictionary.aboutUs} />
         <Testimonialls translations={dictionary.testimonials} />
-        <VisitUs />
+        <VisitUs translations={dictionary.visitUs} />
       </main>
 
-      <Footer />
+      <Footer
+        translations={dictionary.footer}
+        languageTranslations={dictionary.language}
+        logoTranslations={dictionary.logo}
+        locale={locale}
+      />
     </>
   );
 }
