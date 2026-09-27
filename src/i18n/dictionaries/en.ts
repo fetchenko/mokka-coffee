@@ -36,6 +36,8 @@ const testimonialTranslations = {
 
 const visitUsTranslations = {
   eyebrow: "Visit us",
+  addressLine1: "ul. Kawiorniarna 12",
+  addressLine2: "31-123 Krakow, Poland",
   title: "We'd love to see you!",
   weekdays: "Mon - Fri: 7:00 - 20:00",
   weekends: "Sat - Sun: 8:00 - 21:00",
