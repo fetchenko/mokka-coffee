@@ -23,6 +23,12 @@ const aboutUsStats = {
 };
 
 const testimonialTranslations = {
+  annaName: "Anna K.",
+  annaInitials: "AK",
+  magdaName: "Magda L.",
+  magdaInitials: "ML",
+  juliaName: "Julia M.",
+  juliaInitials: "JM",
   anna: "The best coffee in town! Cozy place and amazing vibes.",
   magda: "I come here every morning. And delicious pastries.",
   julia: "Great coffee, friendly service, and a lovely atmosphere.",
