@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import { ProductCard } from "@/components/blocks/product-card";
 import { CategoryNavigation } from "@/components/blocks/category-navigation";
-import type { Dictionary } from "@/i18n/dictionaries/en";
+import type { Dictionary } from "@/i18n/dictionary.types";
 import type { Locale } from "@/i18n/config";
 import type { ProductType } from "@/features/menu/model";
 import { products } from "@/features/menu/data";

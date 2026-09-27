@@ -17,8 +17,6 @@ describe("formatPrice", () => {
   });
 
   it("formats zero for Polish locale", () => {
-    expect(normalizeWhitespace(formatPrice(0, "PLN", "pl-PL"))).toBe(
-      "0,00 zł",
-    );
+    expect(normalizeWhitespace(formatPrice(0, "PLN", "pl-PL"))).toBe("0,00 zł");
   });
 });

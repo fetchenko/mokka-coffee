@@ -5,7 +5,7 @@ import type { ChangeEvent } from "react";
 
 import { setLocale } from "@/i18n/actions";
 import { supportedLocales, type Locale } from "@/i18n/config";
-import type { Dictionary } from "@/i18n/dictionaries/en";
+import type { Dictionary } from "@/i18n/dictionary.types";
 
 type LanguageSwitcherProps = {
   locale: Locale;
