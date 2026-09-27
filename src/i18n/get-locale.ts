@@ -7,13 +7,27 @@ export function getLocaleFromAcceptLanguage(
 ): Locale | null {
   if (!acceptLanguage) return null;
 
-  for (const languageRange of acceptLanguage.split(",")) {
-    const language = languageRange
-      .split(";")[0]
-      .trim()
-      .toLowerCase()
-      .split("-")[0];
+  const languages = acceptLanguage
+    .split(",")
+    .map((languageRange, index) => {
+      const [languagePart, ...parameters] = languageRange.trim().split(";");
+      const qualityParameter = parameters.find((parameter) =>
+        parameter.trim().startsWith("q="),
+      );
+      const quality = qualityParameter
+        ? Number.parseFloat(qualityParameter.trim().slice(2))
+        : 1;
 
+      return {
+        language: languagePart.trim().toLowerCase().split("-")[0],
+        quality: Number.isNaN(quality) ? 0 : quality,
+        index,
+      };
+    })
+    .filter(({ quality }) => quality > 0)
+    .sort((a, b) => b.quality - a.quality || a.index - b.index);
+
+  for (const { language } of languages) {
     if (isSupportedLocale(language)) {
       return language;
     }
