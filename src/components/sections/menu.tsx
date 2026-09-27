@@ -6,7 +6,6 @@ import { ProductCard } from "@/components/blocks/product-card";
 import { CategoryNavigation } from "@/components/blocks/category-navigation";
 import type { Dictionary } from "@/i18n/dictionaries/en";
 import type { Locale } from "@/i18n/config";
-import type { Currency } from "@/lib/money";
 import type { ProductType } from "@/features/menu/model";
 import { products } from "@/features/menu/data";
 import { categoryNavigation } from "@/features/menu/category-menu";
@@ -14,7 +13,6 @@ import { categoryNavigation } from "@/features/menu/category-menu";
 type MenuProps = {
   translations: Dictionary["menu"];
   locale: Locale;
-  currency: Currency;
 };
 
 export function Menu({ translations, locale, currency }: MenuProps) {
@@ -46,7 +44,6 @@ export function Menu({ translations, locale, currency }: MenuProps) {
             key={product.id}
             product={product}
             translation={translations.products[product.id]}
-            currency={currency}
             locale={locale}
           />
         ))}
