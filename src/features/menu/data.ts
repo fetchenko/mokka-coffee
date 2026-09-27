@@ -3,7 +3,6 @@ import type { ProductCategories } from "@/features/menu/model";
 export const products: ProductCategories[] = [
   {
     id: "coffee",
-    label: "Coffee",
     items: [
       {
         id: "espresso",
@@ -76,7 +75,6 @@ export const products: ProductCategories[] = [
   },
   {
     id: "non-coffee",
-    label: "Non-coffee",
     items: [
       {
         id: "matcha-latte",
@@ -109,7 +107,6 @@ export const products: ProductCategories[] = [
   },
   {
     id: "pastries",
-    label: "Pastries",
     items: [
       {
         id: "cinnamon-roll",
@@ -135,44 +132,27 @@ export const products: ProductCategories[] = [
   },
   {
     id: "sandwiches",
-    label: "Sandwiches",
     items: [
       {
-        id: "ham-and-cheese-sandwich",
-        name: "Ham and Cheese Sandwich",
-        description:
-          "Smoky ham and melted cheese served on soft, toasted, or pressed bread.",
-        prices: { PLN: 750, EUR: 18, USD: 20, BYN: 62 },
+        id: "ham-and-cheese-sandwich",        prices: { PLN: 750, EUR: 175, USD: 200, BYN: 583 },
         image:
           "https://images.unsplash.com/photo-1695304777030-167556e5ecf3?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         tags: ["popular"],
       },
       {
-        id: "blt",
-        name: "BLT",
-        description:
-          "Crisp bacon, fresh lettuce, and juicy tomatoes with a light spread of mayonnaise.",
-        prices: { PLN: 800, EUR: 19, USD: 21, BYN: 66 },
+        id: "blt",        prices: { PLN: 800, EUR: 187, USD: 213, BYN: 622 },
         image:
           "https://images.unsplash.com/photo-1705538363245-03fe613f9eb9?q=80&w=839&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         tags: ["popular"],
       },
       {
-        id: "chicken-salad-croissant",
-        name: "Chicken Salad Croissant",
-        description:
-          "Creamy chicken salad with herbs, grapes, or nuts served inside a flaky, buttery croissant.",
-        prices: { PLN: 950, EUR: 23, USD: 25, BYN: 78 },
+        id: "chicken-salad-croissant",        prices: { PLN: 950, EUR: 222, USD: 253, BYN: 739 },
         image:
           "https://images.unsplash.com/photo-1653964158593-716a5a01de7c?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         tags: ["new"],
       },
       {
-        id: "grilled-cheese",
-        name: "Grilled Cheese",
-        description:
-          "Melted cheese pressed between sliced bread, with optional sourdough, bacon, or pesto.",
-        prices: { PLN: 700, EUR: 17, USD: 18, BYN: 57 },
+        id: "grilled-cheese",        prices: { PLN: 700, EUR: 163, USD: 187, BYN: 544 },
         image:
           "https://images.unsplash.com/photo-1751199592465-f142293a8cc6?q=80&w=884&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         tags: ["favourite"],
