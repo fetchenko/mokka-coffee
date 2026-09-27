@@ -29,9 +29,9 @@ const testimonialTranslations = {
   magdaInitials: "ML",
   juliaName: "Julia M.",
   juliaInitials: "JM",
-  anna: "The best coffee in town! Cozy place and amazing vibes.",
-  magda: "I come here every morning. And delicious pastries.",
-  julia: "Great coffee, friendly service, and a lovely atmosphere.",
+  annaReview: "The best coffee in town! Cozy place and amazing vibes.",
+  magdaReview: "I come here every morning. And delicious pastries.",
+  juliaReview: "Great coffee, friendly service, and a lovely atmosphere.",
 };
 
 export const dictionary = {
