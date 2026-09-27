@@ -2,6 +2,7 @@ import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { Menu } from "@/components/sections/menu";
 import { TranslationWrapper } from "@/components/i18n/translation-wrapper";
+import { getCurrencyForLocale } from "@/i18n/currency";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -22,7 +23,7 @@ export default function MenuPage() {
             <Menu
               translations={translations}
               locale={locale}
-              currency={locale === "pl" ? "PLN" : locale === "ru" ? "BYN" : "USD"}
+              currency={getCurrencyForLocale(locale)}
             />
           )}
         </TranslationWrapper>
