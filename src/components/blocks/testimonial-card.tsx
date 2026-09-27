@@ -13,8 +13,6 @@ export function TestimonialCard({
   showNavigation = false,
   showPrevious = true,
   showNext = true,
-  previousLabel = "Previous testimonial",
-  nextLabel = "Next testimonial",
 }: {
   testimonial: Testimonial;
   onPrevious: () => void;
