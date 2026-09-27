@@ -1,12 +1,15 @@
 const navigationItems = {
   home: "Strona główna",
-  logo: {
-    subtitle: "Kawa specialty",
-  },
   menu: "Menu",
   about: "O nas",
   contact: "Kontakt",
 };
+
+const logo = {
+  subtitle: "Kawa specialty",
+};
+
+
 
 const heroFeatures = {
   specialtyCoffee: "Kawa specialty",
