@@ -16,8 +16,8 @@ import { ProductRow } from "@/components/blocks/product-row";
 import { categoryNavigation } from "@/features/menu/category-menu";
 import { Button } from "@/components/ui/button";
 import { Text } from "@/components/ui/text";
-import type { Dictionary } from "@/i18n/dictionaries/en";
 import type { Locale } from "@/i18n/config";
+import { Dictionary } from "@/i18n/dictionary.types";
 
 const DISPLAY_ITEMS = 5;
 

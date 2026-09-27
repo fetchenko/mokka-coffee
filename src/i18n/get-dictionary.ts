@@ -1,17 +1,11 @@
 import { cache } from "react";
 
-import type { Locale } from "./config";
-import { dictionary as en } from "./dictionaries/en";
-import { dictionary as pl } from "./dictionaries/pl";
-import { dictionary as ru } from "./dictionaries/ru";
+import { Dictionary } from "@/i18n/dictionary.types";
+import { Locale } from "@/i18n/config";
 
-export type TranslationSchema<T> = {
-  [K in keyof T]: T[K] extends Record<string, unknown>
-    ? TranslationSchema<T[K]>
-    : string;
-};
-
-export type Dictionary = TranslationSchema<typeof en>;
+import { dictionary as en } from "@/i18n/dictionaries/en";
+import { dictionary as pl } from "@/i18n/dictionaries/pl";
+import { dictionary as ru } from "@/i18n/dictionaries/ru";
 
 const dictionaries: Record<Locale, Dictionary> = {
   en,

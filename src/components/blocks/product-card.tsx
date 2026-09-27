@@ -4,11 +4,7 @@ import type { Product } from "@/features/menu/model";
 import { getCurrencyForLocale } from "@/i18n/currency";
 import { formatPrice } from "@/lib/money";
 import type { Locale } from "@/i18n/config";
-
-export type ProductTranslation = {
-  name: string;
-  description: string;
-};
+import { ProductTranslation } from "@/i18n/dictionary.types";
 
 type ProductCardProps = {
   product: Product;
