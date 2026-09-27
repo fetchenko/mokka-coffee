@@ -1,15 +1,27 @@
-import type { Decorator } from "@storybook/react-vite";
+import type { ComponentType } from "react";
 
 import type { Dictionary } from "../src/i18n/dictionaries/en";
 import { dictionary as en } from "../src/i18n/dictionaries/en";
 
-export function withTranslations<K extends keyof Dictionary>(
+type TranslatableProps<K extends keyof Dictionary> = {
+  dictionary: Dictionary[K];
+};
+
+export function withTranslations<
+  K extends keyof Dictionary,
+  Props extends TranslatableProps<K>,
+>(
+  Component: ComponentType<Props>,
   section: K,
-): Decorator {
-  return (Story, context) => (
-    <Story
-      {...context.args}
-      dictionary={en[section]}
-    />
-  );
+): ComponentType<Omit<Props, "dictionary">> {
+  return function TranslatedComponent(
+    props: Omit<Props, "dictionary">,
+  ) {
+    return (
+      <Component
+        {...(props as Props)}
+        dictionary={en[section]}
+      />
+    );
+  };
 }
