@@ -20,3 +20,7 @@ export const testimonials = [
 ] as const;
 
 export type Testimonial = (typeof testimonials)[number];
+
+export type LocalizedTestimonial = Omit<Testimonial, "bodyKey"> & {
+  body: string;
+};
