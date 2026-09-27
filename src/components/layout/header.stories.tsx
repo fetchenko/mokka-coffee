@@ -5,6 +5,7 @@ import { Header } from "./header";
 import { Logo } from "@/components/ui/logo";
 
 const StorybookHeader = withTranslations(Header, "header");
+const StorybookLogo = withTranslations(Logo, "logo");
 
 const meta = {
   title: "Components/Header",
@@ -15,33 +16,21 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-const logo = <Logo />;
+const logo = <StorybookLogo />;
 
 export const Default: Story = {
-  args: {
-    logo,
-  },
+  args: { logo },
   parameters: {
     layout: "fullscreen",
-    nextjs: {
-      navigation: {
-        pathname: "/",
-      },
-    },
+    nextjs: { navigation: { pathname: "/" } },
   },
 };
 
 export const Dark: Story = {
-  args: {
-    logo,
-  },
+  args: { logo },
   parameters: {
     layout: "fullscreen",
-    nextjs: {
-      navigation: {
-        pathname: "/",
-      },
-    },
+    nextjs: { navigation: { pathname: "/" } },
   },
   render: (args) => (
     <div className="h-150 bg-black">
@@ -51,16 +40,10 @@ export const Dark: Story = {
 };
 
 export const TransparentDesktop: Story = {
-  args: {
-    logo,
-  },
+  args: { logo },
   parameters: {
     layout: "fullscreen",
-    nextjs: {
-      navigation: {
-        pathname: "/",
-      },
-    },
+    nextjs: { navigation: { pathname: "/" } },
   },
   render: (args) => (
     <div className="bg-primary h-120">
