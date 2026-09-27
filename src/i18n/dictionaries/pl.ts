@@ -5,10 +5,6 @@ const navigationItems = {
   contact: "Kontakt",
 };
 
-const logo = {
-  subtitle: "Kawa specialty",
-};
-
 
 
 const heroFeatures = {
@@ -61,6 +57,9 @@ const visitUsTranslations = {
 };
 
 export const dictionary = {
+  logo: {
+    subtitle: "Kawa specialty",
+  },
   header: {
 navigationItems,
     visitUs: "Odwiedź nas",
