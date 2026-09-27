@@ -19,9 +19,28 @@ export default function HomePage() {
 
       <main>
         <Hero />
-        <CustomerFavorites />
+        <TranslationWrapper section="menu">
+          {({ translations, locale }) => {
+            const currency =
+              locale === "pl" ? "PLN" : locale === "ru" ? "BYN" : "USD";
+
+            return (
+              <>
+                <CustomerFavorites
+                  translations={translations}
+                  locale={locale}
+                  currency={currency}
+                />
+                <MenuPreview
+                  translations={translations}
+                  locale={locale}
+                  currency={currency}
+                />
+              </>
+            );
+          }}
+        </TranslationWrapper>
         <AboutUs />
-        <MenuPreview />
         <TranslationWrapper section="testimonials">
           {({ translations }) => (
             <Testimonialls translations={translations} />
