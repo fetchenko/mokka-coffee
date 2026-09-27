@@ -22,7 +22,11 @@ export default function HomePage() {
         <CustomerFavorites />
         <AboutUs />
         <MenuPreview />
-        <Testimonialls />
+        <TranslationWrapper section="testimonials">
+          {({ translations }) => (
+            <Testimonialls translations={translations} />
+          )}
+        </TranslationWrapper>
         <VisitUs />
       </main>
 
