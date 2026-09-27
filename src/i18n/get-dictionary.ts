@@ -4,6 +4,7 @@ import type { Dictionary } from "./dictionaries/en";
 import { dictionary as en } from "./dictionaries/en";
 import { dictionary as pl } from "./dictionaries/pl";
 import { dictionary as ru } from "./dictionaries/ru";
+import { cache } from "react";
 
 const dictionaries: Record<Locale, Dictionary> = {
   en,
@@ -11,6 +12,6 @@ const dictionaries: Record<Locale, Dictionary> = {
   ru,
 };
 
-export function getDictionary(locale: Locale): Dictionary {
+export const getDictionary = cache((locale: Locale): Dictionary => {
   return dictionaries[locale];
-}
+});
