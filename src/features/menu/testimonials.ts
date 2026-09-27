@@ -1,18 +1,18 @@
 export const testimonials = [
   {
-    bodyKey: "anna",
+    bodyKey: "annaReview",
     nameKey: "annaName",
     initialsKey: "annaInitials",
     rating: 5.0,
   },
   {
-    bodyKey: "magda",
+    bodyKey: "magdaReview",
     nameKey: "magdaName",
     initialsKey: "magdaInitials",
     rating: 4.8,
   },
   {
-    bodyKey: "julia",
+    bodyKey: "juliaReview",
     nameKey: "juliaName",
     initialsKey: "juliaInitials",
     rating: 4.5,
