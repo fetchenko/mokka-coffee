@@ -5,12 +5,16 @@ const navigationItems = {
   contact: "Contact",
 };
 
-const heroFeatures = [
-  { label: "Specialty coffee", description: "Top quality beans" },
-  { label: "Sustainable", description: "Eco-friendly" },
-  { label: "Made with love", description: "For you" },
-  { label: "Community", description: "Local & warm" },
-];
+const heroFeatures = {
+  specialtyCoffee: "Specialty coffee",
+  topQualityBeans: "Top quality beans",
+  sustainable: "Sustainable",
+  ecoFriendly: "Eco-friendly",
+  madeWithLove: "Made with love",
+  forYou: "For you",
+  community: "Community",
+  localAndWarm: "Local & warm",
+};
 
 export const dictionary = {
   header: {
