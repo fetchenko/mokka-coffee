@@ -53,12 +53,22 @@ const visitUsTranslations = {
   messageLabel: "Wiadomość",
   sendMessage: "Wyślij wiadomość",
 };
+const logo = {
+  subtitle: "Kawa specialty",
+};
 
-export const dictionary = {
-  logo: {
-    subtitle: "Kawa specialty",
+const language = {
+  label: "Język",
+  selectAriaLabel: "Wybierz język",
+  names: {
+    en: "English",
+    pl: "Polski",
+    ru: "Rosyjski",
   },
+};
+export const dictionary = {
   header: {
+    logo,
     navigationItems,
     visitUs: "Odwiedź nas",
     homeAriaLabel: "Strona główna Mokka Coffee",
@@ -68,21 +78,15 @@ export const dictionary = {
     closeNavigation: "Zamknij nawigację",
   },
   footer: {
+    logo,
+    language,
     navigationItems,
     description: "Dobra kawa, dobrzy ludzie, dobre dni",
     navigation: "Nawigacja stopki",
     followUs: "Obserwuj nas",
     copyright: "Mokka Coffee. Wszelkie prawa zastrzeżone",
   },
-  language: {
-    label: "Język",
-    selectAriaLabel: "Wybierz język",
-    names: {
-      en: "English",
-      pl: "Polski",
-      ru: "Rosyjski",
-    },
-  },
+
   hero: {
     title: "Dobre dni",
     titleAccent: "zaczynają się od kawy",

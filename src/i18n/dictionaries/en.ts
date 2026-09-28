@@ -53,11 +53,22 @@ const visitUsTranslations = {
   sendMessage: "Send message",
 };
 
-export const dictionary = {
-  logo: {
-    subtitle: "Specialty Coffee",
+const logo = {
+  subtitle: "Specialty Coffee",
+};
+
+export const language = {
+  label: "Language",
+  selectAriaLabel: "Select language",
+  names: {
+    en: "English",
+    pl: "Polski",
+    ru: "Русский",
   },
+};
+export const dictionary = {
   header: {
+    logo,
     navigationItems,
     visitUs: "Visit Us",
     homeAriaLabel: "Mokka Coffee home",
@@ -67,21 +78,15 @@ export const dictionary = {
     closeNavigation: "Close navigation",
   },
   footer: {
+    logo,
+    language,
     navigationItems,
     description: "Good coffee, good people, good days",
     navigation: "Footer navigation",
     followUs: "Follow us",
     copyright: "Mokka Coffee. All rights reserved",
   },
-  language: {
-    label: "Language",
-    selectAriaLabel: "Select language",
-    names: {
-      en: "English",
-      pl: "Polski",
-      ru: "Русский",
-    },
-  },
+
   hero: {
     title: "Good days",
     titleAccent: "start with coffee",

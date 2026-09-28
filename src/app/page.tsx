@@ -6,7 +6,6 @@ import { Hero } from "@/components/sections/hero";
 import { MenuPreview } from "@/components/sections/menu-preview";
 import { Testimonialls } from "@/components/sections/testimonialls";
 import { VisitUs } from "@/components/sections/visit-us";
-import { Logo } from "@/components/ui/logo";
 import { getLocale } from "@/i18n/get-locale";
 import { getDictionary } from "@/i18n/get-dictionary";
 
@@ -16,11 +15,7 @@ export default async function HomePage() {
 
   return (
     <>
-      <Header
-        className="section-dark"
-        translations={dictionary.header}
-        logo={<Logo translations={dictionary.logo} />}
-      />
+      <Header className="section-dark" translations={dictionary.header} />
 
       <main>
         <Hero translations={dictionary.hero} />
@@ -31,12 +26,7 @@ export default async function HomePage() {
         <VisitUs translations={dictionary.visitUs} />
       </main>
 
-      <Footer
-        translations={dictionary.footer}
-        languageTranslations={dictionary.language}
-        logoTranslations={dictionary.logo}
-        locale={locale}
-      />
+      <Footer translations={dictionary.footer} locale={locale} />
     </>
   );
 }

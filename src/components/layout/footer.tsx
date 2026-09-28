@@ -23,23 +23,16 @@ const SOCIAL_LINKS = [
 
 type FooterProps = {
   translations: Dictionary["footer"];
-  languageTranslations: Dictionary["language"];
-  logoTranslations: Dictionary["logo"];
   locale: Locale;
 };
 
-export function Footer({
-  translations,
-  languageTranslations,
-  logoTranslations,
-  locale,
-}: FooterProps) {
+export function Footer({ translations, locale }: FooterProps) {
   return (
     <footer className="section-dark bg-background text-foreground">
       <Container>
         <div className="grid gap-8 py-12 sm:grid-cols-4">
           <div>
-            <Logo translations={logoTranslations} />
+            <Logo translations={translations.logo} />
             <p className="text-muted-foreground hidden w-40 py-4 text-xs sm:block">
               {translations.description}
             </p>
@@ -74,7 +67,7 @@ export function Footer({
           <div className="text-muted-foreground flex flex-col justify-between gap-4">
             <LanguageSwitcher
               locale={locale}
-              dictionary={languageTranslations}
+              language={translations.language}
             />
             <small>
               {new Date().getFullYear()} {translations.copyright}

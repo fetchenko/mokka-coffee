@@ -5,17 +5,14 @@ import type { ChangeEvent } from "react";
 
 import { setLocale } from "@/i18n/actions";
 import { supportedLocales, type Locale } from "@/i18n/config";
-import type { Dictionary } from "@/i18n/dictionary.types";
+import type { LanguageTranslation } from "@/i18n/dictionary.types";
 
 type LanguageSwitcherProps = {
   locale: Locale;
-  dictionary: Dictionary["language"];
+  language: LanguageTranslation;
 };
 
-export function LanguageSwitcher({
-  locale,
-  dictionary,
-}: LanguageSwitcherProps) {
+export function LanguageSwitcher({ locale, language }: LanguageSwitcherProps) {
   const router = useRouter();
 
   async function handleChange(event: ChangeEvent<HTMLSelectElement>) {
@@ -27,16 +24,16 @@ export function LanguageSwitcher({
 
   return (
     <label className="flex items-center gap-2 text-sm">
-      <span>{dictionary.label}</span>
+      <span>{language.label}</span>
       <select
         value={locale}
         onChange={handleChange}
         className="bg-background rounded-md border px-2 py-1"
-        aria-label={dictionary.selectAriaLabel}
+        aria-label={language.selectAriaLabel}
       >
         {supportedLocales.map((item) => (
           <option key={item} value={item}>
-            {dictionary.names[item]}
+            {language.names[item]}
           </option>
         ))}
       </select>
