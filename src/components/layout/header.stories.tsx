@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 import { Header } from "./header";
+import { dictionary as en } from "@/i18n/dictionaries/en";
 
 const meta = {
   title: "Components/Header",
@@ -12,6 +13,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+  args: {
+    translations: en.header,
+  },
   parameters: {
     layout: "fullscreen",
     nextjs: {
@@ -23,6 +27,9 @@ export const Default: Story = {
 };
 
 export const Dark: Story = {
+  args: {
+    translations: en.header,
+  },
   parameters: {
     layout: "fullscreen",
     nextjs: {
@@ -31,14 +38,17 @@ export const Dark: Story = {
       },
     },
   },
-  render: () => (
+  render: (args) => (
     <div className="h-150 bg-black">
-      <Header className="section-dark" />
+      <Header {...args} className="section-dark" />
     </div>
   ),
 };
 
 export const TransparentDesktop: Story = {
+  args: {
+    translations: en.header,
+  },
   parameters: {
     layout: "fullscreen",
     nextjs: {
@@ -47,9 +57,9 @@ export const TransparentDesktop: Story = {
       },
     },
   },
-  render: () => (
+  render: (args) => (
     <div className="bg-primary h-120">
-      <Header className="section-dark" />
+      <Header {...args} className="section-dark" />
     </div>
   ),
 };

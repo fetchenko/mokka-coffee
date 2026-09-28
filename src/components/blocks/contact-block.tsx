@@ -1,20 +1,24 @@
+import type { Dictionary } from "@/i18n/dictionary.types";
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
 
-export function ContactBlock() {
+export function ContactBlock({
+  translations,
+}: {
+  translations: Dictionary["visitUs"];
+}) {
   return (
     <div>
-      <Heading variant="eyebrow">Contact us</Heading>
-      <Heading variant="section">Send us a message</Heading>
-      <Text>
-        Have a question, want to book an event or just want to say hi? Drop us a
-        message and we&apos;ll get back to you soon
-      </Text>
+      <Heading variant="eyebrow">{translations.contactEyebrow}</Heading>
+      <Heading variant="section">{translations.contactTitle}</Heading>
+      <Text>{translations.contactDescription}</Text>
       <form className="space-y-4">
         <div className="grid gap-4 sm:grid-cols-2">
           <label className="space-y-2">
-            <span className="text-sm font-medium">Your name</span>
+            <span className="text-sm font-medium">
+              {translations.nameLabel}
+            </span>
             <input
               name="name"
               type="text"
@@ -24,7 +28,9 @@ export function ContactBlock() {
             />
           </label>
           <label className="space-y-2">
-            <span className="text-sm font-medium">Your email</span>
+            <span className="text-sm font-medium">
+              {translations.emailLabel}
+            </span>
             <input
               name="email"
               type="email"
@@ -35,7 +41,9 @@ export function ContactBlock() {
           </label>
         </div>
         <label className="block space-y-2">
-          <span className="text-sm font-medium">Message</span>
+          <span className="text-sm font-medium">
+            {translations.messageLabel}
+          </span>
           <textarea
             name="message"
             rows={5}
@@ -43,7 +51,7 @@ export function ContactBlock() {
             className="border-input bg-background focus-visible:ring-ring w-full resize-y rounded-sm border px-4 py-3 text-sm outline-none focus-visible:ring-1"
           />
         </label>
-        <Button type="button">Send message</Button>
+        <Button type="button">{translations.sendMessage}</Button>
       </form>
     </div>
   );

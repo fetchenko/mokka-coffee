@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { inter, playfair } from "@/app/fonts";
+import { getLocale } from "@/i18n/get-locale";
 
 import "./globals.css";
 
@@ -8,10 +9,12 @@ export const metadata: Metadata = {
   description: "MOKKA — Specialty Coffee",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default async function RootLayout({ children }: LayoutProps<"/">) {
+  const locale = await getLocale();
+
   return (
     <html
-      lang="en"
+      lang={locale}
       className={`${inter.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col font-sans">{children}</body>

@@ -2,9 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Rating } from "@/components/ui/rating";
 import { Text } from "@/components/ui/text";
 import { Testimonial } from "@/features/menu/testimonials";
+import { Dictionary } from "@/i18n/dictionaries/en";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export function TestimonialCard({
+  translations,
   testimonial,
   onPrevious,
   onNext,
@@ -18,6 +20,7 @@ export function TestimonialCard({
   showNavigation?: boolean;
   showPrevious?: boolean;
   showNext?: boolean;
+  translations: Dictionary["testimonials"];
 }) {
   return (
     <article className="bg-secondary relative flex min-h-64 flex-col rounded-lg p-6">
@@ -31,7 +34,7 @@ export function TestimonialCard({
                 type="button"
                 variant="secondary"
                 size="icon"
-                aria-label="Previous testimonial"
+                aria-label={translations.previousLabel}
                 onClick={onPrevious}
               >
                 <ArrowLeft aria-hidden />
@@ -43,7 +46,7 @@ export function TestimonialCard({
                 type="button"
                 variant="secondary"
                 size="icon"
-                aria-label="Next testimonial"
+                aria-label={translations.nextLabel}
                 onClick={onNext}
               >
                 <ArrowRight aria-hidden />
@@ -54,7 +57,7 @@ export function TestimonialCard({
       </div>
 
       <Text className="mt-3 max-w-sm text-base leading-6">
-        {testimonial.body}
+        {translations.items[testimonial.bodyKey]}
       </Text>
 
       <div className="mt-auto flex items-center gap-3 pt-6">
@@ -62,9 +65,11 @@ export function TestimonialCard({
           className="bg-primary text-primary-foreground flex size-10 shrink-0 items-center justify-center rounded-full text-sm font-semibold"
           aria-hidden
         >
-          {testimonial.initials}
+          {translations.items[testimonial.initialsKey]}
         </div>
-        <p className="font-semibold">{testimonial.name}</p>
+        <p className="font-semibold">
+          {translations.items[testimonial.nameKey]}
+        </p>
       </div>
     </article>
   );

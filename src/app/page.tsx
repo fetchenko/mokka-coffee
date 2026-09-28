@@ -6,22 +6,27 @@ import { Hero } from "@/components/sections/hero";
 import { MenuPreview } from "@/components/sections/menu-preview";
 import { Testimonialls } from "@/components/sections/testimonialls";
 import { VisitUs } from "@/components/sections/visit-us";
+import { getLocale } from "@/i18n/get-locale";
+import { getDictionary } from "@/i18n/get-dictionary";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const locale = await getLocale();
+  const dictionary = getDictionary(locale);
+
   return (
     <>
-      <Header className="section-dark" />
+      <Header className="section-dark" translations={dictionary.header} />
 
       <main>
-        <Hero />
-        <CustomerFavorites />
-        <AboutUs />
-        <MenuPreview />
-        <Testimonialls />
-        <VisitUs />
+        <Hero translations={dictionary.hero} />
+        <CustomerFavorites translations={dictionary.menu} locale={locale} />
+        <MenuPreview translations={dictionary.menu} locale={locale} />
+        <AboutUs translations={dictionary.aboutUs} />
+        <Testimonialls translations={dictionary.testimonials} />
+        <VisitUs translations={dictionary.visitUs} />
       </main>
 
-      <Footer />
+      <Footer translations={dictionary.footer} locale={locale} />
     </>
   );
 }
