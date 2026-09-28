@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import type { Product } from "@/features/menu/model";
+import type { Product } from "@/features/menu/data";
 import { getCurrencyForLocale } from "@/i18n/currency";
 import { formatPrice } from "@/lib/money";
 import type { Locale } from "@/i18n/config";

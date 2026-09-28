@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { navigation } from "@/config/navigation";
 import { products } from "@/features/menu/data";
-import type { Product } from "@/features/menu/model";
+import type { Product } from "@/features/menu/data";
 import type { Dictionary } from "@/i18n/dictionary.types";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";

@@ -6,7 +6,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
-import type { ProductType } from "@/features/menu/model";
+import type { ProductType } from "@/features/menu/data";
 
 export type CategoryItem = {
   id: ProductType;

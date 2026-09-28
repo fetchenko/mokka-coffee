@@ -11,7 +11,7 @@ import { Heading } from "@/components/ui/heading";
 import { CategoryNavigation } from "@/components/blocks/category-navigation";
 import { navigation } from "@/config/navigation";
 import { products } from "@/features/menu/data";
-import type { ProductType } from "@/features/menu/model";
+import type { ProductType } from "@/features/menu/data";
 import { ProductRow } from "@/components/blocks/product-row";
 import { categoryNavigation } from "@/features/menu/category-menu";
 import { Button } from "@/components/ui/button";

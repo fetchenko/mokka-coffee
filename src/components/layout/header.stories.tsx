@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 import { Header } from "./header";
-import { Logo } from "@/components/ui/logo";
 import { dictionary as en } from "@/i18n/dictionaries/en";
 
 const meta = {
@@ -13,12 +12,9 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-const logo = <Logo translations={en.logo} />;
-
 export const Default: Story = {
   args: {
     translations: en.header,
-    logo,
   },
   parameters: {
     layout: "fullscreen",
@@ -33,7 +29,6 @@ export const Default: Story = {
 export const Dark: Story = {
   args: {
     translations: en.header,
-    logo,
   },
   parameters: {
     layout: "fullscreen",
@@ -53,7 +48,6 @@ export const Dark: Story = {
 export const TransparentDesktop: Story = {
   args: {
     translations: en.header,
-    logo,
   },
   parameters: {
     layout: "fullscreen",

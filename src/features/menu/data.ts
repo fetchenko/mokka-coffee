@@ -1,4 +1,16 @@
-import type { ProductCategories } from "@/features/menu/model";
+import { Currency } from "@/lib/money";
+
+export type Product = {
+  id: string;
+  prices: Record<Currency, number>;
+  image: string;
+  tags?: string[];
+};
+
+export type ProductCategories = {
+  id: string;
+  items: Product[];
+};
 
 export const products: ProductCategories[] = [
   {
@@ -164,3 +176,11 @@ export const products: ProductCategories[] = [
     ],
   },
 ];
+
+export type ProductType = (typeof products)[number]["id"];
+
+export type ProductId = (typeof products)[number]["items"][number]["id"];
+
+export type ProductTag = NonNullable<
+  (typeof products)[number]["items"][number]["tags"]
+>[number];

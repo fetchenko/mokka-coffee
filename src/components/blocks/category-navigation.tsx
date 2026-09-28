@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils/cn";
 import { navigation } from "@/config/navigation";
-import type { ProductType } from "@/features/menu/model";
+import type { ProductType } from "@/features/menu/data";
 import type { CategoryItem } from "@/features/menu/category-menu";
 
 type CategoryNavigationProps =
