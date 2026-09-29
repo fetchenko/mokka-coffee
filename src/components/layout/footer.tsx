@@ -1,5 +1,5 @@
 import type { Locale } from "@/i18n/config";
-import type { Dictionary } from "@/i18n/dictionary.types";
+import type { Dictionary } from "@/i18n/dictionaries/en";
 import { Container } from "@/components/layout/container";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { Button } from "@/components/ui/button";

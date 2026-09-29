@@ -1,4 +1,4 @@
-import type { Dictionary } from "@/i18n/dictionary.types";
+import type { Dictionary } from "@/i18n/dictionaries/en";
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { MapPin, Navigation } from "lucide-react";

@@ -1,10 +1,11 @@
 import { describe, expect, expectTypeOf, it } from "vitest";
 
-import { dictionary as en } from "./dictionaries/en";
+import { dictionary as en, LogoTranslation } from "./dictionaries/en";
 import { dictionary as pl } from "./dictionaries/pl";
 import { dictionary as ru } from "./dictionaries/ru";
 import { getDictionary } from "./get-dictionary";
-import { Dictionary, TranslationSchema } from "@/i18n/dictionary.types";
+import { Dictionary } from "@/i18n/dictionaries/en";
+import { TranslationSchema } from "@/i18n/translation-schema";
 
 describe("TranslationSchema", () => {
   it("turns translation leaves into strings while preserving the dictionary shape", () => {
@@ -27,7 +28,7 @@ describe("TranslationSchema", () => {
 
   it("uses the English dictionary as the translation schema", () => {
     expectTypeOf<Dictionary>().toEqualTypeOf<TranslationSchema<typeof en>>();
-    expectTypeOf<Dictionary["logo"]["subtitle"]>().toEqualTypeOf<string>();
+    expectTypeOf<LogoTranslation["subtitle"]>().toEqualTypeOf<string>();
     expectTypeOf<
       Dictionary["header"]["navigationItems"]["home"]
     >().toEqualTypeOf<string>();

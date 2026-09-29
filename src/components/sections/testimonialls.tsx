@@ -9,7 +9,7 @@ import { Heading } from "@/components/ui/heading";
 import { cn } from "@/lib/utils/cn";
 import { testimonials } from "@/features/menu/testimonials";
 import { TestimonialCard } from "@/components/blocks/testimonial-card";
-import type { Dictionary } from "@/i18n/dictionary.types";
+import type { Dictionary } from "@/i18n/dictionaries/en";
 
 const DISPLAY_ITEMS = 2;
 

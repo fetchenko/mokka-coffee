@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils/cn";
 import { Button } from "@/components/ui/button";
 import { navigation } from "@/config/navigation";
 import { useInView } from "react-intersection-observer";
-import type { Dictionary } from "@/i18n/dictionary.types";
+import type { Dictionary } from "@/i18n/dictionaries/en";
 import { Logo } from "@/components/ui/logo";
 
 const NAVIGATION_ITEMS = [

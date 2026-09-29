@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
 import { sections } from "@/config/navigation";
-import type { Dictionary } from "@/i18n/dictionary.types";
+import type { Dictionary } from "@/i18n/dictionaries/en";
 import { CalendarDays, Coffee, Smile } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
