@@ -9,6 +9,7 @@ import type { Locale } from "@/i18n/config";
 import type { ProductType } from "@/features/menu/data";
 import { products } from "@/features/menu/data";
 import { categoryNavigation } from "@/features/menu/category-menu";
+import { Heading } from "@/components/ui/heading";
 
 type MenuProps = {
   translations: Dictionary["menu"];
@@ -43,6 +44,9 @@ export function Menu({ translations, locale }: MenuProps) {
             }}
             data-category={category.id}
           >
+            <Heading variant="block">
+              {translations.categories[category.id]}
+            </Heading>
             <div className="grid gap-4 md:col-span-2 md:grid-cols-2 lg:grid-cols-4">
               {category.items.map((product) => (
                 <ProductCard
