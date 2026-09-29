@@ -19,7 +19,7 @@ import { Text } from "@/components/ui/text";
 import type { Locale } from "@/i18n/config";
 import { Dictionary } from "@/i18n/dictionaries/en";
 
-const DISPLAY_ITEMS = 5;
+const DISPLAY_ITEMS = 4;
 
 type MenuPreviewProps = {
   translations: Dictionary["menu"];
@@ -36,9 +36,9 @@ export function MenuPreview({ translations, locale }: MenuPreviewProps) {
   return (
     <Section>
       <Container>
-        <div className="grid gap-10 md:grid-cols-3 md:gap-8 lg:gap-12">
+        <div className="grid gap-8 md:grid-cols-3 md:gap-8 lg:gap-12">
           <div>
-            <div className="mb-8 space-y-2 md:mb-10">
+            <div className="mb-4 space-y-2 md:mb-8">
               <Heading variant="eyebrow">
                 {translations.preview.eyebrow}
               </Heading>
@@ -50,7 +50,6 @@ export function MenuPreview({ translations, locale }: MenuPreviewProps) {
               categoryItems={categoryNavigation}
               labels={translations.categories}
               ariaLabel={translations.navigationLabel}
-              mode="select"
               selectedCategory={selectedCategory}
               onSelect={setSelectedCategory}
             />
