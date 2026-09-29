@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 import { CategoryNavigation } from "@/components/blocks/category-navigation";
 import { ProductCard } from "@/components/blocks/product-card";
@@ -15,6 +16,57 @@ type MenuProps = {
   translations: Dictionary["menu"];
   locale: Locale;
 };
+
+type CategorySectionProps = {
+  category: (typeof products)[number];
+  translations: Dictionary["menu"];
+  locale: Locale;
+  registerRef: (element: HTMLElement | null) => void;
+  onInView: (category: ProductType) => void;
+};
+
+function CategorySection({
+  category,
+  translations,
+  locale,
+  registerRef,
+  onInView,
+}: CategorySectionProps) {
+  const { ref: observerRef } = useInView({
+    threshold: 0,
+    rootMargin: "-8rem 0px -60% 0px",
+    onChange: (inView) => {
+      if (inView) {
+        onInView(category.id);
+      }
+    },
+  });
+
+  return (
+    <section
+      ref={(element) => {
+        registerRef(element);
+        observerRef(element);
+      }}
+      data-category={category.id}
+      className="scroll-mt-32"
+    >
+      <Heading variant="block">
+        {translations.categories[category.id]}
+      </Heading>
+      <div className="grid gap-4 md:col-span-2 md:grid-cols-2 lg:grid-cols-4">
+        {category.items.map((product) => (
+          <ProductCard
+            key={product.id}
+            product={product}
+            translation={translations.products[product.id]}
+            locale={locale}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
 
 export function Menu({ translations, locale }: MenuProps) {
   const [selectedCategory, setSelectedCategory] =
@@ -46,27 +98,16 @@ export function Menu({ translations, locale }: MenuProps) {
 
       <div className="space-y-12">
         {products.map((category) => (
-          <section
+          <CategorySection
             key={category.id}
-            ref={(element) => {
+            category={category}
+            translations={translations}
+            locale={locale}
+            registerRef={(element) => {
               categoryRefs.current[category.id] = element ?? undefined;
             }}
-            data-category={category.id}
-          >
-            <Heading variant="block">
-              {translations.categories[category.id]}
-            </Heading>
-            <div className="grid gap-4 md:col-span-2 md:grid-cols-2 lg:grid-cols-4">
-              {category.items.map((product) => (
-                <ProductCard
-                  key={product.id}
-                  product={product}
-                  translation={translations.products[product.id]}
-                  locale={locale}
-                />
-              ))}
-            </div>
-          </section>
+            onInView={setSelectedCategory}
+          />
         ))}
       </div>
     </section>
