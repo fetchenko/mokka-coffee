@@ -34,7 +34,7 @@ function CategorySection({
 }: CategorySectionProps) {
   const { ref: observerRef } = useInView({
     threshold: 0,
-    rootMargin: "-8rem 0px -60% 0px",
+    rootMargin: "-8rem 0px -70% 0px",
     onChange: (inView) => {
       if (inView) {
         onInView(category.id);
@@ -44,16 +44,16 @@ function CategorySection({
 
   return (
     <section
-      ref={(element) => {
-        registerRef(element);
-        observerRef(element);
-      }}
+      ref={registerRef}
       data-category={category.id}
       className="scroll-mt-32"
     >
+      <div ref={observerRef} aria-hidden="true" className="h-px" />
+
       <Heading variant="block">
         {translations.categories[category.id]}
       </Heading>
+
       <div className="grid gap-4 md:col-span-2 md:grid-cols-2 lg:grid-cols-4">
         {category.items.map((product) => (
           <ProductCard
