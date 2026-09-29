@@ -2,14 +2,14 @@
 
 import { useRef, useState } from "react";
 
-import { ProductCard } from "@/components/blocks/product-card";
 import { CategoryNavigation } from "@/components/blocks/category-navigation";
+import { ProductCard } from "@/components/blocks/product-card";
+import { Heading } from "@/components/ui/heading";
 import type { Dictionary } from "@/i18n/dictionaries/en";
 import type { Locale } from "@/i18n/config";
 import type { ProductType } from "@/features/menu/data";
 import { products } from "@/features/menu/data";
 import { categoryNavigation } from "@/features/menu/category-menu";
-import { Heading } from "@/components/ui/heading";
 
 type MenuProps = {
   translations: Dictionary["menu"];
@@ -22,6 +22,15 @@ export function Menu({ translations, locale }: MenuProps) {
 
   const categoryRefs = useRef<Partial<Record<ProductType, HTMLElement>>>({});
 
+  const handleCategorySelect = (category: ProductType) => {
+    setSelectedCategory(category);
+
+    categoryRefs.current[category]?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <section>
       <div className="top-header bg-background sticky z-10">
@@ -31,7 +40,7 @@ export function Menu({ translations, locale }: MenuProps) {
           ariaLabel={translations.navigationLabel}
           mode="select"
           selectedCategory={selectedCategory}
-          onSelect={setSelectedCategory}
+          onSelect={handleCategorySelect}
         />
       </div>
 
