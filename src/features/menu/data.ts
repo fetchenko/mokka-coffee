@@ -1,18 +1,57 @@
 import { Currency } from "@/lib/money";
 
+export const productTypes = [
+  "coffee",
+  "non-coffee",
+  "pastries",
+  "sandwiches",
+] as const;
+
+export type ProductType = (typeof productTypes)[number];
+
+export const productIds = [
+  "espresso",
+  "americano",
+  "latte",
+  "cappuccino",
+  "flat-white",
+  "mocha",
+  "caramel-latte",
+  "cold-brew",
+  "vanilla-latte",
+  "coffee-latte",
+  "matcha-latte",
+  "hot-chocolate",
+  "chai-latte",
+  "lemonade",
+  "cinnamon-roll",
+  "croissant",
+  "cheesecake",
+  "ham-and-cheese-sandwich",
+  "blt",
+  "chicken-salad-croissant",
+  "grilled-cheese",
+] as const;
+
+export type ProductId = (typeof productIds)[number];
+
+export const productTags = ["popular", "favourite", "new"] as const;
+
+export type ProductTag = (typeof productTags)[number];
+
 export type Product = {
-  id: string;
+  id: ProductId;
   prices: Record<Currency, number>;
   image: string;
-  tags: string[];
+  tags: ProductTag[];
 };
 
 export type ProductCategories = {
-  id: string;
+  id: ProductType;
   items: Product[];
 };
 
-export const products = [
+export const products: ProductCategories[] = [
   {
     id: "coffee",
     items: [
@@ -178,12 +217,4 @@ export const products = [
       },
     ],
   },
-] as const satisfies ProductCategories[];
-
-export type ProductType = (typeof products)[number]["id"];
-
-export type ProductId = (typeof products)[number]["items"][number]["id"];
-
-export type ProductTag = NonNullable<
-  (typeof products)[number]["items"][number]["tags"]
->[number];
+];

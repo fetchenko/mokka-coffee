@@ -14,8 +14,6 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     translations: en.footer,
-    languageTranslations: en.language,
-    logoTranslations: en.logo,
     locale: "en",
   },
   parameters: {

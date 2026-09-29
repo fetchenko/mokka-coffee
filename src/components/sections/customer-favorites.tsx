@@ -5,14 +5,13 @@ import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
 import { navigation } from "@/config/navigation";
 import { products } from "@/features/menu/data";
-import type { Product } from "@/features/menu/data";
-import type { Dictionary } from "@/i18n/dictionaries/en";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
+import { Dictionary } from "@/i18n/dictionaries/en";
 
 const DISPLAY_ITEMS = 4;
-export const customerFavorites: Product[] = products
+export const customerFavorites = products
   .flatMap((category) => category.items)
   .filter((product) => product.tags?.includes("favourite"))
   .slice(0, DISPLAY_ITEMS);

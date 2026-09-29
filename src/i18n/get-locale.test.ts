@@ -54,11 +54,11 @@ describe("getLocale", () => {
 
     vi.mocked(cookies).mockResolvedValue({
       get: getCookie,
-    } as Awaited<ReturnType<typeof cookies>>);
+    } as unknown as Awaited<ReturnType<typeof cookies>>);
 
     vi.mocked(headers).mockResolvedValue({
       get: getHeader,
-    } as Awaited<ReturnType<typeof headers>>);
+    } as unknown as Awaited<ReturnType<typeof headers>>);
   });
 
   it("uses a supported cookie locale", async () => {
