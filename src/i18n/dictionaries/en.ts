@@ -1,3 +1,11 @@
+import { ProductId, ProductType } from "@/features/menu/data";
+import { TranslationSchema } from "@/i18n/translation-schema";
+
+export type ProductTranslation = {
+  name: string;
+  description: string;
+};
+
 const navigationItems = {
   home: "Home",
   menu: "Menu",
@@ -57,6 +65,8 @@ const logo = {
   subtitle: "Specialty Coffee",
 };
 
+export type LogoTranslation = TranslationSchema<typeof logo>;
+
 export const language = {
   label: "Language",
   selectAriaLabel: "Select language",
@@ -66,6 +76,9 @@ export const language = {
     ru: "Русский",
   },
 };
+
+export type LanguageTranslation = TranslationSchema<typeof language>;
+
 export const dictionary = {
   header: {
     logo,
@@ -119,7 +132,7 @@ export const dictionary = {
       "non-coffee": "Non-coffee",
       pastries: "Pastries",
       sandwiches: "Sandwiches",
-    },
+    } satisfies Record<ProductType, string>,
     products: {
       espresso: { name: "Espresso", description: "Rich and bold" },
       americano: { name: "Americano", description: "Simple and classic" },
@@ -176,7 +189,7 @@ export const dictionary = {
         description:
           "Melted cheese pressed between sliced bread, with optional sourdough, bacon, or pesto.",
       },
-    },
+    } satisfies Record<ProductId, ProductTranslation>,
     navigationLabel: "Menu categories",
     preview: {
       eyebrow: "Menu preview",
@@ -192,3 +205,5 @@ export const dictionary = {
     },
   },
 } as const;
+
+export type Dictionary = TranslationSchema<typeof dictionary>;

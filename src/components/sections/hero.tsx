@@ -2,7 +2,7 @@ import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils/cn";
-import type { Dictionary } from "@/i18n/dictionary.types";
+import type { Dictionary } from "@/i18n/dictionaries/en";
 import { Coffee, Heart, Leaf, Map, Users } from "lucide-react";
 import Link from "next/link";
 

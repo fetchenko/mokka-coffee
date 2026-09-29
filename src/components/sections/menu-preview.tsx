@@ -17,7 +17,7 @@ import { categoryNavigation } from "@/features/menu/category-menu";
 import { Button } from "@/components/ui/button";
 import { Text } from "@/components/ui/text";
 import type { Locale } from "@/i18n/config";
-import { Dictionary } from "@/i18n/dictionary.types";
+import { Dictionary } from "@/i18n/dictionaries/en";
 
 const DISPLAY_ITEMS = 5;
 

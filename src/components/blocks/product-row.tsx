@@ -4,7 +4,7 @@ import type { Product } from "@/features/menu/data";
 import { getCurrencyForLocale } from "@/i18n/currency";
 import type { Locale } from "@/i18n/config";
 import { formatPrice } from "@/lib/money";
-import { ProductTranslation } from "@/i18n/dictionary.types";
+import { ProductTranslation } from "@/i18n/dictionaries/en";
 
 type ProductRowProps = {
   product: Product;

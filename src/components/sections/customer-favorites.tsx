@@ -6,7 +6,7 @@ import { Heading } from "@/components/ui/heading";
 import { navigation } from "@/config/navigation";
 import { products } from "@/features/menu/data";
 import type { Product } from "@/features/menu/data";
-import type { Dictionary } from "@/i18n/dictionary.types";
+import type { Dictionary } from "@/i18n/dictionaries/en";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";

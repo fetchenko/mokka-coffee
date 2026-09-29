@@ -1,7 +1,6 @@
 import type { ComponentType } from "react";
 
-import type { Dictionary } from "@/i18n/dictionary.types";
-import { dictionary as en } from "@/i18n/dictionaries/en";
+import { dictionary as en, Dictionary } from "@/i18n/dictionaries/en";
 
 type TranslatableProps<K extends keyof Dictionary> = {
   dictionary: Dictionary[K];

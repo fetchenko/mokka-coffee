@@ -4,7 +4,7 @@ export type Product = {
   id: string;
   prices: Record<Currency, number>;
   image: string;
-  tags?: string[];
+  tags: string[];
 };
 
 export type ProductCategories = {
@@ -12,7 +12,7 @@ export type ProductCategories = {
   items: Product[];
 };
 
-export const products: ProductCategories[] = [
+export const products = [
   {
     id: "coffee",
     items: [
@@ -49,6 +49,7 @@ export const products: ProductCategories[] = [
         prices: { PLN: 1200, EUR: 280, USD: 320, BYN: 933 },
         image:
           "https://images.unsplash.com/photo-1676471814490-0f9aa1ea8e4a?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        tags: [],
       },
       {
         id: "mocha",
@@ -100,6 +101,7 @@ export const products: ProductCategories[] = [
         prices: { PLN: 1200, EUR: 280, USD: 320, BYN: 933 },
         image:
           "https://images.unsplash.com/photo-1716973172733-2a8574d7a606?q=80&w=826&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        tags: [],
       },
       {
         id: "chai-latte",
@@ -139,6 +141,7 @@ export const products: ProductCategories[] = [
         prices: { PLN: 1200, EUR: 280, USD: 320, BYN: 933 },
         image:
           "https://images.unsplash.com/photo-1622621746668-59fb299bc4d7?q=80&w=933&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        tags: [],
       },
     ],
   },
@@ -175,7 +178,7 @@ export const products: ProductCategories[] = [
       },
     ],
   },
-];
+] as const satisfies ProductCategories[];
 
 export type ProductType = (typeof products)[number]["id"];
 

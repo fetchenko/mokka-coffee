@@ -2,7 +2,7 @@ import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { ContactBlock } from "@/components/blocks/contact-block";
 import { VisitUsCard } from "@/components/blocks/visit-us-card";
-import type { Dictionary } from "@/i18n/dictionary.types";
+import type { Dictionary } from "@/i18n/dictionaries/en";
 
 type ContactProps = {
   translations: Dictionary["visitUs"];

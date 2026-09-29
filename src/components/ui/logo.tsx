@@ -1,7 +1,7 @@
-import type { Dictionary } from "@/i18n/dictionary.types";
+import type { LogoTranslation } from "@/i18n/dictionaries/en";
 
 type LogoProps = {
-  translations: Dictionary["logo"];
+  translations: LogoTranslation;
 };
 
 export function Logo({ translations }: LogoProps) {
