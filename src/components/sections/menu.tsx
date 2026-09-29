@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import { ProductCard } from "@/components/blocks/product-card";
 import { CategoryNavigation } from "@/components/blocks/category-navigation";
@@ -19,11 +19,7 @@ export function Menu({ translations, locale }: MenuProps) {
   const [selectedCategory, setSelectedCategory] =
     useState<ProductType>("coffee");
 
-  const activeCategory = products.find(
-    (category) => category.id === selectedCategory,
-  );
-
-  if (!activeCategory) return null;
+  const categoryRefs = useRef<Partial<Record<ProductType, HTMLElement>>>({});
 
   return (
     <section>
@@ -38,14 +34,26 @@ export function Menu({ translations, locale }: MenuProps) {
         />
       </div>
 
-      <div className="grid gap-4 md:col-span-2 md:grid-cols-2 lg:grid-cols-4">
-        {activeCategory.items.map((product) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            translation={translations.products[product.id]}
-            locale={locale}
-          />
+      <div className="space-y-12">
+        {products.map((category) => (
+          <section
+            key={category.id}
+            ref={(element) => {
+              categoryRefs.current[category.id] = element ?? undefined;
+            }}
+            data-category={category.id}
+          >
+            <div className="grid gap-4 md:col-span-2 md:grid-cols-2 lg:grid-cols-4">
+              {category.items.map((product) => (
+                <ProductCard
+                  key={product.id}
+                  product={product}
+                  translation={translations.products[product.id]}
+                  locale={locale}
+                />
+              ))}
+            </div>
+          </section>
         ))}
       </div>
     </section>
