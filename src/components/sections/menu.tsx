@@ -33,8 +33,7 @@ function CategorySection({
   onInView,
 }: CategorySectionProps) {
   const { ref: observerRef } = useInView({
-    threshold: 0,
-    rootMargin: "-8rem 0px -70% 0px",
+    threshold: 0.5,
     onChange: (inView) => {
       if (inView) {
         onInView(category.id);
@@ -44,12 +43,13 @@ function CategorySection({
 
   return (
     <section
-      ref={registerRef}
+      ref={(element) => {
+        registerRef(element);
+        observerRef(element);
+      }}
       data-category={category.id}
       className="scroll-mt-32"
     >
-      <div ref={observerRef} aria-hidden="true" className="h-px" />
-
       <Heading variant="block">
         {translations.categories[category.id]}
       </Heading>
