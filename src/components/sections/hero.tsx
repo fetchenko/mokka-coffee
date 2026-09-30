@@ -57,7 +57,7 @@ export function Hero({ translations }: HeroProps) {
         className="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-gradient-to-t from-black/70 to-transparent"
       />
       <Container className="flex min-h-svh flex-col pt-24 pb-8 lg:pt-28 lg:pb-12">
-        <div className="max-w-xl">
+        <div className="max-w-xl lg:mt-auto">
           <h1 className="font-display text-[clamp(3.5rem,14vw,5.5rem)] leading-[1.1] font-semibold tracking-[-0.045em] lg:text-[clamp(4.5rem,6vw,6rem)]">
             <span className="block">{translations.title}</span>
             <span className="text-primary block leading-[0.88]">
@@ -69,7 +69,7 @@ export function Hero({ translations }: HeroProps) {
           </p>
         </div>
 
-        <div className="mt-auto mb-4 flex w-full max-w-sm flex-col gap-3 sm:flex-row lg:mb-6">
+        <div className="mt-auto mb-4 flex w-full max-w-sm flex-col gap-3 sm:flex-row lg:mt-8 lg:mb-6">
           <Button asChild>
             <Link href="/menu">{translations.menuCta}</Link>
           </Button>
@@ -81,7 +81,7 @@ export function Hero({ translations }: HeroProps) {
           </Button>
         </div>
 
-        <div className="grid grid-cols-4 gap-1 sm:gap-5 lg:max-w-3xl lg:gap-8">
+        <div className="grid grid-cols-4 gap-1 sm:gap-5 lg:max-w-3xl lg:gap-8 lg:mb-auto">
           {features.map((feature) => {
             const Icon = feature.icon;
             return (
