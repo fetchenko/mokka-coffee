@@ -35,31 +35,29 @@ export function MenuPreview({ translations, locale }: MenuPreviewProps) {
 
   return (
     <Section>
-      <Container className="mt-4 grid gap-4 md:mt-8 md:grid-cols-3 md:gap-8 lg:gap-12">
+      <Container className="mt-4 grid gap-4 md:mt-8 md:grid-cols-[1fr_1.25fr_0.7fr] md:gap-8 lg:gap-12">
         <div>
-          <div>
-            <Heading variant="eyebrow">{translations.preview.eyebrow}</Heading>
-            <Heading variant="section">{translations.preview.title}</Heading>
-            <Text className="py-2">{translations.preview.description}</Text>
+          <Heading variant="eyebrow">{translations.preview.eyebrow}</Heading>
+          <Heading variant="section">{translations.preview.title}</Heading>
+          <Text className="py-2">{translations.preview.description}</Text>
 
-            <CategorySelect
-              categoryItems={categoryNavigation}
-              labels={translations.categories}
-              ariaLabel={translations.navigationLabel}
-              selectedCategory={selectedCategory}
-              onSelect={setSelectedCategory}
-            />
-          </div>
+          <CategorySelect
+            categoryItems={categoryNavigation}
+            labels={translations.categories}
+            ariaLabel={translations.navigationLabel}
+            selectedCategory={selectedCategory}
+            onSelect={setSelectedCategory}
+          />
         </div>
 
-        <div>
+        <div className="flex min-h-full flex-col">
           <div className="space-y-8">
             {activeCategory && (
               <div>
                 <Heading variant="eyebrow">
                   {translations.categories[activeCategory.id]}
                 </Heading>
-                <div className="mt-4">
+                <div className="mt-4 divide-y divide-border">
                   {activeCategory.items
                     .slice(0, DISPLAY_ITEMS)
                     .map((product) => (
@@ -75,8 +73,8 @@ export function MenuPreview({ translations, locale }: MenuPreviewProps) {
             )}
           </div>
 
-          <Button variant="link" asChild className="mt-6">
-            <Link href={`${navigation.menu}/#${activeCategory?.id ?? ""}`}>
+          <Button variant="link" asChild className="mt-6 self-end">
+            <Link href={navigation.menu + "/#" + (activeCategory?.id ?? "")}>
               {translations.preview.viewFullMenu} <ArrowRight />
             </Link>
           </Button>
@@ -87,7 +85,7 @@ export function MenuPreview({ translations, locale }: MenuPreviewProps) {
             src="https://images.unsplash.com/photo-1731270605166-edddd1a66918?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt={translations.preview.imageAlt}
             fill
-            sizes="(min-width: 768px) 33vw, 100vw"
+            sizes="(min-width: 768px) 25vw, 100vw"
             className="object-cover"
           />
         </div>
