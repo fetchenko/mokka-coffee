@@ -21,7 +21,7 @@ export function CategoryLinks({
   return (
     <nav
       aria-label={ariaLabel}
-      className="top-header sticky z-10 bg-background"
+      className="top-header bg-background sticky z-10"
     >
       <ul className="flex justify-around">
         {categoryItems.map((category) => {
@@ -35,9 +35,7 @@ export function CategoryLinks({
                 variant="outline"
                 size="icon"
                 asChild
-                className={cn(
-                  isActive && "bg-foreground text-background",
-                )}
+                className={cn(isActive && "bg-foreground text-background")}
               >
                 <Link
                   href={`#${category.id}`}

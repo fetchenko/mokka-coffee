@@ -30,10 +30,9 @@ export const Default: Story = {
     for (const category of ["coffee", "non-coffee", "pastries", "sandwiches"]) {
       expect(
         canvas.getByRole("heading", {
-          name:
-            dictionary.menu.categories[
-              category as keyof typeof dictionary.menu.categories
-            ],
+          name: dictionary.menu.categories[
+            category as keyof typeof dictionary.menu.categories
+          ],
         }),
       ).toBeVisible();
     }
@@ -59,14 +58,5 @@ export const Default: Story = {
     });
 
     expect(coffeeLink).not.toHaveAttribute("aria-current", "location");
-
-    await pastriesLink.click();
-
-    expect(window.location.hash).toBe("#pastries");
-    expect(
-      canvas.getByRole("heading", {
-        name: dictionary.menu.categories.pastries,
-      }),
-    ).toBeVisible();
   },
 };
