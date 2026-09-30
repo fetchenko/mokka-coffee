@@ -60,6 +60,8 @@
 
   --icon-selected: var(--color-coffee-900);
   --icon-unselected: var(--color-coffee-50);
+
+  --spacing-header: calc(var(--spacing) * 16);
 }
 
 .section-dark {
@@ -149,6 +151,12 @@
   --color-icon-unselected: var(--icon-unselected);
 
   --spacing-header: calc(var(--spacing) * 16);
+}
+
+@media (min-width: 64rem) {
+  :root {
+    --spacing-header: calc(var(--spacing) * 20);
+  }
 }
 
 body {
