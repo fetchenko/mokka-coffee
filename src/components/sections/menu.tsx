@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 import { Container } from "@/components/layout/container";
-import { MenuNavigation } from "@/components/blocks/menu-navigation";
+import { CategoryLinks } from "@/components/blocks/category-links";
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { CategorySection } from "@/components/blocks/category-section";
@@ -25,7 +25,7 @@ export function Menu({ translations, locale }: MenuProps) {
   return (
     <Section>
       <Container className="pb-8">
-        <MenuNavigation
+        <CategoryLinks
           categoryItems={categoryNavigation}
           labels={translations.categories}
           ariaLabel={translations.navigationLabel}
