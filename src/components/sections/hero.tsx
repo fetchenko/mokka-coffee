@@ -50,10 +50,14 @@ export function Hero({ translations }: HeroProps) {
       />
       <div
         aria-hidden="true"
+        className="absolute inset-x-0 top-0 -z-10 h-40 bg-gradient-to-b from-black/70 via-black/35 to-transparent"
+      />
+      <div
+        aria-hidden="true"
         className="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-gradient-to-t from-black/70 to-transparent"
       />
-      <Container className="flex min-h-svh flex-col pt-28 pb-10 lg:pt-32 lg:pb-16">
-        <div className="max-w-xl">
+      <Container className="flex min-h-svh flex-col pt-24 pb-8 lg:pt-32 lg:pb-16">
+        <div className="max-w-xl lg:mt-auto">
           <h1 className="font-display text-[clamp(3.5rem,14vw,5.5rem)] leading-[1.1] font-semibold tracking-[-0.045em] lg:text-[clamp(4.5rem,6vw,6rem)]">
             <span className="block">{translations.title}</span>
             <span className="text-primary block leading-[0.88]">
@@ -63,19 +67,21 @@ export function Hero({ translations }: HeroProps) {
           <p className="text-foreground/85 mt-6 max-w-2xs text-base leading-relaxed sm:text-lg md:max-w-xs">
             {translations.description}
           </p>
-          <div className="mt-8 flex w-full max-w-sm flex-col gap-3 sm:flex-row">
-            <Button asChild>
-              <Link href="/menu">{translations.menuCta}</Link>
-            </Button>
-            <Button asChild variant="outline">
-              <Link href="/visit-us">
-                <Map />
-                {translations.visitCta}
-              </Link>
-            </Button>
-          </div>
         </div>
-        <div className="mt-auto grid grid-cols-4 gap-1 pt-16 sm:gap-5 lg:max-w-3xl lg:gap-8 lg:pb-2">
+
+        <div className="mt-auto mb-6 flex w-full max-w-sm flex-col gap-3 sm:flex-row lg:mt-8 lg:mb-12">
+          <Button asChild>
+            <Link href="/menu">{translations.menuCta}</Link>
+          </Button>
+          <Button asChild variant="outline">
+            <Link href="/visit-us">
+              <Map />
+              {translations.visitCta}
+            </Link>
+          </Button>
+        </div>
+
+        <div className="grid grid-cols-4 gap-1 pt-4 sm:gap-5 lg:max-w-3xl lg:gap-8 lg:pb-2">
           {features.map((feature) => {
             const Icon = feature.icon;
             return (
