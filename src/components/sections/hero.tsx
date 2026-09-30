@@ -50,11 +50,11 @@ export function Hero({ translations }: HeroProps) {
       />
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 top-0 -z-10 h-40 bg-gradient-to-b from-black/70 via-black/35 to-transparent"
+        className="absolute inset-x-0 top-0 -z-10 h-40 bg-linear-to-b from-black/70 via-black/35 to-transparent"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-gradient-to-t from-black/70 to-transparent"
+        className="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-linear-to-t from-black/70 to-transparent"
       />
       <Container className="flex min-h-svh flex-col pt-24 pb-8 lg:pt-28 lg:pb-12">
         <div className="max-w-xl lg:mt-auto">
