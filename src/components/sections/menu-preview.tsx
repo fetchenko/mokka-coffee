@@ -8,7 +8,7 @@ import { useState } from "react";
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { Heading } from "@/components/ui/heading";
-import { CategoryNavigation } from "@/components/blocks/category-navigation";
+import { CategorySelect } from "@/components/blocks/category-select";
 import { navigation } from "@/config/navigation";
 import { products } from "@/features/menu/data";
 import type { ProductType } from "@/features/menu/data";
@@ -46,7 +46,7 @@ export function MenuPreview({ translations, locale }: MenuPreviewProps) {
               <Text>{translations.preview.description}</Text>
             </div>
 
-            <CategoryNavigation
+            <CategorySelect
               categoryItems={categoryNavigation}
               labels={translations.categories}
               ariaLabel={translations.navigationLabel}
