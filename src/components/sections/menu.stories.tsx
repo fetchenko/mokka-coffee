@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { expect, within } from "storybook/test";
+import { expect, waitFor, within } from "storybook/test";
 
 import { Menu } from "./menu";
 import { dictionary } from "@/i18n/dictionaries/en";
@@ -54,9 +54,9 @@ export const Default: Story = {
       behavior: "instant",
     });
 
-    await expect
-      .poll(() => pastriesLink.getAttribute("aria-current"))
-      .toBe("location");
+    await waitFor(() => {
+      expect(pastriesLink).toHaveAttribute("aria-current", "location");
+    });
 
     expect(coffeeLink).not.toHaveAttribute("aria-current", "location");
 
