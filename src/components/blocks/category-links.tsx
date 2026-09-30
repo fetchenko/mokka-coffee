@@ -23,29 +23,31 @@ export function CategoryLinks({
       aria-label={ariaLabel}
       className="top-header bg-background sticky z-10"
     >
-      <ul className="flex justify-around">
+      <ul className="flex justify-center gap-3 sm:gap-5 md:gap-6">
         {categoryItems.map((category) => {
           const Icon = category.icon;
           const label = labels[category.id];
           const isActive = category.id === activeCategory;
 
           return (
-            <li key={category.id} className="text-center">
+            <li key={category.id}>
               <Button
                 variant="outline"
-                size="icon"
+                size="default"
                 asChild
-                className={cn(isActive && "bg-foreground text-background")}
+                className={cn(
+                  "h-auto min-h-16 flex-col px-3 py-2 md:min-h-20 md:min-w-20",
+                  isActive && "bg-foreground text-background",
+                )}
               >
                 <Link
                   href={`#${category.id}`}
                   aria-current={isActive ? "location" : undefined}
-                  aria-label={label}
                 >
-                  <Icon aria-hidden="true" />
+                  <Icon aria-hidden="true" className="size-7 md:size-9" />
+                  <span className="text-xs sm:text-sm">{label}</span>
                 </Link>
               </Button>
-              <p className="text-xs sm:text-sm">{label}</p>
             </li>
           );
         })}
