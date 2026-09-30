@@ -81,7 +81,7 @@ export function Hero({ translations }: HeroProps) {
           </Button>
         </div>
 
-        <div className="grid grid-cols-4 gap-1 sm:gap-5 lg:max-w-3xl lg:gap-8 lg:mb-auto">
+        <div className="grid grid-cols-4 gap-1 sm:gap-5 lg:max-w-3xl lg:gap-8">
           {features.map((feature) => {
             const Icon = feature.icon;
             return (
