@@ -69,7 +69,7 @@ export function Hero({ translations }: HeroProps) {
           </p>
         </div>
 
-        <div className="mt-auto mb-4 flex w-full max-w-sm flex-col gap-3 sm:flex-row lg:mt-8 lg:mb-6">
+        <div className="mt-auto mb-4 flex w-full max-w-sm flex-col gap-3 sm:flex-row lg:mt-8 lg:mb-auto">
           <Button asChild>
             <Link href="/menu">{translations.menuCta}</Link>
           </Button>
