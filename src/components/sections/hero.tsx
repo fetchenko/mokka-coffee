@@ -42,7 +42,7 @@ export function Hero({ translations }: HeroProps) {
     <Section tone="dark" className="relative isolate min-h-svh overflow-hidden">
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-20 bg-[url('/assets/hero.webp')] bg-cover bg-[60%_center] bg-no-repeat"
+        className="absolute inset-0 -z-20 bg-[url('/assets/hero.webp')] bg-cover bg-position-[60%_center] bg-no-repeat"
       />
       <div
         aria-hidden="true"
