@@ -42,40 +42,46 @@ export function Hero({ translations }: HeroProps) {
     <Section tone="dark" className="relative isolate min-h-svh overflow-hidden">
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-20 bg-[url('/assets/hero.webp')] bg-cover bg-[60%_center] bg-no-repeat"
+        className="absolute inset-0 -z-20 bg-[url('/assets/hero.webp')] bg-cover bg-position-[60%_center] bg-no-repeat"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-gradient-to-r from-black/75 via-black/45 to-black/15"
+        className="absolute inset-0 -z-10 bg-linear-to-r from-black/75 via-black/45 to-black/15"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-gradient-to-t from-black/70 to-transparent"
+        className="absolute inset-x-0 top-0 -z-10 h-40 bg-linear-to-b from-black/70 via-black/35 to-transparent"
       />
-      <Container className="flex min-h-svh flex-col pt-28 pb-10 lg:pt-32 lg:pb-16">
-        <div className="max-w-xl">
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-linear-to-t from-black/70 to-transparent"
+      />
+      <Container className="flex min-h-svh flex-col pt-24 pb-8 lg:pt-28 lg:pb-12">
+        <div className="max-w-xl lg:mt-auto">
           <h1 className="font-display text-[clamp(3.5rem,14vw,5.5rem)] leading-[1.1] font-semibold tracking-[-0.045em] lg:text-[clamp(4.5rem,6vw,6rem)]">
             <span className="block">{translations.title}</span>
             <span className="text-primary block leading-[0.88]">
               {translations.titleAccent}
             </span>
           </h1>
-          <p className="text-foreground/85 mt-6 max-w-2xs text-base leading-relaxed sm:text-lg md:max-w-xs">
+          <p className="text-foreground/85 mt-5 max-w-2xs text-base leading-relaxed sm:text-lg md:max-w-xs">
             {translations.description}
           </p>
-          <div className="mt-8 flex w-full max-w-sm flex-col gap-3 sm:flex-row">
-            <Button asChild>
-              <Link href="/menu">{translations.menuCta}</Link>
-            </Button>
-            <Button asChild variant="outline">
-              <Link href="/visit-us">
-                <Map />
-                {translations.visitCta}
-              </Link>
-            </Button>
-          </div>
         </div>
-        <div className="mt-auto grid grid-cols-4 gap-1 pt-16 sm:gap-5 lg:max-w-3xl lg:gap-8 lg:pb-2">
+
+        <div className="mt-auto mb-4 flex w-full max-w-sm flex-col gap-3 sm:flex-row lg:mt-8 lg:mb-auto">
+          <Button asChild>
+            <Link href="/menu">{translations.menuCta}</Link>
+          </Button>
+          <Button asChild variant="outline">
+            <Link href="/visit-us">
+              <Map />
+              {translations.visitCta}
+            </Link>
+          </Button>
+        </div>
+
+        <div className="grid grid-cols-4 gap-1 sm:gap-5 lg:max-w-3xl lg:gap-8">
           {features.map((feature) => {
             const Icon = feature.icon;
             return (
