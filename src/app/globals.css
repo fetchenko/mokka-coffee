@@ -61,7 +61,7 @@
   --icon-selected: var(--color-coffee-900);
   --icon-unselected: var(--color-coffee-50);
 
-  --spacing-header: calc(var(--spacing) * 16);
+  --header-height: calc(var(--spacing) * 16);
 }
 
 .section-dark {
@@ -150,12 +150,12 @@
   --color-icon-selected: var(--icon-selected);
   --color-icon-unselected: var(--icon-unselected);
 
-  --spacing-header: calc(var(--spacing) * 16);
+  --spacing-header: var(--header-height);
 }
 
 @media (min-width: 64rem) {
   :root {
-    --spacing-header: calc(var(--spacing) * 20);
+    --header-height: calc(var(--spacing) * 20);
   }
 }
 
