@@ -4,7 +4,6 @@ import { useState } from "react";
 
 import { Container } from "@/components/layout/container";
 import { CategoryLinks } from "@/components/blocks/category-links";
-import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { CategorySection } from "@/components/blocks/category-section";
 import type { Dictionary } from "@/i18n/dictionaries/en";
@@ -19,8 +18,7 @@ type MenuProps = {
 };
 
 export function Menu({ translations, locale }: MenuProps) {
-  const [activeCategory, setActiveCategory] =
-    useState<ProductType>("coffee");
+  const [activeCategory, setActiveCategory] = useState<ProductType>("coffee");
 
   return (
     <Section>
