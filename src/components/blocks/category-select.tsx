@@ -14,25 +14,27 @@ type CategorySelectProps = {
 export function CategorySelect(props: CategorySelectProps) {
   return (
     <nav aria-label={props.ariaLabel}>
-      <ul className="flex justify-around">
+      <ul className="flex justify-center gap-3 sm:gap-5 md:gap-6">
         {props.categoryItems.map((category) => {
           const Icon = category.icon;
           const label = props.labels[category.id];
           const isSelected = category.id === props.selectedCategory;
 
           return (
-            <li key={category.id} className="text-center">
+            <li key={category.id}>
               <Button
-                aria-label={label}
                 aria-pressed={isSelected}
                 onClick={() => props.onSelect(category.id)}
-                size="icon"
+                size="default"
                 variant="outline"
-                className={cn(isSelected && "bg-foreground text-background")}
+                className={cn(
+                  "h-auto min-h-16 flex-col px-3 py-2 md:min-h-20 md:min-w-20",
+                  isSelected && "bg-foreground text-background",
+                )}
               >
-                <Icon aria-hidden="true" />
+                <Icon aria-hidden="true" className="size-7 md:size-9" />
+                <span className="text-xs sm:text-sm">{label}</span>
               </Button>
-              <p className="text-xs sm:text-sm">{label}</p>
             </li>
           );
         })}
