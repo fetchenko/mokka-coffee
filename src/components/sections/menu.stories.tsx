@@ -28,16 +28,45 @@ export const Default: Story = {
     expect(links).toHaveLength(4);
 
     for (const category of ["coffee", "non-coffee", "pastries", "sandwiches"]) {
-      expect(canvas.getByRole("heading", { name: dictionary.menu.categories[category as keyof typeof dictionary.menu.categories] })).toBeVisible();
+      expect(
+        canvas.getByRole("heading", {
+          name:
+            dictionary.menu.categories[
+              category as keyof typeof dictionary.menu.categories
+            ],
+        }),
+      ).toBeVisible();
     }
 
+    const coffeeLink = canvas.getByRole("link", {
+      name: dictionary.menu.categories.coffee,
+    });
     const pastriesLink = canvas.getByRole("link", {
       name: dictionary.menu.categories.pastries,
     });
+    const pastriesSection = canvasElement.querySelector("#pastries");
+
+    expect(coffeeLink).toHaveAttribute("aria-current", "location");
+    expect(pastriesSection).not.toBeNull();
+
+    pastriesSection?.scrollIntoView({
+      block: "center",
+      behavior: "instant",
+    });
+
+    await expect
+      .poll(() => pastriesLink.getAttribute("aria-current"))
+      .toBe("location");
+
+    expect(coffeeLink).not.toHaveAttribute("aria-current", "location");
 
     await pastriesLink.click();
 
     expect(window.location.hash).toBe("#pastries");
-    expect(canvas.getByRole("heading", { name: "Pastries" })).toBeVisible();
+    expect(
+      canvas.getByRole("heading", {
+        name: dictionary.menu.categories.pastries,
+      }),
+    ).toBeVisible();
   },
 };
