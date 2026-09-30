@@ -27,14 +27,10 @@ export function CustomerFavorites({
 }: CustomerFavoritesProps) {
   return (
     <Section>
-      <Container className="mx-auto grid max-w-5xl gap-y-5 md:grid-cols-[1fr_auto]">
-        <div className="flex justify-between">
-          <div>
-            <Heading variant="eyebrow">
-              {translations.favorites.eyebrow}
-            </Heading>
-            <Heading variant="section">{translations.favorites.title}</Heading>
-          </div>
+      <Container className="mx-auto mt-4 grid gap-y-5 md:mt-8 md:grid-cols-[1fr_auto]">
+        <div>
+          <Heading variant="eyebrow">{translations.favorites.eyebrow}</Heading>
+          <Heading variant="section">{translations.favorites.title}</Heading>
         </div>
         <ul className="grid gap-4 md:col-span-2 md:grid-cols-2 lg:grid-cols-4">
           {customerFavorites.map((product) => (
@@ -48,7 +44,7 @@ export function CustomerFavorites({
           ))}
         </ul>
         <Button
-          className="md:col-start-2 md:row-start-1 md:self-end"
+          className="self-end md:col-start-2 md:row-start-1"
           variant="link"
           asChild
         >

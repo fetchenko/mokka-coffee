@@ -16,7 +16,7 @@ export function ProductRow({ product, translation, locale }: ProductRowProps) {
   const currency = getCurrencyForLocale(locale);
 
   return (
-    <article className="grid grid-cols-[64px_minmax(0,1fr)_auto] grid-rows-2 gap-x-3 gap-y-1 border-b py-3">
+    <article className="grid grid-cols-[64px_minmax(0,1fr)_auto] grid-rows-2 gap-x-3 gap-y-1 border-b py-2">
       <div className="relative col-start-1 row-span-2 size-16 overflow-hidden rounded-full">
         <Image
           src={product.image}
