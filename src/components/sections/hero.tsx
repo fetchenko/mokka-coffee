@@ -57,7 +57,7 @@ export function Hero({ translations }: HeroProps) {
         className="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-gradient-to-t from-black/70 to-transparent"
       />
       <Container className="flex min-h-svh flex-col pt-24 pb-8 lg:pt-32 lg:pb-16">
-        <div className="max-w-xl lg:mt-auto">
+        <div className="max-w-xl">
           <h1 className="font-display text-[clamp(3.5rem,14vw,5.5rem)] leading-[1.1] font-semibold tracking-[-0.045em] lg:text-[clamp(4.5rem,6vw,6rem)]">
             <span className="block">{translations.title}</span>
             <span className="text-primary block leading-[0.88]">
