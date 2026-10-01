@@ -103,7 +103,7 @@ export const dictionary = {
     imageAlt: "Интерьер Mokka",
     description:
       "Mokka — это место, где любовь к кофе встречается с хорошей атмосферой. Мы выбираем лучшие зёрна со всего мира и тщательно готовим каждую чашку. Заходите, замедлитесь и наслаждайтесь.",
-    visitCta: "Посетить нас",
+    contactCta: "Свяжитесь с нами",
     stats: aboutUsStats,
   },
   visitUs: visitUsTranslations,
