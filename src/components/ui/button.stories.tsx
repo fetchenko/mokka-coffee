@@ -26,7 +26,7 @@ const meta = {
     },
     size: {
       control: "select",
-      options: ["default", "sm", "lg", "icon"],
+      options: ["default", "sm", "lg", "icon", "icon-md"],
     },
     asChild: {
       control: "boolean",
@@ -93,6 +93,9 @@ export const IconVariants: Story = {
       <div className="flex gap-2">
         <Button size="icon" aria-label="Add item">
           <span aria-hidden="true">+</span>
+        </Button>
+        <Button size="icon-md" variant="outline" aria-label="Add item">
+          <Coffee />
         </Button>
         <Button size="icon-lg" variant="outline" aria-label="Add item">
           <Coffee />
