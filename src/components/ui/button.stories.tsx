@@ -47,6 +47,25 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
+const sizes = [
+  { size: "sm", label: "Small" },
+  { size: "default", label: "Default" },
+  { size: "lg", label: "Large" },
+  { size: "icon-xs", label: "Icon XS" },
+  { size: "icon-sm", label: "Icon SM" },
+  { size: "icon", label: "Icon" },
+  { size: "icon-md", label: "Icon MD" },
+  { size: "icon-lg", label: "Icon LG" },
+] as const;
+
+const iconSizes = new Set([
+  "icon-xs",
+  "icon-sm",
+  "icon",
+  "icon-md",
+  "icon-lg",
+]);
+
 export const Variants: Story = {
   render: () => (
     <ThemePreview>
@@ -66,10 +85,18 @@ export const Variants: Story = {
 export const Sizes: Story = {
   render: () => (
     <ThemePreview>
-      <div className="flex items-center gap-2">
-        <Button size="sm">Small</Button>
-        <Button>Default</Button>
-        <Button size="lg">Large</Button>
+      <div className="flex flex-wrap items-center gap-2">
+        {sizes.map(({ size, label }) =>
+          iconSizes.has(size) ? (
+            <Button key={size} size={size} variant="outline" aria-label={label}>
+              <Plus />
+            </Button>
+          ) : (
+            <Button key={size} size={size}>
+              {label}
+            </Button>
+          ),
+        )}
       </div>
     </ThemePreview>
   ),
@@ -102,21 +129,13 @@ export const IconVariants: Story = {
   render: () => (
     <ThemePreview>
       <div className="flex items-center gap-2">
-        <Button size="icon-xs" aria-label="Add item">
-          <Plus />
-        </Button>
-        <Button size="icon-sm" aria-label="Add item">
-          <Plus />
-        </Button>
-        <Button size="icon" aria-label="Add item">
-          <Plus />
-        </Button>
-        <Button size="icon-md" aria-label="Add item">
-          <Coffee />
-        </Button>
-        <Button size="icon-lg" aria-label="Add item">
-          <Coffee />
-        </Button>
+        {sizes
+          .filter(({ size }) => iconSizes.has(size))
+          .map(({ size, label }) => (
+            <Button key={size} size={size} aria-label={label}>
+              <Coffee />
+            </Button>
+          ))}
       </div>
     </ThemePreview>
   ),
