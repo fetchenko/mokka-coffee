@@ -1,4 +1,5 @@
 import type { Dictionary } from "@/i18n/dictionaries/en";
+import { cn } from "@/lib/utils/cn";
 
 const MAP_URL =
   "https://www.google.com/maps?q=ul.+Kawiorniarna+12%2C+31-123+Krakow%2C+Poland&output=embed";
@@ -12,11 +13,12 @@ export function MapEmbed({
 }) {
   return (
     <div
-      className={
+      className={cn(
+        "relative overflow-hidden rounded-lg",
         stretch
-          ? "relative h-full min-h-72 overflow-hidden rounded-lg"
-          : "relative aspect-[4/3] overflow-hidden rounded-lg lg:aspect-[16/9]"
-      }
+          ? "h-full min-h-72"
+          : "aspect-[4/3] lg:aspect-[16/9]",
+      )}
     >
       <iframe
         title={translations.mapTitle}
