@@ -23,8 +23,8 @@ export function TestimonialCard({
   translations: Dictionary["testimonials"];
 }) {
   return (
-    <article className="bg-secondary relative flex flex-col rounded-lg p-6">
-      <div className={showNavigation ? "px-10" : undefined}>
+    <article className="bg-secondary relative flex min-h-56 flex-col rounded-lg p-6">
+      <div className={showNavigation ? "px-12" : undefined}>
         <Rating value={testimonial.rating} />
       </div>
 
@@ -34,7 +34,7 @@ export function TestimonialCard({
             <Button
               type="button"
               variant="secondary"
-              size="icon"
+              size="icon-lg"
               aria-label={translations.previousLabel}
               onClick={onPrevious}
               className="absolute top-1/2 left-2 -translate-y-1/2"
@@ -47,7 +47,7 @@ export function TestimonialCard({
             <Button
               type="button"
               variant="secondary"
-              size="icon"
+              size="icon-lg"
               aria-label={translations.nextLabel}
               onClick={onNext}
               className="absolute top-1/2 right-2 -translate-y-1/2"
@@ -58,11 +58,11 @@ export function TestimonialCard({
         </>
       )}
 
-      <Text className={showNavigation ? "mt-3 max-w-sm px-10 text-base leading-6" : "mt-3 max-w-sm text-base leading-6"}>
+      <Text className={showNavigation ? "mt-3 max-w-sm px-12 text-base leading-6" : "mt-3 max-w-sm text-base leading-6"}>
         {translations.items[testimonial.bodyKey]}
       </Text>
 
-      <div className={showNavigation ? "mt-5 flex items-center gap-3 px-10" : "mt-5 flex items-center gap-3"}>
+      <div className={showNavigation ? "mt-5 flex items-center gap-3 px-12" : "mt-5 flex items-center gap-3"}>
         <div
           className="bg-primary text-primary-foreground flex size-10 shrink-0 items-center justify-center rounded-full text-sm font-semibold"
           aria-hidden
