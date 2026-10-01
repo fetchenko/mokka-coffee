@@ -71,8 +71,8 @@ export function TestimonialCard({
       <div
         className={
           showNavigation
-            ? "mt-5 flex items-center gap-3 px-12"
-            : "mt-5 flex items-center gap-3"
+            ? "mt-auto flex items-center gap-3 px-12 pt-5"
+            : "mt-auto flex items-center gap-3 pt-5"
         }
       >
         <div
