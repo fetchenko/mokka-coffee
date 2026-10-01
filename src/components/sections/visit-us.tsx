@@ -16,7 +16,7 @@ export function VisitUs({ translations }: VisitUsProps) {
       <Container className="py-16 md:py-20">
         <div className="grid gap-10 md:grid-cols-3 md:gap-6 lg:gap-8">
           <VisitUsCard translations={translations} />
-          <MapEmbed translations={translations} />
+          <MapEmbed translations={translations} stretch />
           <ContactBlock translations={translations} />
         </div>
       </Container>
