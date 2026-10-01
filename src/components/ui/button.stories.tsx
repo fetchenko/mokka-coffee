@@ -26,7 +26,16 @@ const meta = {
     },
     size: {
       control: "select",
-      options: ["default", "sm", "lg", "icon"],
+      options: [
+        "default",
+        "sm",
+        "lg",
+        "icon",
+        "icon-md",
+        "icon-xs",
+        "icon-sm",
+        "icon-lg",
+      ],
     },
     asChild: {
       control: "boolean",
@@ -37,6 +46,19 @@ const meta = {
 export default meta;
 
 type Story = StoryObj<typeof meta>;
+
+const sizes = [
+  { size: "sm", label: "Small" },
+  { size: "default", label: "Default" },
+  { size: "lg", label: "Large" },
+  { size: "icon-xs", label: "Icon XS" },
+  { size: "icon-sm", label: "Icon SM" },
+  { size: "icon", label: "Icon" },
+  { size: "icon-md", label: "Icon MD" },
+  { size: "icon-lg", label: "Icon LG" },
+] as const;
+
+const iconSizes = new Set(["icon-xs", "icon-sm", "icon", "icon-md", "icon-lg"]);
 
 export const Variants: Story = {
   render: () => (
@@ -56,11 +78,24 @@ export const Variants: Story = {
 
 export const Sizes: Story = {
   render: () => (
-    <div className="flex items-center gap-2">
-      <Button size="sm">Small</Button>
-      <Button>Default</Button>
-      <Button size="lg">Large</Button>
-    </div>
+    <ThemePreview>
+      <div className="flex flex-wrap items-center gap-2">
+        {sizes.map(({ size, label }) =>
+          iconSizes.has(size) ? (
+            <div className="flex flex-col space-y-2" key={size}>
+              <Button size={size} variant="outline" aria-label={label}>
+                <Plus />
+              </Button>
+              <span className="text-muted-foreground text-xs">{label}</span>
+            </div>
+          ) : (
+            <Button key={size} size={size}>
+              {label}
+            </Button>
+          ),
+        )}
+      </div>
+    </ThemePreview>
   ),
 };
 
@@ -90,13 +125,14 @@ export const WithIcon: Story = {
 export const IconVariants: Story = {
   render: () => (
     <ThemePreview>
-      <div className="flex gap-2">
-        <Button size="icon" aria-label="Add item">
-          <span aria-hidden="true">+</span>
-        </Button>
-        <Button size="icon-lg" variant="outline" aria-label="Add item">
-          <Coffee />
-        </Button>
+      <div className="flex items-center gap-2">
+        {sizes
+          .filter(({ size }) => iconSizes.has(size))
+          .map(({ size, label }) => (
+            <Button key={size} size={size} aria-label={label}>
+              <Coffee />
+            </Button>
+          ))}
       </div>
     </ThemePreview>
   ),
