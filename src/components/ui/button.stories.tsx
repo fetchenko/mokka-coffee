@@ -58,13 +58,7 @@ const sizes = [
   { size: "icon-lg", label: "Icon LG" },
 ] as const;
 
-const iconSizes = new Set([
-  "icon-xs",
-  "icon-sm",
-  "icon",
-  "icon-md",
-  "icon-lg",
-]);
+const iconSizes = new Set(["icon-xs", "icon-sm", "icon", "icon-md", "icon-lg"]);
 
 export const Variants: Story = {
   render: () => (
@@ -88,9 +82,12 @@ export const Sizes: Story = {
       <div className="flex flex-wrap items-center gap-2">
         {sizes.map(({ size, label }) =>
           iconSizes.has(size) ? (
-            <Button key={size} size={size} variant="outline" aria-label={label}>
-              <Plus />
-            </Button>
+            <div className="flex flex-col space-y-2" key={size}>
+              <Button size={size} variant="outline" aria-label={label}>
+                <Plus />
+              </Button>
+              <label className="text-muted-foreground text-xs">{label}</label>
+            </div>
           ) : (
             <Button key={size} size={size}>
               {label}
@@ -121,22 +118,6 @@ export const WithIcon: Story = {
           </a>
         </Button>
       </DirectionPreview>
-    </ThemePreview>
-  ),
-};
-
-export const IconVariants: Story = {
-  render: () => (
-    <ThemePreview>
-      <div className="flex items-center gap-2">
-        {sizes
-          .filter(({ size }) => iconSizes.has(size))
-          .map(({ size, label }) => (
-            <Button key={size} size={size} aria-label={label}>
-              <Coffee />
-            </Button>
-          ))}
-      </div>
     </ThemePreview>
   ),
 };
