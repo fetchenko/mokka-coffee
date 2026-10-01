@@ -22,7 +22,7 @@ type AboutUsProps = {
 export function AboutUs({ translations }: AboutUsProps) {
   return (
     <Section id={sections.aboutUs}>
-      <Container className="pt-16 md:pt-24">
+      <Container className="pt-4 md:pt-16">
         <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_auto] md:items-center md:gap-8 lg:gap-12">
           <Image
             src="/assets/about-us.webp"
@@ -43,12 +43,15 @@ export function AboutUs({ translations }: AboutUsProps) {
             </Button>
           </div>
 
-          <ul className="flex w-full flex-col divide-y divide-accent-muted text-sm md:w-fit">
+          <ul className="divide-accent-muted flex w-full flex-col divide-y text-sm md:w-fit">
             {stats.map(({ icon: Icon, title, descriptionKey }) => (
-              <li key={title} className="flex items-center gap-4 py-4 first:pt-0 last:pb-0">
+              <li
+                key={title}
+                className="flex items-center gap-4 py-4 first:pt-0 last:pb-0"
+              >
                 <Icon className="size-10 shrink-0 stroke-1" aria-hidden />
                 <div>
-                  <p className="text-xl font-semibold leading-none">{title}</p>
+                  <p className="text-xl leading-none font-semibold">{title}</p>
                   <p className="text-muted-foreground text-sm leading-tight">
                     {translations.stats[descriptionKey]}
                   </p>
