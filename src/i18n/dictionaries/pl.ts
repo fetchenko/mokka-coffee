@@ -118,7 +118,7 @@ export const dictionary = {
   menu: {
     categories: {
       coffee: "Kawa",
-      "non-coffee": "Napoje bezkofeinowe",
+      "non-coffee": "Napoje bez kawy",
       pastries: "Wypieki",
       sandwiches: "Kanapki",
     },
