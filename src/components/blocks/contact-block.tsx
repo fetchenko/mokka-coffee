@@ -12,8 +12,8 @@ export function ContactBlock({
     <div>
       <Heading variant="eyebrow">{translations.contactEyebrow}</Heading>
       <Heading variant="section">{translations.contactTitle}</Heading>
-      <Text>{translations.contactDescription}</Text>
-      <form className="space-y-4">
+      <Text className="mt-4">{translations.contactDescription}</Text>
+      <form className="mt-8 space-y-4">
         <div className="grid gap-4 sm:grid-cols-2">
           <label className="space-y-2">
             <span className="text-sm font-medium">
