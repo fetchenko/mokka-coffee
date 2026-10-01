@@ -92,7 +92,7 @@ export const dictionary = {
   hero: {
     title: "Dobre dni",
     titleAccent: "zaczynają się od kawy",
-    description: "Kawa specialty, przytulna atmosfera i serdeczni ludzie.",
+    description: "Kawa specialty, przytulna atmosfera i serdeczni ludzie",
     menuCta: "Zobacz menu",
     visitCta: "Odwiedź nas",
     features: heroFeatures,
@@ -102,7 +102,7 @@ export const dictionary = {
     title: "To coś więcej niż tylko kawa",
     imageAlt: "Wnętrze Mokka",
     description:
-      "Mokka to miejsce, w którym pasja do kawy spotyka się z dobrą atmosferą. Wybieramy najlepsze ziarna z całego świata i starannie przygotowujemy każdą filiżankę. Wpadnij, zwolnij tempo i ciesz się chwilą.",
+      "Mokka to miejsce, w którym pasja do kawy spotyka się z dobrą atmosferą. Wybieramy najlepsze ziarna z całego świata i starannie przygotowujemy każdą filiżankę. Wpadnij, zwolnij tempo i ciesz się chwilą",
     contactCta: "Skontaktuj się z nami",
     stats: aboutUsStats,
   },
@@ -145,11 +145,11 @@ export const dictionary = {
       },
       "vanilla-latte": {
         name: "Latte waniliowe",
-        description: "Espresso, spienione mleko i wanilia.",
+        description: "Espresso, spienione mleko i wanilia",
       },
       "coffee-latte": {
         name: "Kawa z lodem",
-        description: "Delikatna kawa parzona na zimno, podawana z lodem.",
+        description: "Delikatna kawa parzona na zimno, podawana z lodem",
       },
       "matcha-latte": {
         name: "Matcha Latte",
@@ -173,29 +173,29 @@ export const dictionary = {
       "ham-and-cheese-sandwich": {
         name: "Kanapka z szynką i serem",
         description:
-          "Wędzona szynka i roztopiony ser w miękkim, tostowanym lub grillowanym pieczywie.",
+          "Wędzona szynka i roztopiony ser w miękkim, tostowanym lub grillowanym pieczywie",
       },
       blt: {
         name: "BLT",
         description:
-          "Chrupiący bekon, świeża sałata i soczyste pomidory z lekką warstwą majonezu.",
+          "Chrupiący bekon, świeża sałata i soczyste pomidory z lekką warstwą majonezu",
       },
       "chicken-salad-croissant": {
         name: "Croissant z sałatką z kurczakiem",
         description:
-          "Kremowa sałatka z kurczakiem, ziołami, winogronami lub orzechami w maślanym croissancie.",
+          "Kremowa sałatka z kurczakiem, ziołami, winogronami lub orzechami w maślanym croissancie",
       },
       "grilled-cheese": {
         name: "Grilled Cheese",
         description:
-          "Roztopiony ser między kromkami pieczywa, opcjonalnie na chlebie na zakwasie, z bekonem lub pesto.",
+          "Roztopiony ser między kromkami pieczywa, opcjonalnie na chlebie na zakwasie, z bekonem lub pesto",
       },
     },
     navigationLabel: "Kategorie menu",
     preview: {
       eyebrow: "Menu",
       title: "Coś dla każdego",
-      description: "Starannie wybrane ziarna w każdej filiżance.",
+      description: "Starannie wybrane ziarna w każdej filiżance",
       viewFullMenu: "Pełne menu",
       imageAlt: "Kawa i ciasto",
     },
