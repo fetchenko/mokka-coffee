@@ -26,7 +26,16 @@ const meta = {
     },
     size: {
       control: "select",
-      options: ["default", "sm", "lg", "icon", "icon-md"],
+      options: [
+        "default",
+        "sm",
+        "lg",
+        "icon",
+        "icon-md",
+        "icon-xs",
+        "icon-sm",
+        "icon-lg",
+      ],
     },
     asChild: {
       control: "boolean",
@@ -56,11 +65,13 @@ export const Variants: Story = {
 
 export const Sizes: Story = {
   render: () => (
-    <div className="flex items-center gap-2">
-      <Button size="sm">Small</Button>
-      <Button>Default</Button>
-      <Button size="lg">Large</Button>
-    </div>
+    <ThemePreview>
+      <div className="flex items-center gap-2">
+        <Button size="sm">Small</Button>
+        <Button>Default</Button>
+        <Button size="lg">Large</Button>
+      </div>
+    </ThemePreview>
   ),
 };
 
@@ -90,14 +101,20 @@ export const WithIcon: Story = {
 export const IconVariants: Story = {
   render: () => (
     <ThemePreview>
-      <div className="flex gap-2">
-        <Button size="icon" aria-label="Add item">
-          <span aria-hidden="true">+</span>
+      <div className="flex items-center gap-2">
+        <Button size="icon-xs" aria-label="Add item">
+          <Plus />
         </Button>
-        <Button size="icon-md" variant="outline" aria-label="Add item">
+        <Button size="icon-sm" aria-label="Add item">
+          <Plus />
+        </Button>
+        <Button size="icon" aria-label="Add item">
+          <Plus />
+        </Button>
+        <Button size="icon-md" aria-label="Add item">
           <Coffee />
         </Button>
-        <Button size="icon-lg" variant="outline" aria-label="Add item">
+        <Button size="icon-lg" aria-label="Add item">
           <Coffee />
         </Button>
       </div>
