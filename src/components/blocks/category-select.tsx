@@ -26,7 +26,7 @@ export function CategorySelect(props: CategorySelectProps) {
                 aria-label={label}
                 aria-pressed={isSelected}
                 onClick={() => props.onSelect(category.id)}
-                size="icon"
+                size="icon-md"
                 variant="outline"
                 className={cn(isSelected && "bg-foreground text-background")}
               >
