@@ -75,7 +75,7 @@ export function MenuPreview({ translations, locale }: MenuPreviewProps) {
             )}
           </div>
 
-          <Button variant="link" asChild className="mt-6 self-end">
+          <Button variant="link" asChild className="mt-6 self-end px-2">
             <Link href={`${navigation.menu}/#${activeCategory?.id ?? ""}`}>
               {translations.preview.viewFullMenu} <ArrowRight />
             </Link>

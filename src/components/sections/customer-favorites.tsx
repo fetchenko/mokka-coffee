@@ -44,7 +44,7 @@ export function CustomerFavorites({
           ))}
         </ul>
         <Button
-          className="self-end md:col-start-2 md:row-start-1"
+          className="ml-auto px-2 md:col-start-2 md:row-start-1"
           variant="link"
           asChild
         >
