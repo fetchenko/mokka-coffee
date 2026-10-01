@@ -59,7 +59,7 @@ export function MenuPreview({ translations, locale }: MenuPreviewProps) {
                 <Heading variant="eyebrow">
                   {translations.categories[activeCategory.id]}
                 </Heading>
-                <div className="mt-4">
+                <div className="mt-4 divide-y divide-accent-muted">
                   {activeCategory.items
                     .slice(0, DISPLAY_ITEMS)
                     .map((product) => (
