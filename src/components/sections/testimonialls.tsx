@@ -38,7 +38,7 @@ export function Testimonialls({ translations }: TestimonialsProps) {
 
         <div className="overflow-hidden lg:hidden">
           <div
-            className="flex transition-transform duration-300"
+            className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: "translateX(-" + activeIndex * 100 + "%)" }}
           >
             {testimonials.map((testimonial, index) => (
