@@ -114,7 +114,7 @@ export const dictionary = {
     imageAlt: "Inside Mokka",
     description:
       "Mokka is a place where passion for coffee meets good vibes. We select the best beans from around the world and brew each cup with care. Come in, slow down and enjoy.",
-    visitCta: "Visit us",
+    contactCta: "Contact us",
     stats: aboutUsStats,
   },
   visitUs: visitUsTranslations,
