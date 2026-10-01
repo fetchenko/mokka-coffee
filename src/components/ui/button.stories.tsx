@@ -86,7 +86,7 @@ export const Sizes: Story = {
               <Button size={size} variant="outline" aria-label={label}>
                 <Plus />
               </Button>
-              <label className="text-muted-foreground text-xs">{label}</label>
+              <span className="text-muted-foreground text-xs">{label}</span>
             </div>
           ) : (
             <Button key={size} size={size}>
@@ -118,6 +118,22 @@ export const WithIcon: Story = {
           </a>
         </Button>
       </DirectionPreview>
+    </ThemePreview>
+  ),
+};
+
+export const IconVariants: Story = {
+  render: () => (
+    <ThemePreview>
+      <div className="flex items-center gap-2">
+        {sizes
+          .filter(({ size }) => iconSizes.has(size))
+          .map(({ size, label }) => (
+            <Button key={size} size={size} aria-label={label}>
+              <Coffee />
+            </Button>
+          ))}
+      </div>
     </ThemePreview>
   ),
 };
