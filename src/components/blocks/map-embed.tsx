@@ -9,7 +9,7 @@ export function MapEmbed({
   translations: Dictionary["visitUs"];
 }) {
   return (
-    <div className="relative h-72 overflow-hidden rounded-lg lg:h-80">
+    <div className="relative aspect-[4/3] overflow-hidden lg:aspect-[16/9]">
       <iframe
         title={translations.mapTitle}
         src={MAP_URL}
