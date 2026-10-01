@@ -19,7 +19,7 @@ import { Text } from "@/components/ui/text";
 import type { Locale } from "@/i18n/config";
 import { Dictionary } from "@/i18n/dictionaries/en";
 
-const DISPLAY_ITEMS = 4;
+const DISPLAY_ITEMS = 3;
 
 type MenuPreviewProps = {
   translations: Dictionary["menu"];
