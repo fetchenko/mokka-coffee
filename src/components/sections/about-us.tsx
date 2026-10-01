@@ -43,7 +43,7 @@ export function AboutUs({ translations }: AboutUsProps) {
             </Button>
           </div>
 
-          <ul className="flex w-fit flex-col divide-y divide-accent-muted text-sm">
+          <ul className="flex w-full flex-col divide-y divide-accent-muted text-sm md:w-fit">
             {stats.map(({ icon: Icon, title, descriptionKey }) => (
               <li key={title} className="flex items-center gap-4 py-4 first:pt-0 last:pb-0">
                 <Icon className="size-10 shrink-0 stroke-1" aria-hidden />
