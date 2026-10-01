@@ -4,6 +4,7 @@ import { Text } from "@/components/ui/text";
 import { Testimonial } from "@/features/menu/testimonials";
 import { Dictionary } from "@/i18n/dictionaries/en";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { cn } from "@/lib/utils/cn";
 
 export function TestimonialCard({
   translations,
@@ -24,7 +25,7 @@ export function TestimonialCard({
 }) {
   return (
     <article className="bg-secondary relative flex min-h-56 flex-col rounded-lg p-6">
-      <div className={showNavigation ? "px-12" : undefined}>
+      <div className={cn(showNavigation && "px-12")}>
         <Rating value={testimonial.rating} />
       </div>
 
@@ -59,21 +60,19 @@ export function TestimonialCard({
       )}
 
       <Text
-        className={
-          showNavigation
-            ? "mt-3 max-w-sm px-12 text-base leading-6"
-            : "mt-3 max-w-sm text-base leading-6"
-        }
+        className={cn(
+          "mt-3 max-w-sm text-base leading-6",
+          showNavigation && "px-12",
+        )}
       >
         {translations.items[testimonial.bodyKey]}
       </Text>
 
       <div
-        className={
-          showNavigation
-            ? "mt-auto flex items-center gap-3 px-12 pt-5"
-            : "mt-auto flex items-center gap-3 pt-5"
-        }
+        className={cn(
+          "mt-auto flex items-center gap-3 pt-5",
+          showNavigation && "px-12",
+        )}
       >
         <div
           className="bg-primary text-primary-foreground flex size-10 shrink-0 items-center justify-center rounded-full text-sm font-semibold"
