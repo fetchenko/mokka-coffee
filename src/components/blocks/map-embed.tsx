@@ -5,11 +5,19 @@ const MAP_URL =
 
 export function MapEmbed({
   translations,
+  stretch = false,
 }: {
   translations: Dictionary["visitUs"];
+  stretch?: boolean;
 }) {
   return (
-    <div className="relative aspect-[4/3] overflow-hidden lg:aspect-[16/9]">
+    <div
+      className={
+        stretch
+          ? "relative h-full min-h-72 overflow-hidden rounded-lg"
+          : "relative aspect-[4/3] overflow-hidden rounded-lg lg:aspect-[16/9]"
+      }
+    >
       <iframe
         title={translations.mapTitle}
         src={MAP_URL}
