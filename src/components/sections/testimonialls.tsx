@@ -30,7 +30,7 @@ export function Testimonialls({ translations }: TestimonialsProps) {
 
   return (
     <Section>
-      <Container className="grid gap-8 lg:grid-cols-3 lg:gap-6">
+      <Container className="grid gap-8 pt-12 lg:grid-cols-3 lg:gap-6 lg:pt-16">
         <div>
           <Heading variant="eyebrow">{translations.eyebrow}</Heading>
           <Heading variant="section">{translations.title}</Heading>
