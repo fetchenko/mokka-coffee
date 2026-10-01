@@ -101,7 +101,7 @@ export const dictionary = {
     imageAlt: "Wnętrze Mokka",
     description:
       "Mokka to miejsce, w którym pasja do kawy spotyka się z dobrą atmosferą. Wybieramy najlepsze ziarna z całego świata i starannie przygotowujemy każdą filiżankę. Wpadnij, zwolnij i ciesz się chwilą.",
-    visitCta: "Odwiedź nas",
+    contactCta: "Skontaktuj się z nami",
     stats: aboutUsStats,
   },
   visitUs: visitUsTranslations,
