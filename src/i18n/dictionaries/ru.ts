@@ -6,14 +6,14 @@ const navigationItems = {
 };
 
 const heroFeatures = {
-  specialtyCoffee: "Спешелти кофе",
+  specialtyCoffee: "Спешелти-кофе",
   topQualityBeans: "Зёрна высшего качества",
-  sustainable: "Экологичность",
+  sustainable: "Устойчивый подход",
   ecoFriendly: "Забота об окружающей среде",
   madeWithLove: "С любовью",
   forYou: "Для вас",
   community: "Сообщество",
-  localAndWarm: "Местное и тёплое",
+  localAndWarm: "Тёплая атмосфера",
 };
 
 const aboutUsStats = {
@@ -30,7 +30,7 @@ const testimonialTranslations = {
   juliaName: "Юлия М.",
   juliaInitials: "ЮМ",
   annaReview: "Лучшая кофейня в городе! Уютное место и отличная атмосфера.",
-  magdaReview: "Я прихожу сюда каждое утро. И здесь вкусная выпечка.",
+  magdaReview: "Я прихожу сюда каждое утро. И выпечка здесь тоже очень вкусная.",
   juliaReview:
     "Отличный кофе, дружелюбное обслуживание и прекрасная атмосфера.",
 };
@@ -40,14 +40,14 @@ const visitUsTranslations = {
   addressLine1: "ул. Кавиорнярна, 12",
   addressLine2: "31-123 Краков, Польша",
   title: "Будем рады вас видеть!",
-  weekdays: "Пн - Пт: 7:00 - 20:00",
-  weekends: "Сб - Вс: 8:00 - 21:00",
+  weekdays: "Пн–Пт: 7:00–20:00",
+  weekends: "Сб–Вс: 8:00–21:00",
   getDirections: "Проложить маршрут",
   mapTitle: "Расположение Mokka Coffee",
   contactEyebrow: "Свяжитесь с нами",
   contactTitle: "Напишите нам",
   contactDescription:
-    "Есть вопрос, хотите забронировать мероприятие или просто поздороваться? Напишите нам, и мы скоро ответим.",
+    "Есть вопрос, хотите организовать мероприятие или просто поздороваться? Напишите нам, и мы скоро ответим.",
   nameLabel: "Ваше имя",
   emailLabel: "Ваш e-mail",
   messageLabel: "Сообщение",
@@ -55,7 +55,7 @@ const visitUsTranslations = {
 };
 
 const logo = {
-  subtitle: "Спешелти кофе",
+  subtitle: "Спешелти-кофе",
 };
 
 const language = {
@@ -92,8 +92,8 @@ export const dictionary = {
   hero: {
     title: "Хорошие дни",
     titleAccent: "начинаются с кофе",
-    description: "Спешелти кофе, уютная атмосфера и дружелюбные люди.",
-    menuCta: "Посмотреть меню",
+    description: "Спешелти-кофе, уютная атмосфера и дружелюбные люди.",
+    menuCta: "Смотреть меню",
     visitCta: "Посетить нас",
     features: heroFeatures,
   },
@@ -103,7 +103,7 @@ export const dictionary = {
     imageAlt: "Интерьер Mokka",
     description:
       "Mokka — это место, где любовь к кофе встречается с хорошей атмосферой. Мы выбираем лучшие зёрна со всего мира и тщательно готовим каждую чашку. Заходите, замедлитесь и наслаждайтесь.",
-    contactCta: "Свяжитесь с нами",
+    contactCta: "Связаться с нами",
     stats: aboutUsStats,
   },
   visitUs: visitUsTranslations,
@@ -142,7 +142,7 @@ export const dictionary = {
         description: "Эспрессо, взбитое молоко и ваниль.",
       },
       "coffee-latte": {
-        name: "Кофейный латте",
+        name: "Кофе со льдом",
         description: "Мягкий кофе медленного заваривания со льдом.",
       },
       "matcha-latte": {
@@ -159,7 +159,7 @@ export const dictionary = {
         name: "Булочка с корицей",
         description: "Мягкая и ароматная",
       },
-      croissant: { name: "Круассан", description: "Сливочный и слоёный" },
+      croissant: { name: "Круассан", description: "Слоёный и сливочный" },
       cheesecake: { name: "Чизкейк", description: "Кремовый и нежный" },
       "ham-and-cheese-sandwich": {
         name: "Сэндвич с ветчиной и сыром",
@@ -179,7 +179,7 @@ export const dictionary = {
       "grilled-cheese": {
         name: "Грилд-чиз",
         description:
-          "Расплавленный сыр между ломтиками хлеба, с опциональными беконом или песто.",
+          "Расплавленный сыр между ломтиками хлеба, по желанию с хлебом на закваске, беконом или песто.",
       },
     },
     navigationLabel: "Категории меню",
@@ -187,13 +187,13 @@ export const dictionary = {
       eyebrow: "Меню",
       title: "Что-то для каждого",
       description: "Тщательно отобранные зёрна в каждой чашке.",
-      viewFullMenu: "Посмотреть всё меню",
+      viewFullMenu: "Всё меню",
       imageAlt: "Кофе и выпечка",
     },
     favorites: {
       eyebrow: "Наши фавориты",
       title: "Выбор гостей",
-      viewFullMenu: "Посмотреть всё меню",
+      viewFullMenu: "Всё меню",
     },
   },
 } as const;
