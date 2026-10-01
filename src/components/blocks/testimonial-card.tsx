@@ -3,7 +3,7 @@ import { Rating } from "@/components/ui/rating";
 import { Text } from "@/components/ui/text";
 import { Testimonial } from "@/features/menu/testimonials";
 import { Dictionary } from "@/i18n/dictionaries/en";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export function TestimonialCard({
   translations,
@@ -33,36 +33,48 @@ export function TestimonialCard({
           {showPrevious && (
             <Button
               type="button"
-              variant="secondary"
-              size="icon-lg"
+              variant="ghost"
+              size="icon-md"
               aria-label={translations.previousLabel}
               onClick={onPrevious}
-              className="absolute top-1/2 left-2 -translate-y-1/2"
+              className="absolute top-1/2 left-1 -translate-y-1/2 text-primary/60 hover:bg-transparent hover:text-primary"
             >
-              <ArrowLeft aria-hidden />
+              <ChevronLeft aria-hidden />
             </Button>
           )}
 
           {showNext && (
             <Button
               type="button"
-              variant="secondary"
-              size="icon-lg"
+              variant="ghost"
+              size="icon-md"
               aria-label={translations.nextLabel}
               onClick={onNext}
-              className="absolute top-1/2 right-2 -translate-y-1/2"
+              className="absolute top-1/2 right-1 -translate-y-1/2 text-primary/60 hover:bg-transparent hover:text-primary"
             >
-              <ArrowRight aria-hidden />
+              <ChevronRight aria-hidden />
             </Button>
           )}
         </>
       )}
 
-      <Text className={showNavigation ? "mt-3 max-w-sm px-12 text-base leading-6" : "mt-3 max-w-sm text-base leading-6"}>
+      <Text
+        className={
+          showNavigation
+            ? "mt-3 max-w-sm px-12 text-base leading-6"
+            : "mt-3 max-w-sm text-base leading-6"
+        }
+      >
         {translations.items[testimonial.bodyKey]}
       </Text>
 
-      <div className={showNavigation ? "mt-5 flex items-center gap-3 px-12" : "mt-5 flex items-center gap-3"}>
+      <div
+        className={
+          showNavigation
+            ? "mt-5 flex items-center gap-3 px-12"
+            : "mt-5 flex items-center gap-3"
+        }
+      >
         <div
           className="bg-primary text-primary-foreground flex size-10 shrink-0 items-center justify-center rounded-full text-sm font-semibold"
           aria-hidden
