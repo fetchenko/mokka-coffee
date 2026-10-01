@@ -52,7 +52,7 @@ export function MenuPreview({ translations, locale }: MenuPreviewProps) {
           </div>
         </div>
 
-        <div>
+        <div className="flex flex-col">
           <div className="space-y-8">
             {activeCategory && (
               <div>
@@ -75,7 +75,7 @@ export function MenuPreview({ translations, locale }: MenuPreviewProps) {
             )}
           </div>
 
-          <Button variant="link" asChild className="mt-6">
+          <Button variant="link" asChild className="mt-6 self-end">
             <Link href={`${navigation.menu}/#${activeCategory?.id ?? ""}`}>
               {translations.preview.viewFullMenu} <ArrowRight />
             </Link>
