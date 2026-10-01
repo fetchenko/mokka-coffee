@@ -8,12 +8,12 @@ const navigationItems = {
 const heroFeatures = {
   specialtyCoffee: "Kawa specialty",
   topQualityBeans: "Ziarna najwyższej jakości",
-  sustainable: "Zrównoważony rozwój",
-  ecoFriendly: "Ekologiczne podejście",
+  sustainable: "Zrównoważone podejście",
+  ecoFriendly: "Dbałość o środowisko",
   madeWithLove: "Zrobione z miłością",
   forYou: "Dla Ciebie",
   community: "Społeczność",
-  localAndWarm: "Lokalnie i serdecznie",
+  localAndWarm: "Ciepła atmosfera",
 };
 
 const aboutUsStats = {
@@ -31,7 +31,8 @@ const testimonialTranslations = {
   juliaInitials: "JM",
   annaReview:
     "Najlepsza kawa w mieście! Przytulne miejsce i świetna atmosfera.",
-  magdaReview: "Przychodzę tutaj każdego ranka. I mają pyszne wypieki.",
+  magdaReview:
+    "Przychodzę tutaj każdego ranka. A wypieki też mają pyszne.",
   juliaReview: "Świetna kawa, miła obsługa i cudowna atmosfera.",
 };
 
@@ -39,20 +40,21 @@ const visitUsTranslations = {
   eyebrow: "Odwiedź nas",
   addressLine1: "ul. Kawiorniarna 12",
   addressLine2: "31-123 Kraków, Polska",
-  title: "Chętnie Cię zobaczymy!",
-  weekdays: "Pon - Pt: 7:00 - 20:00",
-  weekends: "Sob - Nd: 8:00 - 21:00",
+  title: "Miło będzie Cię zobaczyć!",
+  weekdays: "Pon–Pt: 7:00–20:00",
+  weekends: "Sob–Nd: 8:00–21:00",
   getDirections: "Wyznacz trasę",
   mapTitle: "Lokalizacja Mokka Coffee",
   contactEyebrow: "Skontaktuj się z nami",
   contactTitle: "Napisz do nas",
   contactDescription:
-    "Masz pytanie, chcesz zarezerwować wydarzenie czy po prostu powiedzieć cześć? Napisz do nas, a wkrótce odpowiemy.",
+    "Masz pytanie, chcesz zorganizować wydarzenie czy po prostu się przywitać? Napisz do nas, a wkrótce odpowiemy.",
   nameLabel: "Imię",
   emailLabel: "Twój e-mail",
   messageLabel: "Wiadomość",
   sendMessage: "Wyślij wiadomość",
 };
+
 const logo = {
   subtitle: "Kawa specialty",
 };
@@ -82,7 +84,7 @@ export const dictionary = {
     language,
     navigationItems,
     description: "Dobra kawa, dobrzy ludzie, dobre dni",
-    navigation: "Nawigacja stopki",
+    navigation: "Nawigacja w stopce",
     followUs: "Obserwuj nas",
     copyright: "Mokka Coffee. Wszelkie prawa zastrzeżone",
   },
@@ -90,8 +92,8 @@ export const dictionary = {
   hero: {
     title: "Dobre dni",
     titleAccent: "zaczynają się od kawy",
-    description: "Kawa specialty, przytulna atmosfera i serdeczni ludzie.",
-    menuCta: "Zobacz nasze menu",
+    description: "Kawa specialty, przytulna atmosfera i serdeczni ludzie",
+    menuCta: "Zobacz menu",
     visitCta: "Odwiedź nas",
     features: heroFeatures,
   },
@@ -100,7 +102,7 @@ export const dictionary = {
     title: "To coś więcej niż tylko kawa",
     imageAlt: "Wnętrze Mokka",
     description:
-      "Mokka to miejsce, w którym pasja do kawy spotyka się z dobrą atmosferą. Wybieramy najlepsze ziarna z całego świata i starannie przygotowujemy każdą filiżankę. Wpadnij, zwolnij i ciesz się chwilą.",
+      "Mokka to miejsce, w którym pasja do kawy spotyka się z dobrą atmosferą. Wybieramy najlepsze ziarna z całego świata i starannie przygotowujemy każdą filiżankę. Wpadnij, zwolnij tempo i ciesz się chwilą",
     contactCta: "Skontaktuj się z nami",
     stats: aboutUsStats,
   },
@@ -116,7 +118,7 @@ export const dictionary = {
   menu: {
     categories: {
       coffee: "Kawa",
-      "non-coffee": "Napoje bezkawowe",
+      "non-coffee": "Bez kawy",
       pastries: "Wypieki",
       sandwiches: "Kanapki",
     },
@@ -143,11 +145,11 @@ export const dictionary = {
       },
       "vanilla-latte": {
         name: "Latte waniliowe",
-        description: "Espresso, spienione mleko i wanilia.",
+        description: "Espresso, spienione mleko i wanilia",
       },
       "coffee-latte": {
-        name: "Latte kawowe",
-        description: "Delikatna kawa parzona na zimno, podawana z lodem.",
+        name: "Kawa z lodem",
+        description: "Delikatna kawa parzona na zimno, podawana z lodem",
       },
       "matcha-latte": {
         name: "Matcha Latte",
@@ -171,36 +173,36 @@ export const dictionary = {
       "ham-and-cheese-sandwich": {
         name: "Kanapka z szynką i serem",
         description:
-          "Wędzona szynka i roztopiony ser w miękkim, tostowanym lub grillowanym pieczywie.",
+          "Wędzona szynka i roztopiony ser w miękkim, tostowanym lub grillowanym pieczywie",
       },
       blt: {
         name: "BLT",
         description:
-          "Chrupiący bekon, świeża sałata i soczyste pomidory z lekką warstwą majonezu.",
+          "Chrupiący bekon, świeża sałata i soczyste pomidory z lekką warstwą majonezu",
       },
       "chicken-salad-croissant": {
         name: "Croissant z sałatką z kurczakiem",
         description:
-          "Kremowa sałatka z kurczakiem, ziołami, winogronami lub orzechami w maślanym croissancie.",
+          "Kremowa sałatka z kurczakiem, ziołami, winogronami lub orzechami w maślanym croissancie",
       },
       "grilled-cheese": {
         name: "Grilled Cheese",
         description:
-          "Roztopiony ser między kromkami pieczywa, opcjonalnie z zakwasem, bekonem lub pesto.",
+          "Roztopiony ser między kromkami pieczywa, opcjonalnie na chlebie na zakwasie, z bekonem lub pesto",
       },
     },
     navigationLabel: "Kategorie menu",
     preview: {
-      eyebrow: "Podgląd menu",
+      eyebrow: "Menu",
       title: "Coś dla każdego",
-      description: "Starannie wybrane ziarna w każdej filiżance.",
-      viewFullMenu: "Zobacz pełne menu",
+      description: "Starannie wybrane ziarna w każdej filiżance",
+      viewFullMenu: "Pełne menu",
       imageAlt: "Kawa i ciasto",
     },
     favorites: {
       eyebrow: "Nasi faworyci",
-      title: "Ulubione klientów",
-      viewFullMenu: "Zobacz pełne menu",
+      title: "Ulubione wśród klientów",
+      viewFullMenu: "Pełne menu",
     },
   },
 } as const;

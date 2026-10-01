@@ -103,7 +103,7 @@ export const dictionary = {
   hero: {
     title: "Good days",
     titleAccent: "start with coffee",
-    description: "Specialty coffee, cozy atmosphere, and friendly people.",
+    description: "Specialty coffee, cozy atmosphere, and friendly people",
     menuCta: "See our menu",
     visitCta: "Visit us",
     features: heroFeatures,
@@ -113,7 +113,7 @@ export const dictionary = {
     title: "More than just coffee",
     imageAlt: "Inside Mokka",
     description:
-      "Mokka is a place where passion for coffee meets good vibes. We select the best beans from around the world and brew each cup with care. Come in, slow down and enjoy.",
+      "Mokka is a place where passion for coffee meets good vibes. We select the best beans from around the world and brew each cup with care. Come in, slow down and enjoy",
     contactCta: "Contact us",
     stats: aboutUsStats,
   },
@@ -147,11 +147,11 @@ export const dictionary = {
       "cold-brew": { name: "Cold Brew", description: "Refreshing and smooth" },
       "vanilla-latte": {
         name: "Vanilla Latte",
-        description: "Espresso, steamed milk, and vanilla.",
+        description: "Espresso, steamed milk, and vanilla",
       },
       "coffee-latte": {
         name: "Coffee Latte",
-        description: "Smooth, slow-steeped coffee served over ice.",
+        description: "Smooth, slow-steeped coffee served over ice",
       },
       "matcha-latte": {
         name: "Matcha Latte",
@@ -172,29 +172,29 @@ export const dictionary = {
       "ham-and-cheese-sandwich": {
         name: "Ham and Cheese Sandwich",
         description:
-          "Smoky ham and melted cheese served on soft, toasted, or pressed bread.",
+          "Smoky ham and melted cheese served on soft, toasted, or pressed bread",
       },
       blt: {
         name: "BLT",
         description:
-          "Crisp bacon, fresh lettuce, and juicy tomatoes with a light spread of mayonnaise.",
+          "Crisp bacon, fresh lettuce, and juicy tomatoes with a light spread of mayonnaise",
       },
       "chicken-salad-croissant": {
         name: "Chicken Salad Croissant",
         description:
-          "Creamy chicken salad with herbs, grapes, or nuts served inside a flaky, buttery croissant.",
+          "Creamy chicken salad with herbs, grapes, or nuts served inside a flaky, buttery croissant",
       },
       "grilled-cheese": {
         name: "Grilled Cheese",
         description:
-          "Melted cheese pressed between sliced bread, with optional sourdough, bacon, or pesto.",
+          "Melted cheese pressed between sliced bread, with optional sourdough, bacon, or pesto",
       },
     } satisfies Record<ProductId, ProductTranslation>,
     navigationLabel: "Menu categories",
     preview: {
       eyebrow: "Menu preview",
       title: "Something for everyone",
-      description: "Carefully selected beans in every cup.",
+      description: "Carefully selected beans in every cup",
       viewFullMenu: "View full menu",
       imageAlt: "Coffee and cake",
     },
