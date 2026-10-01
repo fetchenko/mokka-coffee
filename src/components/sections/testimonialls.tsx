@@ -30,7 +30,7 @@ export function Testimonialls({ translations }: TestimonialsProps) {
 
   return (
     <Section>
-      <Container className="grid gap-8 py-16 md:py-20 lg:grid-cols-3 lg:gap-6">
+      <Container className="grid gap-8 pt-12 lg:grid-cols-3 lg:gap-6 lg:pt-16">
         <div>
           <Heading variant="eyebrow">{translations.eyebrow}</Heading>
           <Heading variant="section">{translations.title}</Heading>
@@ -38,7 +38,7 @@ export function Testimonialls({ translations }: TestimonialsProps) {
 
         <div className="overflow-hidden lg:hidden">
           <div
-            className="flex transition-transform duration-300"
+            className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: "translateX(-" + activeIndex * 100 + "%)" }}
           >
             {testimonials.map((testimonial, index) => (

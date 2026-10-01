@@ -3,7 +3,8 @@ import { Rating } from "@/components/ui/rating";
 import { Text } from "@/components/ui/text";
 import { Testimonial } from "@/features/menu/testimonials";
 import { Dictionary } from "@/i18n/dictionaries/en";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { cn } from "@/lib/utils/cn";
 
 export function TestimonialCard({
   translations,
@@ -23,44 +24,56 @@ export function TestimonialCard({
   translations: Dictionary["testimonials"];
 }) {
   return (
-    <article className="bg-secondary relative flex min-h-64 flex-col rounded-lg p-6">
-      <div className="flex items-center justify-between">
+    <article className="bg-secondary relative flex min-h-56 flex-col rounded-lg p-6">
+      <div className={cn(showNavigation && "px-12")}>
         <Rating value={testimonial.rating} />
-
-        {showNavigation && (
-          <div className="flex gap-2">
-            {showPrevious && (
-              <Button
-                type="button"
-                variant="secondary"
-                size="icon"
-                aria-label={translations.previousLabel}
-                onClick={onPrevious}
-              >
-                <ArrowLeft aria-hidden />
-              </Button>
-            )}
-
-            {showNext && (
-              <Button
-                type="button"
-                variant="secondary"
-                size="icon"
-                aria-label={translations.nextLabel}
-                onClick={onNext}
-              >
-                <ArrowRight aria-hidden />
-              </Button>
-            )}
-          </div>
-        )}
       </div>
 
-      <Text className="mt-3 max-w-sm text-base leading-6">
+      {showNavigation && (
+        <>
+          {showPrevious && (
+            <Button
+              type="button"
+              variant="ghost"
+              size="icon-md"
+              aria-label={translations.previousLabel}
+              onClick={onPrevious}
+              className="absolute top-1/2 left-1 -translate-y-1/2 text-primary/60 hover:bg-transparent hover:text-primary"
+            >
+              <ChevronLeft aria-hidden />
+            </Button>
+          )}
+
+          {showNext && (
+            <Button
+              type="button"
+              variant="ghost"
+              size="icon-md"
+              aria-label={translations.nextLabel}
+              onClick={onNext}
+              className="absolute top-1/2 right-1 -translate-y-1/2 text-primary/60 hover:bg-transparent hover:text-primary"
+            >
+              <ChevronRight aria-hidden />
+            </Button>
+          )}
+        </>
+      )}
+
+      <Text
+        className={cn(
+          "mt-3 max-w-sm text-base leading-6",
+          showNavigation && "px-12",
+        )}
+      >
         {translations.items[testimonial.bodyKey]}
       </Text>
 
-      <div className="mt-auto flex items-center gap-3 pt-6">
+      <div
+        className={cn(
+          "mt-auto flex items-center gap-3 pt-5",
+          showNavigation && "px-12",
+        )}
+      >
         <div
           className="bg-primary text-primary-foreground flex size-10 shrink-0 items-center justify-center rounded-full text-sm font-semibold"
           aria-hidden
