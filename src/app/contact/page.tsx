@@ -12,7 +12,7 @@ export default async function ContactPage() {
     <>
       <Header translations={dictionary.header} />
 
-      <main>
+      <main className="flex-1 pt-header">
         <Contact translations={dictionary.visitUs} />
       </main>
 
