@@ -26,13 +26,13 @@ export function Contact({ translations }: ContactProps) {
           </p>
         </div>
 
-        <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12">
+        <div className="grid gap-10 lg:grid-cols-2 lg:gap-12">
           <ContactBlock translations={translations} />
+          <VisitUsCard translations={translations} />
+        </div>
 
-          <div className="overflow-hidden rounded-lg">
-            <VisitUsCard translations={translations} />
-            <MapEmbed translations={translations} />
-          </div>
+        <div className="mt-10 md:mt-12">
+          <MapEmbed translations={translations} />
         </div>
       </Container>
     </Section>
