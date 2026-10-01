@@ -26,10 +26,10 @@ export function Contact({ translations }: ContactProps) {
           </p>
         </div>
 
-        <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-start lg:gap-12">
+        <div className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12">
           <ContactBlock translations={translations} />
 
-          <div className="space-y-6">
+          <div className="overflow-hidden rounded-lg">
             <VisitUsCard translations={translations} />
             <MapEmbed translations={translations} />
           </div>
