@@ -35,7 +35,7 @@ export function MenuPreview({ translations, locale }: MenuPreviewProps) {
 
   return (
     <Section>
-      <Container className="mt-4 grid gap-4 md:mt-8 md:grid-cols-3 md:items-stretch md:gap-8 lg:gap-12">
+      <Container className="grid gap-4 pt-4 md:grid-cols-3 md:items-stretch md:gap-8 md:pt-12 lg:gap-12">
         <div>
           <div>
             <Heading variant="eyebrow">{translations.preview.eyebrow}</Heading>
@@ -59,7 +59,7 @@ export function MenuPreview({ translations, locale }: MenuPreviewProps) {
                 <Heading variant="eyebrow">
                   {translations.categories[activeCategory.id]}
                 </Heading>
-                <div className="mt-4">
+                <div className="divide-accent-muted mt-4 divide-y">
                   {activeCategory.items
                     .slice(0, DISPLAY_ITEMS)
                     .map((product) => (
