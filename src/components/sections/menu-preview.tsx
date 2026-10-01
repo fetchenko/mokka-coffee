@@ -68,7 +68,6 @@ export function MenuPreview({ translations, locale }: MenuPreviewProps) {
                         product={product}
                         translation={translations.products[product.id]}
                         locale={locale}
-                        showImage
                       />
                     ))}
                 </div>
