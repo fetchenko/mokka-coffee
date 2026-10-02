@@ -1,6 +1,7 @@
 import type { Dictionary } from "@/i18n/dictionaries/en";
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
+import { Text } from "@/components/ui/text";
 import { MapPin, Navigation } from "lucide-react";
 import Link from "next/link";
 
@@ -16,8 +17,8 @@ export function VisitUsCard({
     <div className="section-dark bg-background text-foreground rounded-lg p-6 md:p-8">
       <MapPin className="text-primary mb-8 size-7" aria-hidden="true" />
       <div className="mb-8 space-y-2">
-        <Heading variant="eyebrow">{translations.eyebrow}</Heading>
-        <Heading variant="section">{translations.title}</Heading>
+        <Text variant="eyebrow">{translations.eyebrow}</Text>
+        <Heading variant="section" as="h2">{translations.title}</Heading>
       </div>
       <div className="space-y-5">
         <address className="not-italic">
