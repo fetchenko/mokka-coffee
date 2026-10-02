@@ -8,7 +8,6 @@ const headingVariants = cva("font-semibold tracking-tight", {
       hero: "text-5xl leading-none",
       section: "font-display font-bold text-3xl leading-tight",
       block: "text-xl leading-6",
-      eyebrow: "text-sm uppercase tracking-[0.15em] text-primary",
     },
   },
   defaultVariants: {
