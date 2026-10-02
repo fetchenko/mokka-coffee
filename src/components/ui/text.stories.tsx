@@ -26,6 +26,11 @@ const variants = [
     label: "Small",
     text: "Available in store and online.",
   },
+  {
+    variant: "eyebrow",
+    label: "Eyebrow",
+    text: "Featured",
+  },
 ] as const;
 
 export const AllVariants: Story = {
