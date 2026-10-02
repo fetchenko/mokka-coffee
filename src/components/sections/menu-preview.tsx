@@ -38,8 +38,10 @@ export function MenuPreview({ translations, locale }: MenuPreviewProps) {
       <Container className="grid gap-4 pt-4 md:grid-cols-3 md:items-stretch md:gap-8 md:pt-12 lg:gap-12">
         <div>
           <div>
-            <Heading variant="eyebrow">{translations.preview.eyebrow}</Heading>
-            <Heading variant="section">{translations.preview.title}</Heading>
+            <Text variant="eyebrow">{translations.preview.eyebrow}</Text>
+            <Heading variant="section" as="h2">
+              {translations.preview.title}
+            </Heading>
             <Text className="py-2">{translations.preview.description}</Text>
 
             <CategorySelect
@@ -56,9 +58,9 @@ export function MenuPreview({ translations, locale }: MenuPreviewProps) {
           <div className="space-y-8">
             {activeCategory && (
               <div>
-                <Heading variant="eyebrow">
+                <Text variant="eyebrow">
                   {translations.categories[activeCategory.id]}
-                </Heading>
+                </Text>
                 <div className="divide-accent-muted mt-4 divide-y">
                   {activeCategory.items
                     .slice(0, DISPLAY_ITEMS)
