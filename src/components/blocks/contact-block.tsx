@@ -10,8 +10,10 @@ export function ContactBlock({
 }) {
   return (
     <div>
-      <Heading variant="eyebrow">{translations.contactEyebrow}</Heading>
-      <Heading variant="section">{translations.contactTitle}</Heading>
+      <Text variant="eyebrow">{translations.contactEyebrow}</Text>
+      <Heading variant="section" as="h2">
+        {translations.contactTitle}
+      </Heading>
       <Text className="mt-4">{translations.contactDescription}</Text>
       <form className="mt-8 space-y-4">
         <div className="grid gap-4 sm:grid-cols-2">

@@ -31,11 +31,6 @@ const variants = [
     label: "Block heading",
     text: "Espresso",
   },
-  {
-    variant: "eyebrow",
-    label: "Eyebrow",
-    text: "Featured",
-  },
 ] as const;
 
 export const AllVariants: Story = {

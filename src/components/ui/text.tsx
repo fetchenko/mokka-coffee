@@ -8,6 +8,7 @@ const textVariants = cva("text-base leading-6", {
     variant: {
       body: "text-muted-foreground",
       small: "text-sm leading-5",
+      eyebrow: "text-sm uppercase tracking-[0.15em] text-primary",
     },
   },
   defaultVariants: {

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { Heading } from "@/components/ui/heading";
 import { Menu } from "@/components/sections/menu";
 import { getLocale } from "@/i18n/get-locale";
 import { getDictionary } from "@/i18n/get-dictionary";
@@ -19,6 +20,9 @@ export default async function MenuPage() {
       <Header translations={dictionary.header} />
 
       <main className="mt-header">
+        <Heading variant="section" as="h1" className="sr-only">
+          {dictionary.header.navigationItems.menu}
+        </Heading>
         <Menu translations={dictionary.menu} locale={locale} />
       </main>
 

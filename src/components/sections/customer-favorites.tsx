@@ -3,6 +3,7 @@ import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
+import { Text } from "@/components/ui/text";
 import { navigation } from "@/config/navigation";
 import { products } from "@/features/menu/data";
 import { ArrowRight } from "lucide-react";
@@ -29,8 +30,10 @@ export function CustomerFavorites({
     <Section>
       <Container className="mx-auto mt-4 grid gap-y-5 md:mt-8 md:grid-cols-[1fr_auto]">
         <div>
-          <Heading variant="eyebrow">{translations.favorites.eyebrow}</Heading>
-          <Heading variant="section">{translations.favorites.title}</Heading>
+          <Text variant="eyebrow">{translations.favorites.eyebrow}</Text>
+          <Heading variant="section" as="h2">
+            {translations.favorites.title}
+          </Heading>
         </div>
         <ul className="grid gap-4 md:col-span-2 md:grid-cols-2 lg:grid-cols-4">
           {customerFavorites.map((product) => (

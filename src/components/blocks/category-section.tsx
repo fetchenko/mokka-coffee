@@ -30,7 +30,7 @@ export function CategorySection({
 
   return (
     <section id={category.id} ref={ref} className="scroll-mt-32">
-      <Heading variant="block" className="py-2">
+      <Heading variant="block" as="h2" className="py-2">
         {translations.categories[category.id]}
       </Heading>
 

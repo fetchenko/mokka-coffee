@@ -33,8 +33,10 @@ export function AboutUs({ translations }: AboutUsProps) {
           />
 
           <div>
-            <Heading variant="eyebrow">{translations.eyebrow}</Heading>
-            <Heading variant="section">{translations.title}</Heading>
+            <Text variant="eyebrow">{translations.eyebrow}</Text>
+            <Heading variant="section" as="h2">
+              {translations.title}
+            </Heading>
             <Text variant="body" className="mt-6">
               {translations.description}
             </Text>
