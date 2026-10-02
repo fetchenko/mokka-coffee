@@ -6,6 +6,7 @@ import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/ui/heading";
+import { Text } from "@/components/ui/text";
 import { cn } from "@/lib/utils/cn";
 import { testimonials } from "@/features/menu/testimonials";
 import { TestimonialCard } from "@/components/blocks/testimonial-card";
