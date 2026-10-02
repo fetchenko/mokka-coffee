@@ -32,8 +32,10 @@ export function Testimonialls({ translations }: TestimonialsProps) {
     <Section>
       <Container className="grid gap-8 pt-12 lg:grid-cols-3 lg:gap-6 lg:pt-16">
         <div>
-          <Heading variant="eyebrow">{translations.eyebrow}</Heading>
-          <Heading variant="section">{translations.title}</Heading>
+          <Text variant="eyebrow">{translations.eyebrow}</Text>
+          <Heading variant="section" as="h2">
+            {translations.title}
+          </Heading>
         </div>
 
         <div className="overflow-hidden lg:hidden">
