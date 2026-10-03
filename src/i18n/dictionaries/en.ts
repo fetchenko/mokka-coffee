@@ -51,14 +51,14 @@ const visitUsTranslations = {
   weekends: "Sat - Sun: 8:00 - 21:00",
   getDirections: "Get directions",
   mapTitle: "Mokka Coffee location",
-  contactEyebrow: "Project contact",
-  contactTitle: "Get in touch about the project",
+  contactEyebrow: "About this project",
+  contactTitle: "Have a question about the project?"
   contactDescription:
-    "This is a portfolio demo. The contact form is included to demonstrate the interface and does not send messages to a real coffee shop.",
-  nameLabel: "Your name",
-  emailLabel: "Your email",
-  messageLabel: "Message",
-  sendMessage: "Demo interaction",
+    "This is a portfolio demo. This form is here to demonstrate the interface and does not send messages to a real business.",
+  nameLabel: "Name",
+  emailLabel: "Email",
+  messageLabel: "Your message",
+  sendMessage: "Try the form",
 };
 
 const logo = {
