@@ -23,6 +23,9 @@ export function Menu({ translations, locale }: MenuProps) {
   return (
     <Section>
       <Container className="pb-8">
+        <p className="text-muted-foreground mb-8 max-w-2xl text-sm leading-relaxed">
+          {translations.preview.disclaimer}
+        </p>
         <CategoryLinks
           categoryItems={categoryNavigation}
           labels={translations.categories}
