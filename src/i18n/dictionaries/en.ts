@@ -101,6 +101,7 @@ export const dictionary = {
   },
 
   hero: {
+    demoLabel: "Fictional coffee shop · Portfolio demo",
     title: "Good days",
     titleAccent: "start with coffee",
     description: "Specialty coffee, cozy atmosphere, and friendly people",
