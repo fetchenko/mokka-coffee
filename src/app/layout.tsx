@@ -5,8 +5,9 @@ import { getLocale } from "@/i18n/get-locale";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "MOKKA — Specialty Coffee",
-  description: "MOKKA — Specialty Coffee",
+  title: "MOKKA — Coffee Shop Website Concept",
+  description:
+    "MOKKA is a fictional coffee shop website concept created as a frontend development portfolio project.",
 };
 
 export default async function RootLayout({ children }: LayoutProps<"/">) {

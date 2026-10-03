@@ -41,6 +41,12 @@ export function Menu({ translations, locale }: MenuProps) {
             />
           ))}
         </div>
+        <p
+          className="text-muted-foreground mt-4 max-w-2xl text-sm leading-relaxed"
+          role="note"
+        >
+          {translations.preview.disclaimer}
+        </p>
       </Container>
     </Section>
   );

@@ -38,7 +38,7 @@ export function TestimonialCard({
               size="icon-md"
               aria-label={translations.previousLabel}
               onClick={onPrevious}
-              className="absolute top-1/2 left-1 -translate-y-1/2 text-primary/60 hover:bg-transparent hover:text-primary"
+              className="text-primary/60 hover:text-primary absolute top-1/2 left-1 -translate-y-1/2 hover:bg-transparent"
             >
               <ChevronLeft aria-hidden />
             </Button>
@@ -51,7 +51,7 @@ export function TestimonialCard({
               size="icon-md"
               aria-label={translations.nextLabel}
               onClick={onNext}
-              className="absolute top-1/2 right-1 -translate-y-1/2 text-primary/60 hover:bg-transparent hover:text-primary"
+              className="text-primary/60 hover:text-primary absolute top-1/2 right-1 -translate-y-1/2 hover:bg-transparent"
             >
               <ChevronRight aria-hidden />
             </Button>

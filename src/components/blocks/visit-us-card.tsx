@@ -18,7 +18,9 @@ export function VisitUsCard({
       <MapPin className="text-primary mb-8 size-7" aria-hidden="true" />
       <div className="mb-8 space-y-2">
         <Text variant="eyebrow">{translations.eyebrow}</Text>
-        <Heading variant="section" as="h2">{translations.title}</Heading>
+        <Heading variant="section" as="h2">
+          {translations.title}
+        </Heading>
       </div>
       <div className="space-y-5">
         <address className="not-italic">

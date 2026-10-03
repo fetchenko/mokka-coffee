@@ -51,13 +51,13 @@ const visitUsTranslations = {
   weekends: "Sat - Sun: 8:00 - 21:00",
   getDirections: "Get directions",
   mapTitle: "Mokka Coffee location",
-  contactEyebrow: "Contact us",
-  contactTitle: "Send us a message",
+  contactEyebrow: "About this project",
+  contactTitle: "Have a question about the project?",
   contactDescription:
-    "Have a question, want to book an event or just want to say hi? Drop us a message and we'll get back to you soon",
-  nameLabel: "Your name",
-  emailLabel: "Your email",
-  messageLabel: "Message",
+    "This is a portfolio demo. This form is here to demonstrate the interface and does not send messages to a real business.",
+  nameLabel: "Name",
+  emailLabel: "Email",
+  messageLabel: "Your message",
   sendMessage: "Send message",
 };
 
@@ -94,13 +94,14 @@ export const dictionary = {
     logo,
     language,
     navigationItems,
-    description: "Good coffee, good people, good days",
+    description: "Fictional coffee shop website concept",
     navigation: "Footer navigation",
     followUs: "Follow us",
-    copyright: "Mokka Coffee. All rights reserved",
+    copyright: "Mokka — fictional portfolio project",
   },
 
   hero: {
+    demoLabel: "Fictional coffee shop · Portfolio demo",
     title: "Good days",
     titleAccent: "start with coffee",
     description: "Specialty coffee, cozy atmosphere, and friendly people",
@@ -112,6 +113,8 @@ export const dictionary = {
     eyebrow: "About us",
     title: "More than just coffee",
     imageAlt: "Inside Mokka",
+    disclaimer:
+      "Demo menu — products and prices are fictional and shown for demonstration purposes only. No orders or purchases are available.",
     description:
       "Mokka is a place where passion for coffee meets good vibes. We select the best beans from around the world and brew each cup with care. Come in, slow down and enjoy",
     contactCta: "Contact us",
@@ -197,6 +200,8 @@ export const dictionary = {
       description: "Carefully selected beans in every cup",
       viewFullMenu: "View full menu",
       imageAlt: "Coffee and cake",
+      disclaimer:
+        "Demo menu — products and prices are fictional and shown for demonstration purposes only. No orders or purchases are available.",
     },
     favorites: {
       eyebrow: "Our favorites",

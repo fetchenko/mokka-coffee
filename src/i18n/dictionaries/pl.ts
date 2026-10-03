@@ -31,8 +31,7 @@ const testimonialTranslations = {
   juliaInitials: "JM",
   annaReview:
     "Najlepsza kawa w mieście! Przytulne miejsce i świetna atmosfera.",
-  magdaReview:
-    "Przychodzę tutaj każdego ranka. A wypieki też mają pyszne.",
+  magdaReview: "Przychodzę tutaj każdego ranka. A wypieki też mają pyszne.",
   juliaReview: "Świetna kawa, miła obsługa i cudowna atmosfera.",
 };
 
@@ -45,13 +44,13 @@ const visitUsTranslations = {
   weekends: "Sob–Nd: 8:00–21:00",
   getDirections: "Wyznacz trasę",
   mapTitle: "Lokalizacja Mokka Coffee",
-  contactEyebrow: "Skontaktuj się z nami",
-  contactTitle: "Napisz do nas",
+  contactEyebrow: "O projekcie",
+  contactTitle: "Masz pytanie dotyczące projektu?",
   contactDescription:
-    "Masz pytanie, chcesz zorganizować wydarzenie czy po prostu się przywitać? Napisz do nas, a wkrótce odpowiemy.",
-  nameLabel: "Imię",
-  emailLabel: "Twój e-mail",
-  messageLabel: "Wiadomość",
+    "To projekt do portfolio. Formularz służy wyłącznie do demonstracji interfejsu i nie wysyła wiadomości do prawdziwej firmy.",
+  nameLabel: "Imię i nazwisko",
+  emailLabel: "E-mail",
+  messageLabel: "Twoja wiadomość",
   sendMessage: "Wyślij wiadomość",
 };
 
@@ -83,13 +82,14 @@ export const dictionary = {
     logo,
     language,
     navigationItems,
-    description: "Dobra kawa, dobrzy ludzie, dobre dni",
+    description: "Fikcyjny koncept strony kawiarni",
     navigation: "Nawigacja w stopce",
     followUs: "Obserwuj nas",
-    copyright: "Mokka Coffee. Wszelkie prawa zastrzeżone",
+    copyright: "Mokka — fikcyjny projekt do portfolio",
   },
 
   hero: {
+    demoLabel: "Fikcyjna kawiarnia · Projekt portfolio",
     title: "Dobre dni",
     titleAccent: "zaczynają się od kawy",
     description: "Kawa specialty, przytulna atmosfera i serdeczni ludzie",
@@ -101,6 +101,8 @@ export const dictionary = {
     eyebrow: "O nas",
     title: "To coś więcej niż tylko kawa",
     imageAlt: "Wnętrze Mokka",
+    disclaimer:
+      "Menu demonstracyjne — produkty i ceny są fikcyjne i służą wyłącznie do celów demonstracyjnych. Zamówienia i zakupy nie są dostępne.",
     description:
       "Mokka to miejsce, w którym pasja do kawy spotyka się z dobrą atmosferą. Wybieramy najlepsze ziarna z całego świata i starannie przygotowujemy każdą filiżankę. Wpadnij, zwolnij tempo i ciesz się chwilą",
     contactCta: "Skontaktuj się z nami",
@@ -198,6 +200,8 @@ export const dictionary = {
       description: "Starannie wybrane ziarna w każdej filiżance",
       viewFullMenu: "Pełne menu",
       imageAlt: "Kawa i ciasto",
+      disclaimer:
+        "Menu demonstracyjne — produkty i ceny są fikcyjne i służą wyłącznie do celów demonstracyjnych. Zamówienia i zakupy nie są dostępne.",
     },
     favorites: {
       eyebrow: "Nasi faworyci",
