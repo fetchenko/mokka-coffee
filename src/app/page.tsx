@@ -4,8 +4,6 @@ import { AboutUs } from "@/components/sections/about-us";
 import { CustomerFavorites } from "@/components/sections/customer-favorites";
 import { Hero } from "@/components/sections/hero";
 import { MenuPreview } from "@/components/sections/menu-preview";
-import { Testimonials } from "@/components/sections/testimonials";
-import { VisitUs } from "@/components/sections/visit-us";
 import { getLocale } from "@/i18n/get-locale";
 import { getDictionary } from "@/i18n/get-dictionary";
 
@@ -22,8 +20,6 @@ export default async function HomePage() {
         <CustomerFavorites translations={dictionary.menu} locale={locale} />
         <MenuPreview translations={dictionary.menu} locale={locale} />
         <AboutUs translations={dictionary.aboutUs} />
-        <Testimonials translations={dictionary.testimonials} />
-        <VisitUs translations={dictionary.visitUs} />
       </main>
 
       <Footer translations={dictionary.footer} locale={locale} />
