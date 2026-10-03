@@ -37,21 +37,21 @@ const testimonialTranslations = {
 
 const visitUsTranslations = {
   eyebrow: "Посетите нас",
-  addressLine1: "ул. Кофейная, 7",
-  addressLine2: "220000 Минск, Беларусь",
+  addressLine1: "Вымышленная локация",
+  addressLine2: "Физической кофейни нет",
   title: "Будем рады вас видеть!",
-  weekdays: "Пн–Пт: 7:00–20:00",
-  weekends: "Сб–Вс: 8:00–21:00",
-  getDirections: "Проложить маршрут",
-  mapTitle: "Расположение Mokka Coffee",
-  contactEyebrow: "Свяжитесь с нами",
-  contactTitle: "Напишите нам",
+  weekdays: "",
+  weekends: "",
+  getDirections: "Маршрут недоступен",
+  mapTitle: "Вымышленная локация проекта",
+  contactEyebrow: "Контакт по проекту",
+  contactTitle: "Связаться по поводу проекта",
   contactDescription:
-    "Есть вопрос, хотите организовать мероприятие или просто поздороваться? Напишите нам, и мы скоро ответим.",
+    "Это портфолио-демо. Контактная форма добавлена для демонстрации интерфейса и не отправляет сообщения в реальную кофейню.",
   nameLabel: "Ваше имя",
   emailLabel: "Ваш e-mail",
   messageLabel: "Сообщение",
-  sendMessage: "Отправить сообщение",
+  sendMessage: "Демонстрация взаимодействия",
 };
 
 const logo = {
