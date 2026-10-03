@@ -90,6 +90,7 @@ export const dictionary = {
   },
 
   hero: {
+    demoLabel: "Fikcyjna kawiarnia · Projekt portfolio",
     title: "Dobre dni",
     titleAccent: "zaczynają się od kawy",
     description: "Kawa specialty, przytulna atmosfera i serdeczni ludzie",
