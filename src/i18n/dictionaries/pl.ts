@@ -102,6 +102,7 @@ export const dictionary = {
     eyebrow: "O nas",
     title: "To coś więcej niż tylko kawa",
     imageAlt: "Wnętrze Mokka",
+      disclaimer: "Menu demonstracyjne — produkty i ceny są fikcyjne i służą wyłącznie do celów demonstracyjnych. Zamówienia i zakupy nie są dostępne.",
     description:
       "Mokka to miejsce, w którym pasja do kawy spotyka się z dobrą atmosferą. Wybieramy najlepsze ziarna z całego świata i starannie przygotowujemy każdą filiżankę. Wpadnij, zwolnij tempo i ciesz się chwilą",
     contactCta: "Skontaktuj się z nami",
