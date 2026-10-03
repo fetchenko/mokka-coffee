@@ -59,6 +59,9 @@ export function Hero({ translations }: HeroProps) {
       />
       <Container className="flex min-h-svh flex-col pt-24 pb-8 lg:pt-28 lg:pb-12">
         <div className="max-w-xl lg:mt-auto">
+          <p className="mb-4 text-xs font-medium tracking-[0.15em] text-primary uppercase">
+            {translations.demoLabel}
+          </p>
           <h1 className="font-display text-[clamp(3.5rem,14vw,5.5rem)] leading-[1.1] font-semibold tracking-[-0.045em] lg:text-[clamp(4.5rem,6vw,6rem)]">
             <span className="block">{translations.title}</span>
             <span className="text-primary block leading-[0.88]">
