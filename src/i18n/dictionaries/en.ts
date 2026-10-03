@@ -44,21 +44,21 @@ const testimonialTranslations = {
 
 const visitUsTranslations = {
   eyebrow: "Visit us",
-  addressLine1: "ul. Kawiorniarna 12",
-  addressLine2: "31-123 Krakow, Poland",
+  addressLine1: "Fictional location",
+  addressLine2: "No physical café",
   title: "We'd love to see you!",
-  weekdays: "Mon - Fri: 7:00 - 20:00",
-  weekends: "Sat - Sun: 8:00 - 21:00",
-  getDirections: "Get directions",
-  mapTitle: "Mokka Coffee location",
-  contactEyebrow: "Contact us",
-  contactTitle: "Send us a message",
+  weekdays: "",
+  weekends: "",
+  getDirections: "No directions available",
+  mapTitle: "Fictional project location",
+  contactEyebrow: "Project contact",
+  contactTitle: "Get in touch about the project",
   contactDescription:
     "Have a question, want to book an event or just want to say hi? Drop us a message and we'll get back to you soon",
   nameLabel: "Your name",
   emailLabel: "Your email",
   messageLabel: "Message",
-  sendMessage: "Send message",
+  sendMessage: "Demo interaction",
 };
 
 const logo = {
