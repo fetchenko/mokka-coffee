@@ -23,7 +23,7 @@ export function Menu({ translations, locale }: MenuProps) {
   return (
     <Section>
       <Container className="pb-8">
-        <p className="text-muted-foreground mb-8 max-w-2xl text-sm leading-relaxed">
+        <p className="text-muted-foreground mb-8 max-w-2xl text-sm leading-relaxed" role="note">
           {translations.preview.disclaimer}
         </p>
         <CategoryLinks
