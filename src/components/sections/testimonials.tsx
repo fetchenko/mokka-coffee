@@ -18,7 +18,7 @@ type TestimonialsProps = {
   translations: Dictionary["testimonials"];
 };
 
-export function Testimonialls({ translations }: TestimonialsProps) {
+export function Testimonials({ translations }: TestimonialsProps) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const goToNext = () => {
