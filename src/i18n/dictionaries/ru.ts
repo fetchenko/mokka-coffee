@@ -83,15 +83,16 @@ export const dictionary = {
     logo,
     language,
     navigationItems,
-    description: "Хороший кофе, хорошие люди, хорошие дни",
+    description: "Вымышленный концепт сайта кофейни",
     navigation: "Навигация в подвале",
     followUs: "Подписывайтесь на нас",
-    copyright: "Mokka Coffee. Все права защищены",
+    copyright: "Mokka — вымышленный проект для портфолио",
   },
 
   hero: {
     title: "Хорошие дни",
     titleAccent: "начинаются с кофе",
+    demoLabel: "Вымышленная кофейня · Проект для портфолио",
     description: "Спешелти-кофе, уютная атмосфера и дружелюбные люди",
     menuCta: "Смотреть меню",
     visitCta: "Посетить нас",
@@ -189,6 +190,8 @@ export const dictionary = {
       description: "Тщательно отобранные зёрна в каждой чашке",
       viewFullMenu: "Всё меню",
       imageAlt: "Кофе и выпечка",
+      disclaimer:
+        "Демонстрационное меню — товары и цены вымышлены и представлены только для демонстрации. Заказы и покупки недоступны.",
     },
     favorites: {
       eyebrow: "Наши фавориты",
