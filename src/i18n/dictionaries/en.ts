@@ -44,21 +44,22 @@ const testimonialTranslations = {
 
 const visitUsTranslations = {
   eyebrow: "Visit us",
-  addressLine1: "ul. Kawiorniarna 12",
-  addressLine2: "31-123 Krakow, Poland",
+  addressLine1: "Fictional location",
+  addressLine2: "No physical café",
   title: "We'd love to see you!",
-  weekdays: "Mon - Fri: 7:00 - 20:00",
-  weekends: "Sat - Sun: 8:00 - 21:00",
-  getDirections: "Get directions",
-  mapTitle: "Mokka Coffee location",
-  contactEyebrow: "Contact us",
-  contactTitle: "Send us a message",
+  weekdays: "",
+  weekends: "",
+  getDirections: "No directions available",
+  locationDisclaimer: "This is a fictional portfolio project. There is no physical café at this location.",
+  mapTitle: "Fictional project location",
+  contactEyebrow: "Project contact",
+  contactTitle: "Get in touch about the project",
   contactDescription:
-    "Have a question, want to book an event or just want to say hi? Drop us a message and we'll get back to you soon",
+    "This is a portfolio demo. The contact form is included to demonstrate the interface and does not send messages to a real coffee shop.",
   nameLabel: "Your name",
   emailLabel: "Your email",
   messageLabel: "Message",
-  sendMessage: "Send message",
+  sendMessage: "Demo interaction",
 };
 
 const logo = {
@@ -94,15 +95,16 @@ export const dictionary = {
     logo,
     language,
     navigationItems,
-    description: "Good coffee, good people, good days",
+    description: "Fictional coffee shop website concept",
     navigation: "Footer navigation",
     followUs: "Follow us",
-    copyright: "Mokka Coffee. All rights reserved",
+    copyright: "Mokka — fictional portfolio project",
   },
 
   hero: {
     title: "Good days",
     titleAccent: "start with coffee",
+    demoLabel: "Fictional coffee shop · Portfolio demo",
     description: "Specialty coffee, cozy atmosphere, and friendly people",
     menuCta: "See our menu",
     visitCta: "Visit us",
@@ -197,6 +199,8 @@ export const dictionary = {
       description: "Carefully selected beans in every cup",
       viewFullMenu: "View full menu",
       imageAlt: "Coffee and cake",
+      disclaimer:
+        "Demo menu — products and prices are fictional and shown for demonstration purposes only. No orders or purchases are available.",
     },
     favorites: {
       eyebrow: "Our favorites",
