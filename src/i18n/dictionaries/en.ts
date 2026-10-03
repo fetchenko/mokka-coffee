@@ -94,10 +94,10 @@ export const dictionary = {
     logo,
     language,
     navigationItems,
-    description: "Good coffee, good people, good days",
+    description: "Fictional coffee shop website concept",
     navigation: "Footer navigation",
     followUs: "Follow us",
-    copyright: "Mokka Coffee. All rights reserved",
+    copyright: "Mokka — fictional portfolio project",
   },
 
   hero: {
@@ -113,7 +113,7 @@ export const dictionary = {
     title: "More than just coffee",
     imageAlt: "Inside Mokka",
     description:
-      "Mokka is a place where passion for coffee meets good vibes. We select the best beans from around the world and brew each cup with care. Come in, slow down and enjoy",
+      "Mokka is a fictional coffee shop concept created to demonstrate a modern, responsive web experience. The project explores visual design, multilingual interfaces, reusable components, and frontend development.",
     contactCta: "Contact us",
     stats: aboutUsStats,
   },
@@ -197,6 +197,8 @@ export const dictionary = {
       description: "Carefully selected beans in every cup",
       viewFullMenu: "View full menu",
       imageAlt: "Coffee and cake",
+      disclaimer:
+        "Demo menu — products and prices are fictional and shown for demonstration purposes only. No orders or purchases are available.",
     },
     favorites: {
       eyebrow: "Our favorites",
