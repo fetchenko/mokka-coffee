@@ -200,6 +200,7 @@ export const dictionary = {
       description: "Carefully selected beans in every cup",
       viewFullMenu: "View full menu",
       imageAlt: "Coffee and cake",
+      disclaimer: "Demo menu — products and prices are fictional and shown for demonstration purposes only. No orders or purchases are available.",
     },
     favorites: {
       eyebrow: "Our favorites",
