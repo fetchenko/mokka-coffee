@@ -45,14 +45,14 @@ const visitUsTranslations = {
   weekends: "Sob–Nd: 8:00–21:00",
   getDirections: "Wyznacz trasę",
   mapTitle: "Lokalizacja Mokka Coffee",
-  contactEyebrow: "Kontakt dotyczący projektu",
-  contactTitle: "Skontaktuj się w sprawie projektu",
+  contactEyebrow: "O projekcie",
+  contactTitle: "Masz pytanie dotyczące projektu?"
   contactDescription:
-    "To projekt do portfolio. Formularz kontaktowy służy do demonstracji interfejsu i nie wysyła wiadomości do prawdziwej kawiarni.",
-  nameLabel: "Imię",
-  emailLabel: "Twój e-mail",
-  messageLabel: "Wiadomość",
-  sendMessage: "Interakcja demonstracyjna",
+    "To projekt do portfolio. Formularz służy wyłącznie do demonstracji interfejsu i nie wysyła wiadomości do prawdziwej firmy.",
+  nameLabel: "Imię i nazwisko",
+  emailLabel: "E-mail",
+  messageLabel: "Twoja wiadomość",
+  sendMessage: "Wypróbuj formularz",
 };
 
 const logo = {
