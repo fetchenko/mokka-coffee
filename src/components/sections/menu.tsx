@@ -23,9 +23,6 @@ export function Menu({ translations, locale }: MenuProps) {
   return (
     <Section>
       <Container className="pb-8">
-        <p className="text-muted-foreground mb-8 max-w-2xl text-sm leading-relaxed" role="note">
-          {translations.preview.disclaimer}
-        </p>
         <CategoryLinks
           categoryItems={categoryNavigation}
           labels={translations.categories}
@@ -44,6 +41,12 @@ export function Menu({ translations, locale }: MenuProps) {
             />
           ))}
         </div>
+        <p
+          className="text-muted-foreground mt-4 max-w-2xl text-sm leading-relaxed"
+          role="note"
+        >
+          {translations.preview.disclaimer}
+        </p>
       </Container>
     </Section>
   );
