@@ -31,8 +31,7 @@ const testimonialTranslations = {
   juliaInitials: "JM",
   annaReview:
     "Najlepsza kawa w mieście! Przytulne miejsce i świetna atmosfera.",
-  magdaReview:
-    "Przychodzę tutaj każdego ranka. A wypieki też mają pyszne.",
+  magdaReview: "Przychodzę tutaj każdego ranka. A wypieki też mają pyszne.",
   juliaReview: "Świetna kawa, miła obsługa i cudowna atmosfera.",
 };
 
@@ -46,7 +45,7 @@ const visitUsTranslations = {
   getDirections: "Wyznacz trasę",
   mapTitle: "Lokalizacja Mokka Coffee",
   contactEyebrow: "O projekcie",
-  contactTitle: "Masz pytanie dotyczące projektu?"
+  contactTitle: "Masz pytanie dotyczące projektu?",
   contactDescription:
     "To projekt do portfolio. Formularz służy wyłącznie do demonstracji interfejsu i nie wysyła wiadomości do prawdziwej firmy.",
   nameLabel: "Imię i nazwisko",
@@ -102,8 +101,8 @@ export const dictionary = {
     eyebrow: "O nas",
     title: "To coś więcej niż tylko kawa",
     imageAlt: "Wnętrze Mokka",
-      disclaimer: "Menu demonstracyjne — produkty i ceny są fikcyjne i służą wyłącznie do celów demonstracyjnych. Zamówienia i zakupy nie są dostępne.",
-      disclaimer: "Menu demonstracyjne — produkty i ceny są fikcyjne i służą wyłącznie do celów demonstracyjnych. Zamówienia i zakupy nie są dostępne.",
+    disclaimer:
+      "Menu demonstracyjne — produkty i ceny są fikcyjne i służą wyłącznie do celów demonstracyjnych. Zamówienia i zakupy nie są dostępne.",
     description:
       "Mokka to miejsce, w którym pasja do kawy spotyka się z dobrą atmosferą. Wybieramy najlepsze ziarna z całego świata i starannie przygotowujemy każdą filiżankę. Wpadnij, zwolnij tempo i ciesz się chwilą",
     contactCta: "Skontaktuj się z nami",
@@ -201,7 +200,8 @@ export const dictionary = {
       description: "Starannie wybrane ziarna w każdej filiżance",
       viewFullMenu: "Pełne menu",
       imageAlt: "Kawa i ciasto",
-      disclaimer: "Menu demonstracyjne — produkty i ceny są fikcyjne i służą wyłącznie do celów demonstracyjnych. Zamówienia i zakupy nie są dostępne.",
+      disclaimer:
+        "Menu demonstracyjne — produkty i ceny są fikcyjne i służą wyłącznie do celów demonstracyjnych. Zamówienia i zakupy nie są dostępne.",
     },
     favorites: {
       eyebrow: "Nasi faworyci",

@@ -113,8 +113,8 @@ export const dictionary = {
     eyebrow: "About us",
     title: "More than just coffee",
     imageAlt: "Inside Mokka",
-      disclaimer: "Demo menu — products and prices are fictional and shown for demonstration purposes only. No orders or purchases are available.",
-      disclaimer: "Demo menu — products and prices are fictional and shown for demonstration purposes only. No orders or purchases are available.",
+    disclaimer:
+      "Demo menu — products and prices are fictional and shown for demonstration purposes only. No orders or purchases are available.",
     description:
       "Mokka is a place where passion for coffee meets good vibes. We select the best beans from around the world and brew each cup with care. Come in, slow down and enjoy",
     contactCta: "Contact us",
@@ -200,7 +200,8 @@ export const dictionary = {
       description: "Carefully selected beans in every cup",
       viewFullMenu: "View full menu",
       imageAlt: "Coffee and cake",
-      disclaimer: "Demo menu — products and prices are fictional and shown for demonstration purposes only. No orders or purchases are available.",
+      disclaimer:
+        "Demo menu — products and prices are fictional and shown for demonstration purposes only. No orders or purchases are available.",
     },
     favorites: {
       eyebrow: "Our favorites",
