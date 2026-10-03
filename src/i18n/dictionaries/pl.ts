@@ -83,15 +83,16 @@ export const dictionary = {
     logo,
     language,
     navigationItems,
-    description: "Dobra kawa, dobrzy ludzie, dobre dni",
+    description: "Fikcyjny koncept strony kawiarni",
     navigation: "Nawigacja w stopce",
     followUs: "Obserwuj nas",
-    copyright: "Mokka Coffee. Wszelkie prawa zastrzeżone",
+    copyright: "Mokka — fikcyjny projekt do portfolio",
   },
 
   hero: {
     title: "Dobre dni",
     titleAccent: "zaczynają się od kawy",
+    demoLabel: "Fikcyjna kawiarnia · Projekt portfolio",
     description: "Kawa specialty, przytulna atmosfera i serdeczni ludzie",
     menuCta: "Zobacz menu",
     visitCta: "Odwiedź nas",
@@ -102,7 +103,7 @@ export const dictionary = {
     title: "To coś więcej niż tylko kawa",
     imageAlt: "Wnętrze Mokka",
     description:
-      "Mokka to miejsce, w którym pasja do kawy spotyka się z dobrą atmosferą. Wybieramy najlepsze ziarna z całego świata i starannie przygotowujemy każdą filiżankę. Wpadnij, zwolnij tempo i ciesz się chwilą",
+      "Mokka to fikcyjny koncept kawiarni stworzony jako nowoczesny, responsywny projekt frontendowy. Projekt prezentuje design, wielojęzyczny interfejs, wielokrotnego użytku komponenty i rozwój aplikacji frontendowych.",
     contactCta: "Skontaktuj się z nami",
     stats: aboutUsStats,
   },
@@ -198,6 +199,8 @@ export const dictionary = {
       description: "Starannie wybrane ziarna w każdej filiżance",
       viewFullMenu: "Pełne menu",
       imageAlt: "Kawa i ciasto",
+      disclaimer:
+        "Menu demonstracyjne — produkty i ceny są fikcyjne i służą wyłącznie do celów demonstracyjnych. Zamówienia i zakupy nie są dostępne.",
     },
     favorites: {
       eyebrow: "Nasi faworyci",
