@@ -83,10 +83,10 @@ export const dictionary = {
     logo,
     language,
     navigationItems,
-    description: "Dobra kawa, dobrzy ludzie, dobre dni",
+    description: "Fikcyjny koncept strony kawiarni",
     navigation: "Nawigacja w stopce",
     followUs: "Obserwuj nas",
-    copyright: "Mokka Coffee. Wszelkie prawa zastrzeżone",
+    copyright: "Mokka — fikcyjny projekt do portfolio",
   },
 
   hero: {
