@@ -15,7 +15,7 @@ export default async function ContactPage() {
 
       <main className="flex-1 pt-header">
         <Heading variant="section" as="h1" className="sr-only">
-          {dictionary.header.navigationItems.contact}
+          {dictionary.visitUs.contactEyebrow}
         </Heading>
         <Contact translations={dictionary.visitUs} />
       </main>
