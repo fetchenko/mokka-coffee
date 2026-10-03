@@ -44,14 +44,14 @@ const visitUsTranslations = {
   weekends: "Сб–Вс: 8:00–21:00",
   getDirections: "Проложить маршрут",
   mapTitle: "Расположение Mokka Coffee",
-  contactEyebrow: "Контакт по проекту",
-  contactTitle: "Связаться по поводу проекта",
+  contactEyebrow: "О проекте",
+  contactTitle: "Есть вопросы по проекту?"
   contactDescription:
-    "Это портфолио-демо. Контактная форма добавлена для демонстрации интерфейса и не отправляет сообщения в реальную кофейню.",
-  nameLabel: "Ваше имя",
-  emailLabel: "Ваш e-mail",
-  messageLabel: "Сообщение",
-  sendMessage: "Демонстрация взаимодействия",
+    "Это проект для портфолио. Форма нужна только для демонстрации интерфейса и не отправляет сообщения в реальную компанию.",
+  nameLabel: "Имя",
+  emailLabel: "Электронная почта",
+  messageLabel: "Ваше сообщение",
+  sendMessage: "Попробовать форму",
 };
 
 const logo = {
