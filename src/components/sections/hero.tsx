@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils/cn";
 import type { Dictionary } from "@/i18n/dictionaries/en";
 import { Coffee, Heart, Leaf, Map, Users } from "lucide-react";
 import Link from "next/link";
+import { navigation } from "@/config/navigation";
 
 const features = [
   {
@@ -74,7 +75,7 @@ export function Hero({ translations }: HeroProps) {
             <Link href="/menu">{translations.menuCta}</Link>
           </Button>
           <Button asChild variant="outline">
-            <Link href="/visit-us">
+            <Link href={navigation.visitUs}>
               <Map />
               {translations.visitCta}
             </Link>
