@@ -33,7 +33,7 @@ export function Footer({ translations, locale }: FooterProps) {
         <div className="grid gap-8 py-12 sm:grid-cols-4">
           <div>
             <Logo translations={translations.logo} />
-            <p className="text-muted-foreground hidden w-40 py-4 text-xs sm:block">
+            <p className="text-muted-foreground pt-4 text-xs">
               {translations.description}
             </p>
           </div>
