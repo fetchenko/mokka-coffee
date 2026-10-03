@@ -201,6 +201,7 @@ export const dictionary = {
       description: "Starannie wybrane ziarna w każdej filiżance",
       viewFullMenu: "Pełne menu",
       imageAlt: "Kawa i ciasto",
+      disclaimer: "Menu demonstracyjne — produkty i ceny są fikcyjne i służą wyłącznie do celów demonstracyjnych. Zamówienia i zakupy nie są dostępne.",
     },
     favorites: {
       eyebrow: "Nasi faworyci",
