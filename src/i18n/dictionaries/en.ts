@@ -52,7 +52,7 @@ const visitUsTranslations = {
   getDirections: "Get directions",
   mapTitle: "Mokka Coffee location",
   contactEyebrow: "About this project",
-  contactTitle: "Have a question about the project?"
+  contactTitle: "Have a question about the project?",
   contactDescription:
     "This is a portfolio demo. This form is here to demonstrate the interface and does not send messages to a real business.",
   nameLabel: "Name",
