@@ -13,7 +13,7 @@ export default async function ContactPage() {
     <>
       <Header translations={dictionary.header} />
 
-      <main className="flex-1 pt-header">
+      <main className="pt-header flex-1">
         <Heading variant="section" as="h1" className="sr-only">
           {dictionary.visitUs.contactEyebrow}
         </Heading>

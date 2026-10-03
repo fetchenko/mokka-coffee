@@ -52,7 +52,7 @@ const visitUsTranslations = {
   nameLabel: "Имя",
   emailLabel: "Электронная почта",
   messageLabel: "Ваше сообщение",
-  sendMessage: "Попробовать форму",
+  sendMessage: "Отправить",
 };
 
 const logo = {

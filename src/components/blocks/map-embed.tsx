@@ -15,9 +15,7 @@ export function MapEmbed({
     <div
       className={cn(
         "relative overflow-hidden rounded-lg",
-        stretch
-          ? "h-full min-h-72"
-          : "aspect-[4/3] lg:aspect-[16/9]",
+        stretch ? "h-full min-h-72" : "aspect-[4/3] lg:aspect-[16/9]",
       )}
     >
       <iframe

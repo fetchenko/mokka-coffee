@@ -51,7 +51,7 @@ const visitUsTranslations = {
   nameLabel: "Imię i nazwisko",
   emailLabel: "E-mail",
   messageLabel: "Twoja wiadomość",
-  sendMessage: "Wypróbuj formularz",
+  sendMessage: "Wyślij wiadomość",
 };
 
 const logo = {
